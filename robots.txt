@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kurnikwok.com/sitemap.xml

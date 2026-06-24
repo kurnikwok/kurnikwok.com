@@ -4,550 +4,93 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kurni Kwok · AI Shaping</title>
-  <meta name="description" content="AI shaping publications by Kurni Kwok: category definition and capability evidence papers on turning general-purpose AI into productive AI work.">
+  <meta name="description" content="Public papers by Kurni Kwok on AI shaping, AI-shaping intelligence, shaped intelligence, productive AI work and work-burden shift.">
   <meta name="author" content="Kurni Kwok">
-  <meta name="color-scheme" content="light dark">
-  <meta property="og:title" content="Kurni Kwok · AI Shaping">
-  <meta property="og:description" content="Public papers on AI shaping, AI-shaping intelligence, shaped intelligence and productive AI work.">
+  <meta name="keywords" content="AI shaping, AI-shaping intelligence, shaped intelligence, productive AI work, work-burden shift, operating-model design, Kurni Kwok">
+  <link rel="canonical" href="https://kurnikwok.com/">
+  <link rel="stylesheet" href="/assets/style.css">
   <meta property="og:type" content="website">
+  <meta property="og:title" content="Kurni Kwok · AI Shaping">
+  <meta property="og:description" content="Public papers by Kurni Kwok on AI shaping, AI-shaping intelligence, shaped intelligence, productive AI work and work-burden shift.">
   <meta property="og:url" content="https://kurnikwok.com/">
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #f6f3ee;
-      --surface: #fffaf2;
-      --surface-2: #eee7dc;
-      --text: #191612;
-      --muted: #61594f;
-      --border: #d9cfc0;
-      --accent: #6f4e37;
-      --accent-2: #2f5f5b;
-      --button: #191612;
-      --button-text: #fffaf2;
-      --shadow: 0 20px 60px rgba(25, 22, 18, 0.08);
-      --radius: 24px;
-      --max-width: 1120px;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #11100e;
-        --surface: #1b1916;
-        --surface-2: #24211d;
-        --text: #f4efe7;
-        --muted: #c7bbae;
-        --border: #39332d;
-        --accent: #d9b58c;
-        --accent-2: #8fc9c1;
-        --button: #f4efe7;
-        --button-text: #11100e;
-        --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-      }
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.55;
-      background:
-        radial-gradient(circle at top left, color-mix(in srgb, var(--accent) 14%, transparent), transparent 34rem),
-        radial-gradient(circle at top right, color-mix(in srgb, var(--accent-2) 12%, transparent), transparent 28rem),
-        var(--bg);
-      color: var(--text);
-    }
-
-    a {
-      color: inherit;
-      text-underline-offset: 0.18em;
-    }
-
-    a:hover {
-      color: var(--accent);
-    }
-
-    .wrap {
-      width: min(var(--max-width), calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    header {
-      padding: 24px 0;
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .brand {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      text-decoration: none;
-    }
-
-    .brand strong {
-      font-size: 1rem;
-      letter-spacing: 0.01em;
-    }
-
-    .brand span {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    .hero {
-      padding: 74px 0 44px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
-      gap: 36px;
-      align-items: stretch;
-    }
-
-    .eyebrow {
-      margin: 0 0 18px;
-      color: var(--accent);
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-    }
-
-    h1 {
-      max-width: 880px;
-      margin: 0;
-      font-size: clamp(2.4rem, 6vw, 5.2rem);
-      line-height: 0.98;
-      letter-spacing: -0.06em;
-    }
-
-    .lead {
-      max-width: 760px;
-      margin: 26px 0 0;
-      color: var(--muted);
-      font-size: clamp(1.08rem, 2vw, 1.35rem);
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 32px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--button);
-      background: var(--button);
-      color: var(--button-text);
-      padding: 12px 18px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: transform 160ms ease, opacity 160ms ease;
-    }
-
-    .button:hover {
-      color: var(--button-text);
-      transform: translateY(-1px);
-      opacity: 0.92;
-    }
-
-    .button.secondary {
-      background: transparent;
-      color: var(--text);
-      border-color: var(--border);
-    }
-
-    .button.secondary:hover {
-      color: var(--accent);
-    }
-
-    .note-card {
-      background: color-mix(in srgb, var(--surface) 92%, transparent);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .note-card h2 {
-      margin: 0 0 12px;
-      font-size: 1.1rem;
-      letter-spacing: -0.02em;
-    }
-
-    .note-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.98rem;
-    }
-
-    .section {
-      padding: 44px 0;
-    }
-
-    .section-head {
-      max-width: 760px;
-      margin-bottom: 24px;
-    }
-
-    h2 {
-      margin: 0 0 10px;
-      font-size: clamp(1.7rem, 3vw, 2.45rem);
-      line-height: 1.1;
-      letter-spacing: -0.04em;
-    }
-
-    .section-head p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 26px;
-      min-height: 100%;
-      box-shadow: var(--shadow);
-    }
-
-    .card .label {
-      display: inline-flex;
-      align-items: center;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 5px 10px;
-      color: var(--muted);
-      font-size: 0.82rem;
-      margin-bottom: 18px;
-      background: var(--surface-2);
-    }
-
-    .card h3 {
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-      line-height: 1.16;
-      letter-spacing: -0.03em;
-    }
-
-    .card p {
-      margin: 0 0 18px;
-      color: var(--muted);
-    }
-
-    .meta {
-      display: grid;
-      gap: 8px;
-      margin: 18px 0 22px;
-      color: var(--muted);
-      font-size: 0.93rem;
-    }
-
-    .meta span {
-      display: block;
-    }
-
-    .small-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .pill-link {
-      display: inline-flex;
-      align-items: center;
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      text-decoration: none;
-      font-weight: 650;
-      font-size: 0.93rem;
-      background: color-mix(in srgb, var(--surface-2) 78%, transparent);
-    }
-
-    .pill-link:hover {
-      border-color: var(--accent);
-    }
-
-    .principles {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .principle {
-      border: 1px solid var(--border);
-      background: color-mix(in srgb, var(--surface) 84%, transparent);
-      border-radius: 18px;
-      padding: 16px;
-    }
-
-    .principle strong {
-      display: block;
-      margin-bottom: 6px;
-    }
-
-    .principle span {
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .boundary {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px;
-      box-shadow: var(--shadow);
-    }
-
-    .boundary p {
-      color: var(--muted);
-      margin: 0 0 14px;
-    }
-
-    .boundary p:last-child {
-      margin-bottom: 0;
-    }
-
-    footer {
-      padding: 42px 0 56px;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    footer .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      border-top: 1px solid var(--border);
-      padding-top: 22px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 820px) {
-      .hero {
-        padding-top: 48px;
-      }
-
-      .hero-grid,
-      .cards,
-      .principles {
-        grid-template-columns: 1fr;
-      }
-
-      .nav {
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        flex-wrap: wrap;
-        justify-content: flex-end;
-      }
-    }
-
-    @media (max-width: 520px) {
-      .nav {
-        flex-direction: column;
-      }
-
-      .nav-links {
-        justify-content: flex-start;
-      }
-
-      .hero {
-        padding: 38px 0 28px;
-      }
-
-      .card,
-      .note-card,
-      .boundary {
-        padding: 20px;
-      }
-    }
-  </style>
+  <meta property="og:site_name" content="Kurni Kwok · AI Shaping">
+  <meta name="twitter:card" content="summary">
+  
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Kurni Kwok · AI Shaping",
+  "url": "https://kurnikwok.com",
+  "author": {
+    "@type": "Person",
+    "name": "Kurni Kwok"
+  }
+}</script>
 </head>
 <body>
-  <header>
-    <nav class="wrap nav" aria-label="Main navigation">
-      <a class="brand" href="/" aria-label="Kurni Kwok home">
-        <strong>Kurni Kwok</strong>
-        <span>AI Shaping · Operating-Model Design</span>
-      </a>
-      <div class="nav-links">
-        <a href="#papers">Papers</a>
-        <a href="#concept">Concept</a>
-        <a href="mailto:projects@kurnikwok.com">Contact</a>
-      </div>
-    </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/">Kurni Kwok <small>AI Shaping · Operating-Model Design</small></a>
+      <nav aria-label="Primary navigation"><a href="/" aria-current="page">Home</a><a href="/ai-shaping/" >AI shaping</a><a href="/ai-shaping-intelligence/" >AI-shaping intelligence</a><a href="/shaped-intelligence/" >Shaped intelligence</a><a href="/productive-ai-work/" >Productive AI work</a><a href="/work-burden-shift/" >Work-burden shift</a><a href="/papers/" >Papers</a></nav>
+    </div>
   </header>
-
   <main>
+
     <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <p class="eyebrow">AI Shaping</p>
-          <h1>Turning general-purpose AI into productive AI work.</h1>
-          <p class="lead">
-            Public papers by Kurni Kwok on AI-shaping intelligence, shaped intelligence,
-            work-burden shift and human-directed productive AI work.
-          </p>
-          <div class="actions" aria-label="Primary actions">
-            <a class="button" href="#papers">Read the papers</a>
-            <a class="button secondary" href="mailto:projects@kurnikwok.com">projects@kurnikwok.com</a>
-          </div>
-        </div>
-
-        <aside class="note-card" aria-label="Publication note">
-          <h2>Current public release</h2>
-          <p>
-            The release separates category definition from capability evidence. Each paper
-            stands alone. Public-stage material supports category understanding or initial
-            capability evaluation only; implementation-level review requires protected-stage
-            discussion.
-          </p>
-        </aside>
+      <div class="eyebrow">AI Shaping</div>
+      <h1>Turning general-purpose AI into productive AI work.</h1>
+      <p class="lead">Public papers by Kurni Kwok on AI-shaping intelligence, shaped intelligence, work-burden shift and human-directed productive AI work.</p>
+      <div class="actions">
+        <a class="button primary" href="/papers/">Read the papers</a>
+        <a class="button" href="/ai-shaping/">Start with AI shaping</a>
+        <a class="button" href="mailto:projects@kurnikwok.com">projects@kurnikwok.com</a>
       </div>
     </section>
 
-    <section class="section" id="papers">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Published papers</h2>
-          <p>
-            The category paper explains the concept stack. The capability paper provides the
-            bounded public evidence instance.
-          </p>
-        </div>
-
-        <div class="cards">
-          <article class="card">
-            <span class="label">Category definition paper</span>
-            <h3>AI Shaping: Turning General-Purpose AI into Productive AI Work</h3>
-            <p>
-              Defines AI shaping as the operating-model discipline for turning broad
-              general-purpose AI capability into grounded, reviewable, repeatable and
-              resumable productive AI work under human direction.
-            </p>
-            <div class="meta">
-              <span><strong>DOI:</strong> 10.5281/zenodo.20830023</span>
-              <span><strong>Role:</strong> Category fit and concept-stack explanation</span>
-            </div>
-            <div class="small-links">
-              <a class="pill-link" href="https://doi.org/10.5281/zenodo.20830023">Open DOI</a>
-              <a class="pill-link" href="https://zenodo.org/records/20830023">Open on Zenodo</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <span class="label">Capability evidence paper</span>
-            <h3>AI-Shaping Intelligence in Practice: Evidence from Project-Managing Shaped Intelligence</h3>
-            <p>
-              Presents a public-safe capability-evidence instance for AI shaping through
-              project-managing shaped intelligence in project and BAU IT support contexts.
-            </p>
-            <div class="meta">
-              <span><strong>DOI:</strong> 10.5281/zenodo.20830132</span>
-              <span><strong>Role:</strong> Public evidence review and protected-stage threshold</span>
-            </div>
-            <div class="small-links">
-              <a class="pill-link" href="https://doi.org/10.5281/zenodo.20830132">Open DOI</a>
-              <a class="pill-link" href="https://zenodo.org/records/20830132">Open on Zenodo</a>
-            </div>
-          </article>
-        </div>
+    <section>
+      <h2>Current public release</h2>
+      <p>The release separates category definition from capability evidence. Each paper stands alone. Public-stage material supports category understanding or initial capability evaluation only; implementation-level review requires protected-stage discussion.</p>
+      <div class="grid">
+        <article class="card">
+          <p class="kicker">Category definition paper</p>
+          <h3>AI Shaping: Turning General-Purpose AI into Productive AI Work</h3>
+          <p>Defines AI shaping as the operating-model discipline for turning broad general-purpose AI capability into grounded, reviewable, repeatable and resumable productive AI work under human direction.</p>
+          <p><strong>DOI:</strong> 10.5281/zenodo.20830023</p>
+          <p><a href="/papers/ai-shaping/">Paper page</a> · <a href="https://doi.org/10.5281/zenodo.20830023">Open DOI</a> · <a href="https://zenodo.org/records/20830023">Open on Zenodo</a></p>
+        </article>
+        <article class="card">
+          <p class="kicker">Capability evidence paper</p>
+          <h3>AI-Shaping Intelligence in Practice: Evidence from Project-Managing Shaped Intelligence</h3>
+          <p>Presents a public-safe capability-evidence instance for AI shaping through project-managing shaped intelligence in project and BAU IT support contexts.</p>
+          <p><strong>DOI:</strong> 10.5281/zenodo.20830132</p>
+          <p><a href="/papers/ai-shaping-intelligence-in-practice/">Paper page</a> · <a href="https://doi.org/10.5281/zenodo.20830132">Open DOI</a> · <a href="https://zenodo.org/records/20830132">Open on Zenodo</a></p>
+        </article>
       </div>
     </section>
 
-    <section class="section" id="concept">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>What AI shaping addresses</h2>
-          <p>
-            Useful AI output is not the same as productive AI work. The central question is
-            whether recurring work burden can shift to shaped intelligence while judgement,
-            approval and real-world action remain human-owned.
-          </p>
-        </div>
-
-        <div class="principles" aria-label="AI shaping principles">
-          <div class="principle">
-            <strong>Grounded</strong>
-            <span>Work remains tied to source basis, context and review state.</span>
-          </div>
-          <div class="principle">
-            <strong>Reviewable</strong>
-            <span>Human judgement, approval and disclosure remain explicit.</span>
-          </div>
-          <div class="principle">
-            <strong>Repeatable</strong>
-            <span>The work pattern can recur without rebuilding the whole basis.</span>
-          </div>
-          <div class="principle">
-            <strong>Resumable</strong>
-            <span>Work can continue after pause, handover or new information.</span>
-          </div>
-        </div>
+    <section>
+      <h2>Concept stack</h2>
+      <p>Useful AI output is not the same as productive AI work. The central question is whether recurring work burden can shift to shaped intelligence while judgement, approval and real-world action remain human-owned.</p>
+      <div class="grid three">
+        <article class="card"><h3><a href="/ai-shaping/">AI shaping</a></h3><p>The operating-model discipline for turning broad AI capability into productive AI work.</p></article>
+        <article class="card"><h3><a href="/ai-shaping-intelligence/">AI-shaping intelligence</a></h3><p>The reusable meta-capability that builds, improves and renews the shaping pattern.</p></article>
+        <article class="card"><h3><a href="/shaped-intelligence/">Shaped intelligence</a></h3><p>The domain-facing reusable capability that carries recurring work burden in a work domain.</p></article>
+        <article class="card"><h3><a href="/productive-ai-work/">Productive AI work</a></h3><p>Grounded, reviewable, repeatable and resumable work under human direction.</p></article>
+        <article class="card"><h3><a href="/work-burden-shift/">Work-burden shift</a></h3><p>The visible before/after signal that more recurring work burden has moved to shaped intelligence.</p></article>
+        <article class="card"><h3><a href="/operating-model-design/">Operating-model design</a></h3><p>The broader design frame for roles, controls, boundaries and repeatable work patterns.</p></article>
       </div>
     </section>
 
-    <section class="section" id="boundary">
-      <div class="wrap">
-        <div class="boundary">
-          <h2>Public boundary</h2>
-          <p>
-            The published papers are for public category understanding and bounded public-stage
-            capability evaluation. They do not provide implementation guidance, deployment
-            assurance, reproducibility proof, product-performance assurance, method transfer or
-            commercial use rights.
-          </p>
-          <p>
-            © 2026 Kurni Kwok. Publication text is licensed for public sharing under
-            CC BY-NC-ND 4.0. The licence does not grant rights to implement, reproduce,
-            adapt, commercialise or transfer protected methods, operating models, prompts,
-            control files, schemas, validation mechanics, route controls, continuity structures,
-            private artefacts or implementation materials.
-          </p>
-        </div>
-      </div>
+    <section class="boundary">
+      <h2>Public boundary</h2>
+      <p>The published papers are for public category understanding and bounded public-stage capability evaluation. They do not provide implementation guidance, deployment assurance, reproducibility proof, product-performance assurance, method transfer or commercial use rights.</p>
     </section>
+
   </main>
-
-  <footer>
-    <div class="wrap footer-inner">
-      <span>© 2026 Kurni Kwok</span>
-      <span><a href="mailto:projects@kurnikwok.com">projects@kurnikwok.com</a> · <a href="https://kurnikwok.com/">kurnikwok.com</a></span>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>© 2026 Kurni Kwok. Public papers are licensed under CC BY-NC-ND 4.0.</div>
+      <div><a href="mailto:projects@kurnikwok.com">projects@kurnikwok.com</a> · <a href="/papers/">Papers</a> · <a href="/sitemap.xml">Sitemap</a></div>
     </div>
   </footer>
 </body>
