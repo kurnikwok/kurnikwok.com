@@ -13,3 +13,5 @@ This package includes:
 - responsive light/dark CSS
 
 No About page is included.
+
+Added project-managing-shaped-intelligence/ as a concept bridge between shaped intelligence and the capability evidence paper.
