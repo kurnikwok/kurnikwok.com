@@ -71,7 +71,8 @@ header.site-header {
   font-weight: 750;
   letter-spacing: -.02em;
 }
-.brand span { font-size: .78rem; color: var(--muted); font-weight: 550; letter-spacing: .01em; }
+.brand .brand-subtitle { font-size: .78rem; color: var(--muted); font-weight: 550; letter-spacing: .01em; }
+.nowrap { white-space: nowrap; }
 nav {
   display: flex;
   flex-wrap: wrap;
