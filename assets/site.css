@@ -225,6 +225,9 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
     flex: 0 0 auto;
     white-space: nowrap;
   }
+  nav a:first-child {
+    padding-left: 0;
+  }
   .hero { padding: 1.4rem; }
   .grid.two, .grid.three { grid-template-columns: 1fr; }
   table, thead, tbody, tr, th, td { display: block; }
