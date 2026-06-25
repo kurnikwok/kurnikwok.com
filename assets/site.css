@@ -178,6 +178,22 @@ li + li { margin-top: .35rem; }
   border: 1px dashed var(--accent);
   background: color-mix(in srgb, var(--surface-strong) 68%, transparent);
 }
+.concept-diagram {
+  margin: 1.25rem 0 0;
+}
+.concept-diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--surface) 90%, transparent);
+}
+.concept-diagram figcaption {
+  margin-top: .55rem;
+  color: var(--muted);
+  font-size: .94rem;
+}
 .breadcrumbs { color: var(--muted); font-size: .92rem; margin-bottom: 1.1rem; }
 .breadcrumbs a { color: var(--muted); text-decoration: none; }
 footer {
