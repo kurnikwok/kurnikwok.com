@@ -186,21 +186,43 @@ li + li { margin-top: .35rem; }
   border: 1px dashed var(--accent);
   background: color-mix(in srgb, var(--surface-strong) 68%, transparent);
 }
-.concept-diagram {
+.concept-diagram,
+.figure-card {
   margin: 1.25rem 0 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
 }
-.concept-diagram img {
+.concept-diagram img,
+.figure-card img {
   display: block;
   width: 100%;
   height: auto;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border-radius: calc(var(--radius) - 6px);
   background: color-mix(in srgb, var(--surface) 90%, transparent);
 }
-.concept-diagram figcaption {
-  margin-top: .55rem;
+.concept-diagram figcaption,
+.figure-card figcaption {
+  margin-top: .8rem;
+  padding-top: .8rem;
+  border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: .94rem;
+  line-height: 1.55;
+}
+.diagram-note {
+  margin: .65rem 0 0;
+  color: var(--text);
+  font-size: .98rem;
+  line-height: 1.6;
+}
+.comparison-table th:first-child,
+.comparison-table td:first-child {
+  width: 32%;
+}
+.comparison-table td {
+  background: color-mix(in srgb, var(--surface) 95%, transparent);
 }
 .breadcrumbs { color: var(--muted); font-size: .92rem; margin-bottom: 1.1rem; }
 .breadcrumbs a { color: var(--muted); text-decoration: none; }
@@ -259,4 +281,9 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   tr { border-bottom: 1px solid var(--line); }
   td { border: 0; padding: .65rem .85rem; }
   td::before { content: attr(data-label); display: block; font-weight: 800; color: var(--accent); margin-bottom: .15rem; }
+
+  .comparison-table th:first-child,
+  .comparison-table td:first-child {
+    width: auto;
+  }
 }

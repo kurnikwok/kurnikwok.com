@@ -1,0 +1,20 @@
+Changed and added files in this upload package:
+404.html
+README-upload.txt
+about/index.html
+ai-shaping/index.html
+ai-shaping-intelligence/index.html
+assets/css/site.css
+faq/index.html
+glossary/index.html
+index.html
+operating-model-design/index.html
+papers/ai-shaping/index.html
+papers/ai-shaping-intelligence-in-practice/index.html
+papers/index.html
+productive-ai-work/index.html
+project-managing-shaped-intelligence/index.html
+protected-stage-discussion/index.html
+shaped-intelligence/index.html
+sitemap.xml
+work-burden-shift/index.html
