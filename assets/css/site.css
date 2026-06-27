@@ -108,10 +108,12 @@ h1, h2, h3 {
   line-height: 1.16;
   letter-spacing: -.035em;
   margin: 0 0 .8rem;
+  text-wrap: balance;
 }
-h1 { font-size: clamp(2.25rem, 6vw, 5.2rem); max-width: 14.5ch; }
-.page h1 { font-size: clamp(2.15rem, 5vw, 4.35rem); max-width: 18ch; }
-.page h1.wide-title { max-width: 32ch; }
+h1 { font-size: clamp(2.25rem, 6vw, 5.2rem); max-width: min(100%, 22ch); }
+.page h1 { font-size: clamp(2.15rem, 5vw, 4.35rem); max-width: min(100%, 28ch); }
+.hero h1 { max-width: min(100%, 24ch); }
+.page h1.wide-title { max-width: min(100%, 34ch); }
 h2 { font-size: clamp(1.55rem, 3vw, 2.25rem); margin-top: 2.2rem; }
 h3 { font-size: 1.15rem; margin-top: 1.35rem; }
 p { margin: .55rem 0 1rem; }
