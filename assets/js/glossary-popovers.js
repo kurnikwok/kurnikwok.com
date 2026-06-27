@@ -1,16 +1,29 @@
 (() => {
   const path = normalisePath(window.location.pathname);
-  if (path === '/glossary/') return;
+  if (['/glossary/', '/faq/', '/sitemap/'].includes(path)) return;
 
   const main = document.querySelector('main');
   if (!main) return;
 
+  /*
+   * Popovers are intended as lightweight help in ordinary prose.
+   * Suppress them in components that already define, compare, route or
+   * explain glossary terms, so readers do not get definition-on-definition.
+   */
   const EXCLUDED_SELECTOR = [
     'a', 'button', 'input', 'textarea', 'select', 'option',
     'script', 'style', 'code', 'pre', 'kbd', 'samp',
-    'nav', 'header', 'footer', 'summary', 'details > summary',
-    'h1', 'h2', 'h3', 'h4', 'h5', 'h6', '.breadcrumbs',
-    '.eyebrow', '.badge'
+    'nav', 'header', 'footer',
+    'summary', 'details', 'details > summary',
+    'table', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td',
+    'dl', 'dt', 'dd',
+    'figure', 'figcaption',
+    'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+    '.breadcrumbs', '.eyebrow', '.badge',
+    '.sitemap-card', '.sitemap-grid', '.link-note',
+    '.figure-section', '.concept-diagram', '.figure-card', '.diagram-note',
+    '.actions',
+    '.no-glossary-popovers', '[data-no-glossary-popovers]'
   ].join(',');
 
   const popover = document.createElement('div');
