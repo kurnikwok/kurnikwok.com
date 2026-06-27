@@ -197,6 +197,7 @@ li + li { margin-top: .35rem; }
   border: 1px dashed var(--accent);
   background: color-mix(in srgb, var(--surface-strong) 68%, transparent);
 }
+.figure-section > p { max-width: 72rem; color: var(--muted); }
 .concept-diagram,
 .figure-card {
   margin: 1.25rem 0 0;
