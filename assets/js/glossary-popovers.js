@@ -9,7 +9,8 @@
     'a', 'button', 'input', 'textarea', 'select', 'option',
     'script', 'style', 'code', 'pre', 'kbd', 'samp',
     'nav', 'header', 'footer', 'summary', 'details > summary',
-    'h1', 'h2', 'h3', 'h4', 'h5', 'h6', '.breadcrumbs'
+    'h1', 'h2', 'h3', 'h4', 'h5', 'h6', '.breadcrumbs',
+    '.eyebrow', '.badge'
   ].join(',');
 
   const popover = document.createElement('div');
