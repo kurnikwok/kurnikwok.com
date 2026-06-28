@@ -107,9 +107,10 @@
       if (!found) break;
 
       if (found.start > cursor) frag.appendChild(document.createTextNode(text.slice(cursor, found.start)));
-      frag.appendChild(makeButton(found.term, text.slice(found.start, found.end)));
+      const punctuation = getAttachedPunctuation(text, found.end);
+      frag.appendChild(makeTermPhrase(found.term, text.slice(found.start, found.end), punctuation));
       used.add(found.term.id);
-      cursor = found.end;
+      cursor = found.end + punctuation.length;
       changed = true;
     }
 
@@ -141,6 +142,22 @@
     const match = regex.exec(text);
     if (!match) return null;
     return { index: match.index + match[1].length, text: match[2] };
+  }
+
+  function getAttachedPunctuation(text, index) {
+    const char = text.charAt(index);
+    return /^[,.;:!?]$/.test(char) ? char : '';
+  }
+
+  function makeTermPhrase(term, label, punctuation = '') {
+    const button = makeButton(term, label);
+    if (!punctuation) return button;
+
+    const span = document.createElement('span');
+    span.className = 'glossary-term-phrase';
+    span.appendChild(button);
+    span.appendChild(document.createTextNode(punctuation));
+    return span;
   }
 
   function makeButton(term, label) {

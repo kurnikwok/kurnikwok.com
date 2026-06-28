@@ -301,6 +301,9 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
 }
 
 /* Glossary popup treatment: first meaningful occurrence of glossary terms outside the glossary page. */
+.glossary-term-phrase {
+  white-space: nowrap;
+}
 .glossary-term {
   appearance: none;
   -webkit-appearance: none;
