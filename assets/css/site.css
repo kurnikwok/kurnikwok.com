@@ -306,6 +306,73 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   }
 }
 
+
+/* Cold-reader absorption aids: explanatory scaffolding without reducing the underlying content. */
+.reader-guide,
+.reader-note,
+.plain-example {
+  border: 1px solid color-mix(in srgb, var(--line) 78%, var(--accent-2) 22%);
+  background: color-mix(in srgb, var(--surface) 90%, var(--surface-strong) 10%);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+.reader-guide-intro > h2,
+.reader-note > h2,
+.plain-example > h2 { margin-top: 0; }
+.reader-guide-intro > p,
+.reader-note > p,
+.plain-example > p { max-width: 74rem; }
+.route-strip,
+.comparison-strip,
+.mini-steps,
+.checklist-grid {
+  display: grid;
+  gap: .8rem;
+  margin-top: 1rem;
+}
+.route-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.route-strip.compact { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.comparison-strip,
+.mini-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.mini-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.checklist-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.route-strip a,
+.comparison-strip div,
+.mini-steps div,
+.checklist-grid div {
+  display: block;
+  padding: .95rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) - 4px);
+  background: color-mix(in srgb, var(--surface-strong) 72%, transparent);
+  text-decoration: none;
+}
+.route-strip strong,
+.comparison-strip strong,
+.mini-steps strong {
+  display: block;
+  color: var(--accent);
+  margin-bottom: .2rem;
+}
+.route-strip span,
+.comparison-strip span,
+.mini-steps span {
+  display: block;
+  color: var(--muted);
+  line-height: 1.45;
+}
+.checklist-grid div {
+  color: var(--text);
+  font-weight: 650;
+}
+@media (max-width: 920px) {
+  .route-strip,
+  .route-strip.compact,
+  .comparison-strip,
+  .mini-steps,
+  .checklist-grid { grid-template-columns: 1fr; }
+}
+
 /* Glossary popup treatment: first meaningful occurrence of glossary terms outside the glossary page. */
 .glossary-term-phrase {
   white-space: nowrap;
