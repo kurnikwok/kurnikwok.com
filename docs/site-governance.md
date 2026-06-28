@@ -49,8 +49,8 @@ Each page should have one primary role.
 | `/project-managing-shaped-intelligence/` | Public evidence-instance overview |
 | `/operating-model-design/` | Operating-model context |
 | `/public-evaluation-map/` | Public route map and stop rules |
-| `/papers/` | Paper index and citation route |
-| `/papers/ai-shaping/` | Category paper landing page |
+| `/papers/` | Papers index and citation route |
+| `/papers/ai-shaping/` | Category definition paper landing page |
 | `/papers/ai-shaping-intelligence-in-practice/` | Capability evidence paper landing page |
 | `/faq/` | Question-and-answer support |
 | `/glossary/` | Term lookup |
@@ -74,11 +74,11 @@ Preferred pattern:
 
 Use consistent labels:
 
-| Use case | Preferred label |
+| Source or route | Preferred label |
 |---|---|
-| Category paper | Category definition paper |
-| Evidence paper | Capability evidence paper |
-| Paper index | Papers index |
+| Formal category source | Category definition paper |
+| Formal capability-evidence source | Capability evidence paper |
+| Papers index page | Papers index |
 | Public route | Public evaluation map |
 | Protected route | Protected-stage discussion |
 
