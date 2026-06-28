@@ -1,0 +1,249 @@
+# Site governance and house style
+
+This file records the public-safe rules for maintaining **kurnikwok.com** consistently over time.
+
+It is for website governance, editorial alignment and SEO harmonisation only. It must not contain protected implementation material.
+
+## 1. Core site architecture
+
+The site has three public roles:
+
+1. **Website pages** — reader entry, plain-language explanation, comparison, routing and bounded public evaluation.
+2. **Papers** — formal DOI-backed public sources for category definition and capability evidence.
+3. **Protected-stage route** — the boundary for any implementation-level discussion.
+
+The website must remain independently readable but not independently authoritative where a formal paper is the controlling public source.
+
+## 2. Formal source hierarchy
+
+Use this hierarchy when deciding where content belongs:
+
+| Content type | Primary location |
+|---|---|
+| Formal category definition | Category definition paper |
+| Formal capability evidence | Capability evidence paper |
+| Plain-language explanation | Website concept pages |
+| Adjacent-category comparison | Comparison page |
+| Evidence-instance overview | Project-managing shaped intelligence page |
+| Public evaluation route | Public evaluation map |
+| Term lookup | Glossary |
+| Reader support | FAQ |
+| Implementation-level boundary | Protected-stage discussion page |
+
+Website pages may summarise or route to papers, but should not become substitute papers.
+
+## 3. Canonical page roles
+
+Each page should have one primary role.
+
+| Page | Primary role |
+|---|---|
+| `/` | Brand and reader-entry route |
+| `/ai-shaping/` | Exact-term category definition page for AI shaping |
+| `/ai-shaping-in-5-minutes/` | Plain-English first read |
+| `/ai-shaping-vs-prompts-agents-automation/` | Adjacent-category comparison shortcut |
+| `/ai-shaping-intelligence/` | Reusable shaping capability concept |
+| `/shaped-intelligence/` | Domain-facing reusable capability concept |
+| `/productive-ai-work/` | Productive AI work outcome concept |
+| `/work-burden-shift/` | Mechanism and public evidence signal |
+| `/project-managing-shaped-intelligence/` | Public evidence-instance overview |
+| `/operating-model-design/` | Operating-model context |
+| `/public-evaluation-map/` | Public route map and stop rules |
+| `/papers/` | Paper index and citation route |
+| `/papers/ai-shaping/` | Category paper landing page |
+| `/papers/ai-shaping-intelligence-in-practice/` | Capability evidence paper landing page |
+| `/faq/` | Question-and-answer support |
+| `/glossary/` | Term lookup |
+| `/about/` | Author and development-context page |
+| `/protected-stage-discussion/` | Protected-stage boundary and contact route |
+| `/sitemap/` | Human-readable site map |
+
+Do not add a new page unless it answers a distinct reader intent.
+
+## 4. Paper-funnel rules
+
+The website should route readers to the papers without repeatedly pushing the same link on the same page.
+
+Preferred pattern:
+
+- One primary next step per page.
+- Up to three links in a `Read next` block.
+- Use internal paper landing pages for ordinary routing.
+- Concentrate DOI, PDF and citation details on the papers index and individual paper landing pages.
+- Keep the public evaluation map as the route for evidence/boundary readers.
+
+Use consistent labels:
+
+| Use case | Preferred label |
+|---|---|
+| Category paper | Category definition paper |
+| Evidence paper | Capability evidence paper |
+| Paper index | Papers index |
+| Public route | Public evaluation map |
+| Protected route | Protected-stage discussion |
+
+Avoid excessive same-page repetition of paper links, DOI links or public/protected boundary warnings.
+
+## 5. Boundary discipline
+
+Every page should preserve the public/protected boundary.
+
+Standard public boundary principle:
+
+> Public pages explain concepts, category distinctions, evidence routes and reader pathways only. They are not implementation guidance, deployment assurance, reproducibility proof, product-performance assurance, method transfer or commercial-use rights.
+
+Page-specific boundary labels:
+
+| Page type | Boundary emphasis |
+|---|---|
+| Concept pages | Public concept only |
+| Comparison page | Category comparison only |
+| Evidence overview | Public evidence-instance overview only |
+| Public evaluation map | Public evaluation route only |
+| Paper pages | Formal public source, not implementation guidance |
+| Protected-stage page | Implementation-level review requires agreed protections |
+
+Do not publish protected method details, including private prompts, control files, schemas, validation mechanics, route controls, continuity structures, private artefacts or implementation materials.
+
+## 6. Harmonisation principle
+
+Harmonisation is structural, not reductive.
+
+Do:
+
+- preserve all core arguments, terms, boundaries and claims;
+- move content to the page where it best serves the reader;
+- compress repeated material when it appears too many times on the same page;
+- make each page role clear;
+- keep terminology consistent.
+
+Do not:
+
+- remove a concept merely because it appears elsewhere;
+- create a second formal source outside the papers;
+- duplicate long paper arguments on website pages;
+- add sales claims, implementation claims or unsupported evidence claims.
+
+## 7. Core terminology
+
+Use these terms consistently:
+
+- AI shaping
+- AI-shaping intelligence
+- shaped intelligence
+- productive AI work
+- work burden
+- work-burden shift
+- project-managing shaped intelligence
+- public-stage material
+- protected-stage discussion
+
+Do not casually replace these with looser synonyms where precision matters.
+
+## 8. Writing style
+
+Use a clear, public-facing, precise style.
+
+Preferred tone:
+
+- direct;
+- bounded;
+- explanatory;
+- calm;
+- non-promotional;
+- concrete before abstract where possible.
+
+Avoid:
+
+- hype;
+- inflated claims;
+- unsupported superiority language;
+- unnecessary jargon;
+- repeating the same disclaimer multiple times on one page;
+- making the website sound like a product launch if the page is a category or evidence route.
+
+Use Australian English where relevant.
+
+## 9. Visual and layout conventions
+
+Keep the visual system simple and consistent:
+
+- responsive light/dark design;
+- readable line lengths;
+- clear section headings;
+- cards or tables only where they reduce reader effort;
+- no decorative complexity that distracts from the public route;
+- maintain accessibility basics such as readable contrast, useful link text and image `alt` text.
+
+Use tables for comparisons, route choices and boundary distinctions where they reduce cognitive load.
+
+## 10. SEO metadata conventions
+
+Each page should have a clear primary search intent.
+
+Title pattern:
+
+```text
+[Primary query] — [Page role] · [AI Shaping or Kurni Kwok]
+```
+
+Use **AI Shaping** as the suffix for category/concept/comparison pages. Use **Kurni Kwok** where authorship, paper identity or protected-stage contact is central.
+
+Each page should have:
+
+- one unique `<title>`;
+- one unique `<meta name="description">`;
+- one clear H1 aligned with the page role;
+- a self-referencing canonical URL;
+- Open Graph and Twitter metadata;
+- JSON-LD where useful;
+- inclusion in `sitemap.xml` unless there is a specific reason to exclude it.
+
+The `/ai-shaping/` page is the exact-term definition page for **AI shaping**. Other pages should support it rather than compete with it.
+
+## 11. Internal linking conventions
+
+Use descriptive anchor text.
+
+Preferred examples:
+
+- AI shaping category definition
+- AI shaping vs prompts, agents and automation
+- work-burden shift
+- project-managing shaped intelligence
+- Category definition paper
+- Capability evidence paper
+- Public evaluation map
+- Protected-stage discussion
+
+Avoid vague anchors such as “click here”, “read more” or “this page” where a descriptive link would help the reader and search engines.
+
+## 12. Future-page checklist
+
+Before creating a new page, check:
+
+- What distinct reader question does this page answer?
+- Which existing page is the canonical source for the concept?
+- Which paper, if any, is the formal source?
+- What is the page’s primary SEO intent?
+- What is the single primary next step?
+- Does the page preserve the public/protected boundary?
+- Is any repeated content necessary for reader orientation, or should it link back instead?
+- Does the page avoid protected implementation detail?
+
+## 13. Public repository caution
+
+The repository is public. Treat everything committed here as publicly disclosed.
+
+Do not commit:
+
+- protected method details;
+- private prompts;
+- internal control files;
+- schemas or validation mechanics;
+- private source material;
+- confidential business material;
+- unpublished implementation artefacts;
+- credentials, tokens or private contact data.
+
+If a future development note would reveal protected method detail, keep it out of this repository.
