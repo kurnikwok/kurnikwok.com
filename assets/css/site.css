@@ -38,7 +38,11 @@
   }
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7.5rem;
+}
+[id] { scroll-margin-top: 7.5rem; }
 body {
   margin: 0;
   background:
@@ -261,6 +265,8 @@ details {
 details + details { margin-top: .8rem; }
 summary { cursor: pointer; font-weight: 800; color: var(--accent); }
 @media (max-width: 820px) {
+  html { scroll-padding-top: 9rem; }
+  [id] { scroll-margin-top: 9rem; }
   header.site-header { padding: .55rem 0; }
   .topbar {
     align-items: flex-start;
