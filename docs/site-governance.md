@@ -124,7 +124,23 @@ Do not:
 - duplicate long paper arguments on website pages;
 - add sales claims, implementation claims or unsupported evidence claims.
 
-## 7. Core terminology
+## 7. Coherence QA
+
+Before publishing site updates, run a coherence pass across changed pages and high-traffic pages.
+
+Check that:
+
+- headings match the content below them;
+- numbered, quantified or scope-setting labels remain accurate;
+- page roles are preserved;
+- terminology follows the canonical terms in this guide;
+- public/protected boundary language remains intact;
+- paper-routing links remain clear without becoming repetitive;
+- metadata, H1s and internal links support the page's primary role.
+
+This pass is normative and structural, not reductive. Do not force paragraph merging, argument deletion or concept compression merely to satisfy a heading or shorten a page. If the content structure is better as multiple paragraphs, update the heading instead.
+
+## 8. Core terminology
 
 Use these terms consistently:
 
@@ -140,7 +156,7 @@ Use these terms consistently:
 
 Do not casually replace these with looser synonyms where precision matters.
 
-## 8. Writing style
+## 9. Writing style
 
 Use a clear, public-facing, precise style.
 
@@ -164,7 +180,7 @@ Avoid:
 
 Use Australian English where relevant.
 
-## 9. Visual and layout conventions
+## 10. Visual and layout conventions
 
 Keep the visual system simple and consistent:
 
@@ -177,7 +193,7 @@ Keep the visual system simple and consistent:
 
 Use tables for comparisons, route choices and boundary distinctions where they reduce cognitive load.
 
-## 10. SEO metadata conventions
+## 11. SEO metadata conventions
 
 Each page should have a clear primary search intent.
 
@@ -201,7 +217,7 @@ Each page should have:
 
 The `/ai-shaping/` page is the exact-term definition page for **AI shaping**. Other pages should support it rather than compete with it.
 
-## 11. Internal linking conventions
+## 12. Internal linking conventions
 
 Use descriptive anchor text.
 
@@ -218,7 +234,7 @@ Preferred examples:
 
 Avoid vague anchors such as “click here”, “read more” or “this page” where a descriptive link would help the reader and search engines.
 
-## 12. Future-page checklist
+## 13. Future-page checklist
 
 Before creating a new page, check:
 
@@ -229,9 +245,10 @@ Before creating a new page, check:
 - What is the single primary next step?
 - Does the page preserve the public/protected boundary?
 - Is any repeated content necessary for reader orientation, or should it link back instead?
+- Do headings, labels and numbered claims match the content below them?
 - Does the page avoid protected implementation detail?
 
-## 13. Public repository caution
+## 14. Public repository caution
 
 The repository is public. Treat everything committed here as publicly disclosed.
 
