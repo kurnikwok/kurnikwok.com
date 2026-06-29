@@ -512,3 +512,45 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
 .glossary-popover a {
   font-weight: 720;
 }
+
+
+/* Harmonised reader-layer refinements: preserve claim precision while reducing repeated explanation. */
+.layer-map,
+.canonical-note,
+.public-stage-note {
+  border: 1px solid color-mix(in srgb, var(--line) 74%, var(--accent-2) 26%);
+  background: color-mix(in srgb, var(--surface) 90%, var(--surface-strong) 10%);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+.layer-map > h2,
+.canonical-note > h2,
+.public-stage-note > h2 { margin-top: 0; }
+.layer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .85rem;
+  margin-top: 1rem;
+}
+.layer-grid div {
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) - 4px);
+  background: color-mix(in srgb, var(--surface-strong) 70%, transparent);
+  padding: .95rem 1rem;
+}
+.layer-grid strong {
+  display: block;
+  color: var(--accent);
+  margin-bottom: .25rem;
+}
+.layer-grid span {
+  display: block;
+  color: var(--muted);
+  line-height: 1.45;
+}
+.public-stage-note {
+  border-style: dashed;
+}
+@media (max-width: 920px) {
+  .layer-grid { grid-template-columns: 1fr; }
+}

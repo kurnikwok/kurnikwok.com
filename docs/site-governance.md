@@ -2,69 +2,100 @@
 
 This file records the public-safe rules for maintaining **kurnikwok.com** consistently over time.
 
-It is for website governance, editorial alignment and SEO harmonisation only. It must not contain protected implementation material.
+It is for website governance, editorial alignment, SEO harmonisation and public-stage boundary discipline only. It must not contain protected implementation material.
 
-## 1. Core site architecture
+## 1. Core principle
 
-The site has three public roles:
+The site is a **guided reader layer**, not a second set of papers.
 
-1. **Website pages** — reader entry, plain-language explanation, comparison, routing and bounded public evaluation.
-2. **Papers** — formal DOI-backed public sources for category definition and capability evidence.
-3. **Protected-stage route** — the boundary for any implementation-level discussion.
+Use this rule:
 
-The website must remain independently readable but not independently authoritative where a formal paper is the controlling public source.
+> Say the formal claim once in the right canonical place, then route readers to it. Do not make every page carry the whole claim stack.
 
-## 2. Formal source hierarchy
+The website may simplify the reader journey, but it must not simplify the claim into something weaker, broader or more implementation-like.
 
-Use this hierarchy when deciding where content belongs:
+## 2. Layered site architecture
 
-| Content type | Primary location |
+| Layer | Primary role |
 |---|---|
-| Formal category definition | Category definition paper |
-| Formal capability evidence | Capability evidence paper |
-| Plain-language explanation | Website concept pages |
-| Adjacent-category comparison | Comparison page |
-| Evidence-instance overview | Project-managing shaped intelligence page |
-| Public evaluation route | Public evaluation map |
-| Term lookup | Glossary |
-| Reader support | FAQ |
-| Implementation-level boundary | Protected-stage discussion page |
+| Homepage and `/ai-shaping-in-5-minutes/` | Fast orientation and cold-reader bridge. |
+| Concept pages | One concept per page; plain explanation first, formal route second. |
+| `/ai-shaping-vs-prompts-agents-automation/` | Adjacent-category comparison shortcut. |
+| `/faq/` | Repeated objections, route anxiety and boundary questions. |
+| `/glossary/` | Canonical term definitions and short public wording. |
+| `/project-managing-shaped-intelligence/` | Public evidence-instance overview. |
+| `/public-evaluation-map/` | Public-stage evidence route and stop rules. |
+| `/papers/` and paper landing pages | DOI-backed formal-source route. |
+| `/protected-stage-discussion/` | Canonical public/protected boundary and contact route. |
+| `docs/` and `README.md` | Repository maintenance discipline. |
 
-Website pages may summarise or route to papers, but should not become substitute papers.
+## 3. Formal source hierarchy
 
-## 3. Canonical page roles
+| Content type | Controlling source |
+|---|---|
+| Formal category definition | Category definition paper. |
+| Formal capability evidence | Capability evidence paper. |
+| Canonical short definitions | Glossary. |
+| Public/protected stop rule | Protected-stage discussion page. |
+| Plain-language orientation | Homepage and start page. |
+| Adjacent-category comparison | Comparison page. |
+| Evidence route | Public evaluation map. |
+| Repository maintenance discipline | This file and README. |
 
-Each page should have one primary role.
+Website pages may summarise and route. They must not become substitute papers or add claims beyond the published public papers.
+
+## 4. Page-role discipline
+
+Each page should answer one primary reader question.
+
+Recommended page pattern:
+
+1. **Plain answer** — answer the page’s reader question without forcing the full concept stack.
+2. **Reader test, example or contrast** — use a checklist, example or table to reduce abstraction.
+3. **Formal route** — link to the canonical concept, paper, glossary or protected-stage page.
+4. **Short public-stage note** — preserve the boundary without repeating the full legal/protected frame unnecessarily.
+
+Do not add a new page unless it answers a distinct reader intent that is not already better served by FAQ, glossary or an existing concept page.
+
+## 5. Canonical page roles
 
 | Page | Primary role |
 |---|---|
-| `/` | Brand and reader-entry route |
-| `/ai-shaping/` | Exact-term category definition page for AI shaping |
-| `/ai-shaping-in-5-minutes/` | Plain-English first read |
-| `/ai-shaping-vs-prompts-agents-automation/` | Adjacent-category comparison shortcut |
-| `/ai-shaping-intelligence/` | Reusable shaping capability concept |
-| `/shaped-intelligence/` | Domain-facing reusable capability concept |
-| `/productive-ai-work/` | Productive AI work outcome concept |
-| `/work-burden-shift/` | Mechanism and public evidence signal |
-| `/project-managing-shaped-intelligence/` | Public evidence-instance overview |
-| `/operating-model-design/` | Operating-model context |
-| `/public-evaluation-map/` | Public route map and stop rules |
-| `/papers/` | Papers index and citation route |
-| `/papers/ai-shaping/` | Category definition paper landing page |
-| `/papers/ai-shaping-intelligence-in-practice/` | Capability evidence paper landing page |
-| `/faq/` | Question-and-answer support |
-| `/glossary/` | Term lookup |
-| `/about/` | Author and development-context page |
-| `/protected-stage-discussion/` | Protected-stage boundary and the only routine direct-email route |
-| `/sitemap/` | Human-readable site map |
+| `/` | Brand and reader-entry route. |
+| `/ai-shaping-in-5-minutes/` | Plain-English first read. |
+| `/ai-shaping/` | Exact-term category definition page for AI shaping. |
+| `/ai-shaping-vs-prompts-agents-automation/` | Adjacent-category comparison shortcut. |
+| `/ai-shaping-intelligence/` | Reusable shaping capability concept. |
+| `/shaped-intelligence/` | Domain-facing reusable capability concept. |
+| `/productive-ai-work/` | Productive AI work outcome concept. |
+| `/work-burden-shift/` | Mechanism and public evidence signal. |
+| `/project-managing-shaped-intelligence/` | Public evidence-instance overview. |
+| `/operating-model-design/` | Operating-model context. |
+| `/public-evaluation-map/` | Public route map and stop rules. |
+| `/papers/` | Papers index and citation route. |
+| `/papers/ai-shaping/` | Category definition paper landing page. |
+| `/papers/ai-shaping-intelligence-in-practice/` | Capability evidence paper landing page. |
+| `/faq/` | Question-and-answer support. |
+| `/glossary/` | Term lookup and canonical short definitions. |
+| `/about/` | Author and development-context page. |
+| `/protected-stage-discussion/` | Protected-stage boundary and the only routine direct-email route. |
+| `/sitemap/` | Human-readable site map. |
 
-Do not add a new page unless it answers a distinct reader intent.
+## 6. Public/protected boundary discipline
 
-## 4. Contact and protected-stage route rules
+Standard public-stage principle:
+
+> Public pages support category understanding, public-stage capability evaluation or reader routing only. They are not implementation guidance, deployment assurance, reproducibility proof, product-performance assurance, method transfer or commercial-use rights.
+
+Use the short note on ordinary concept and routing pages. Use the full boundary on the protected-stage page, public evaluation map and relevant paper pages.
+
+Do not publish protected method details, including private prompts, control files, schemas, validation mechanics, route controls, continuity structures, private artefacts or implementation materials.
+
+## 7. Contact and protected-stage route rules
 
 The public website is category-first, not personal-sales-first. Direct email should not appear as a routine global footer item or general public-page CTA.
 
-Public pages should normally route implementation-level enquiries to the **Protected-stage discussion** page rather than directly to email. This keeps the reader sequence clear: category understanding, public evidence review, public/protected boundary, then protected-stage discussion where appropriate.
+Public pages should normally route implementation-level enquiries to **Protected-stage discussion** rather than directly to email. This keeps the reader sequence clear: category understanding, public evidence review, public/protected boundary, then protected-stage discussion where appropriate.
 
 Direct email may appear only in limited contexts:
 
@@ -72,11 +103,7 @@ Direct email may appear only in limited contexts:
 - in formal published artefacts where author/contact metadata is part of the publication record;
 - in exceptional maintenance, legal or administrative contexts where direct contact is necessary.
 
-Use **Protected-stage discussion** as the preferred implementation-level CTA outside the protected-stage page. Avoid routine public-page CTAs such as “email”, “contact”, “get in touch” or visible email-address buttons.
-
-## 5. Paper-funnel rules
-
-The website should route readers to the papers without repeatedly pushing the same link on the same page.
+## 8. Paper-funnel rules
 
 Preferred pattern:
 
@@ -90,45 +117,26 @@ Use consistent labels:
 
 | Source or route | Preferred label |
 |---|---|
-| Formal category source | Category definition paper |
-| Formal capability-evidence source | Capability evidence paper |
-| Papers index page | Papers index |
-| Public route | Public evaluation map |
-| Protected route | Protected-stage discussion |
+| Formal category source | Category definition paper. |
+| Formal capability-evidence source | Capability evidence paper. |
+| Papers index page | Papers index. |
+| Public route | Public evaluation map. |
+| Protected route | Protected-stage discussion. |
 
 Avoid excessive same-page repetition of paper links, DOI links or public/protected boundary warnings.
 
-## 6. Boundary discipline
-
-Every page should preserve the public/protected boundary.
-
-Standard public boundary principle:
-
-> Public pages explain concepts, category distinctions, evidence routes and reader pathways only. They are not implementation guidance, deployment assurance, reproducibility proof, product-performance assurance, method transfer or commercial-use rights.
-
-Page-specific boundary labels:
-
-| Page type | Boundary emphasis |
-|---|---|
-| Concept pages | Public concept only |
-| Comparison page | Category comparison only |
-| Evidence overview | Public evidence-instance overview only |
-| Public evaluation map | Public evaluation route only |
-| Paper pages | Formal public source, not implementation guidance |
-| Protected-stage page | Implementation-level review requires agreed protections |
-
-Do not publish protected method details, including private prompts, control files, schemas, validation mechanics, route controls, continuity structures, private artefacts or implementation materials.
-
-## 7. Harmonisation principle
+## 9. Harmonisation principle
 
 Harmonisation is structural, not reductive.
 
 Do:
 
 - preserve all core arguments, terms, boundaries and claims;
-- move content to the page where it best serves the reader;
-- compress repeated material when it appears too many times on the same page;
-- make each page role clear;
+- keep the papers as the formal public record;
+- use the glossary for repeated definitions;
+- use the protected-stage page for the full boundary;
+- make each web page answer one reader question;
+- replace repeated theory with public-safe examples or route links where that improves comprehension;
 - keep terminology consistent.
 
 Do not:
@@ -136,25 +144,27 @@ Do not:
 - remove a concept merely because it appears elsewhere;
 - create a second formal source outside the papers;
 - duplicate long paper arguments on website pages;
-- add sales claims, implementation claims or unsupported evidence claims.
+- add sales claims, implementation claims or unsupported evidence claims;
+- make web simplification sound like “AI shaping is just better prompting”.
 
-## 8. Coherence QA
+## 10. Coherence QA
 
 Before publishing site updates, run a coherence pass across changed pages and high-traffic pages.
 
 Check that:
 
 - headings match the content below them;
-- numbered, quantified or scope-setting labels remain accurate;
 - page roles are preserved;
-- terminology follows the canonical terms in this guide;
+- each page has one primary reader question;
+- terminology follows the glossary and paper wording;
 - public/protected boundary language remains intact;
 - paper-routing links remain clear without becoming repetitive;
-- metadata, H1s and internal links support the page's primary role.
+- metadata, H1s and internal links support the page's primary role;
+- no public page exceeds the published paper claims.
 
-This pass is normative and structural, not reductive. Do not force paragraph merging, argument deletion or concept compression merely to satisfy a heading or shorten a page. If the content structure is better as multiple paragraphs, update the heading instead.
+This pass is normative and structural, not reductive. Do not force paragraph merging, argument deletion or concept compression merely to shorten a page. If content structure is better as multiple paragraphs, update the heading or route instead.
 
-## 9. Core terminology
+## 11. Core terminology
 
 Use these terms consistently:
 
@@ -170,7 +180,7 @@ Use these terms consistently:
 
 Do not casually replace these with looser synonyms where precision matters.
 
-## 10. Writing style
+## 12. Writing style
 
 Use a clear, public-facing, precise style.
 
@@ -194,47 +204,28 @@ Avoid:
 
 Use Australian English where relevant.
 
-## 11. Visual and layout conventions
+## 13. Visual and layout conventions
 
-Use one shared design system across the site, with different intensity by page type. The homepage may be more visually directive; concept, evidence, paper and reference pages should remain calmer and more text-led.
-
-Keep the visual system simple and consistent:
-
-- responsive light/dark design;
-- readable line lengths;
-- clear section headings;
-- consistent badges, cards, buttons, callouts and boundary boxes;
-- no decorative complexity that distracts from the public route;
-- maintain accessibility basics such as readable contrast, useful link text, focus states and image `alt` text.
-
-Use cards for reader routing on web pages where route choice is the main task. Use tables for dense comparisons, formal boundary distinctions and paper-like material where row/column comparison reduces cognitive load.
-
-Site-wide label rule: when linking to `/protected-stage-discussion/` in navigation, footers or route cards, use **Protected-stage discussion** rather than the clipped label **Protected-stage**.
-
-Footer contact rule: do not include direct email in the routine global footer. Use the footer for navigation to category, paper, evidence and protected-stage routes.
-
-Preferred visual hierarchy:
-
-| Element | Use |
-|---|---|
-| Primary button | Best first click for the current page |
-| Secondary button | Important supporting reader path |
-| Contact/protected-stage button | Link to the Protected-stage discussion page outside that page; direct email only on the protected-stage page |
-| Badge | Page role, route type or evidence boundary label |
-| Card | Skimmable reader choice or distinct concept block |
-| Boundary/callout box | Public-stage limit, stop rule or non-implementation warning |
+Use one shared design system across the site.
 
 Preferred page-template intensity:
 
 | Page type | Treatment |
 |---|---|
-| Homepage | Strong hero, clear CTA hierarchy, route cards and prominent compact concept stack |
-| Concept pages | Consistent page-role intro, plain explanation, then fuller concept detail |
-| Evidence/boundary pages | Strong public-stage role, stop rule and protected-stage boundary treatment |
-| Paper pages | Formal source framing, citation route and limited summary |
-| Reference pages | Simple lookup structure, compact headings and restrained cards |
+| Homepage | Strong hero, clear CTA hierarchy, route cards and compact concept stack. |
+| Start page | Plain example, direct reader route and minimal terminology. |
+| Concept pages | Page-role intro, plain answer, example/contrast, formal route. |
+| Evidence/boundary pages | Strong public-stage role, stop rule and protected-stage boundary treatment. |
+| Paper pages | Formal source framing, citation route and limited summary. |
+| Reference pages | Simple lookup structure, compact headings and restrained cards. |
 
-## 12. SEO metadata conventions
+Use cards for reader routing. Use tables for dense comparison, formal boundaries and route decisions. Use examples where they reduce abstraction without creating implementation guidance.
+
+Site-wide label rule: when linking to `/protected-stage-discussion/`, use **Protected-stage discussion** rather than the clipped label **Protected-stage**.
+
+Footer contact rule: do not include direct email in the routine global footer. Use the footer for navigation to category, paper, evidence and protected-stage routes.
+
+## 14. SEO metadata conventions
 
 Each page should have a clear primary search intent.
 
@@ -258,7 +249,7 @@ Each page should have:
 
 The `/ai-shaping/` page is the exact-term definition page for **AI shaping**. Other pages should support it rather than compete with it.
 
-## 13. Internal linking conventions
+## 15. Internal linking conventions
 
 Use descriptive anchor text.
 
@@ -275,7 +266,7 @@ Preferred examples:
 
 Avoid vague anchors such as “click here”, “read more” or “this page” where a descriptive link would help the reader and search engines.
 
-## 14. Future-page checklist
+## 16. Future-page checklist
 
 Before creating a new page, check:
 
@@ -289,7 +280,7 @@ Before creating a new page, check:
 - Do headings, labels and numbered claims match the content below them?
 - Does the page avoid protected implementation detail?
 
-## 15. Public repository caution
+## 17. Public repository caution
 
 The repository is public. Treat everything committed here as publicly disclosed.
 
