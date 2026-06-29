@@ -51,7 +51,8 @@ Recommended update order:
 2. Update canonical sources first: glossary for definitions, protected-stage page for boundary wording, papers pages for formal-source routing.
 3. Update individual public pages only for their primary reader question.
 4. Check sitemap, navigation, metadata, internal links and boundary language.
-5. Do a final public-repository caution check before committing.
+5. Check reference-page polish: glossary duplicates, FAQ grouping, repeated labels and route clarity.
+6. Do a final public-repository caution check before committing.
 
 ## Repository guide
 

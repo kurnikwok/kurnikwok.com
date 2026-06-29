@@ -554,3 +554,9 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
 @media (max-width: 920px) {
   .layer-grid { grid-template-columns: 1fr; }
 }
+/* Reference-page polish: grouped glossary and FAQ sections. */
+.glossary-group h2,
+.faq-group h2 { margin-top: 0; }
+.glossary-group dl { gap: .9rem; }
+.faq-group details:first-of-type { margin-top: .35rem; }
+.faq-group details + details { margin-top: .8rem; }

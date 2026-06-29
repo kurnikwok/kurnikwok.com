@@ -160,6 +160,8 @@ Check that:
 - public/protected boundary language remains intact;
 - paper-routing links remain clear without becoming repetitive;
 - metadata, H1s and internal links support the page's primary role;
+- reference pages avoid accidental duplicate entries or near-duplicate labels;
+- FAQ and glossary material is grouped by reader task where grouping improves scanability;
 - no public page exceeds the published paper claims.
 
 This pass is normative and structural, not reductive. Do not force paragraph merging, argument deletion or concept compression merely to shorten a page. If content structure is better as multiple paragraphs, update the heading or route instead.
