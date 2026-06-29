@@ -182,16 +182,41 @@ Use Australian English where relevant.
 
 ## 10. Visual and layout conventions
 
+Use one shared design system across the site, with different intensity by page type. The homepage may be more visually directive; concept, evidence, paper and reference pages should remain calmer and more text-led.
+
 Keep the visual system simple and consistent:
 
 - responsive light/dark design;
 - readable line lengths;
 - clear section headings;
-- cards or tables only where they reduce reader effort;
+- consistent badges, cards, buttons, callouts and boundary boxes;
 - no decorative complexity that distracts from the public route;
-- maintain accessibility basics such as readable contrast, useful link text and image `alt` text.
+- maintain accessibility basics such as readable contrast, useful link text, focus states and image `alt` text.
 
-Use tables for comparisons, route choices and boundary distinctions where they reduce cognitive load.
+Use cards for reader routing on web pages where route choice is the main task. Use tables for dense comparisons, formal boundary distinctions and paper-like material where row/column comparison reduces cognitive load.
+
+Site-wide label rule: when linking to `/protected-stage-discussion/` in navigation, footers or route cards, use **Protected-stage discussion** rather than the clipped label **Protected-stage**.
+
+Preferred visual hierarchy:
+
+| Element | Use |
+|---|---|
+| Primary button | Best first click for the current page |
+| Secondary button | Important supporting reader path |
+| Contact/protected-stage button | Implementation-level or serious follow-up route |
+| Badge | Page role, route type or evidence boundary label |
+| Card | Skimmable reader choice or distinct concept block |
+| Boundary/callout box | Public-stage limit, stop rule or non-implementation warning |
+
+Preferred page-template intensity:
+
+| Page type | Treatment |
+|---|---|
+| Homepage | Strong hero, clear CTA hierarchy, route cards and prominent compact concept stack |
+| Concept pages | Consistent page-role intro, plain explanation, then fuller concept detail |
+| Evidence/boundary pages | Strong public-stage role, stop rule and protected-stage boundary treatment |
+| Paper pages | Formal source framing, citation route and limited summary |
+| Reference pages | Simple lookup structure, compact headings and restrained cards |
 
 ## 11. SEO metadata conventions
 

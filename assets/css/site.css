@@ -54,6 +54,11 @@ body {
 }
 a { color: var(--link); text-decoration-thickness: .08em; text-underline-offset: .18em; }
 a:hover { text-decoration-thickness: .14em; }
+a:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 64%, transparent);
+  outline-offset: .18rem;
+  border-radius: .3rem;
+}
 header.site-header {
   position: sticky;
   top: 0;
@@ -126,6 +131,7 @@ p { margin: .55rem 0 1rem; }
 .button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: .45rem;
   padding: .76rem 1rem;
   border: 1px solid var(--line);
@@ -133,12 +139,27 @@ p { margin: .55rem 0 1rem; }
   background: var(--surface);
   color: var(--text);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 720;
+  box-shadow: 0 10px 24px rgba(49, 31, 16, .08);
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease, background .16s ease;
+}
+.button:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--line) 58%, var(--accent) 42%);
+  box-shadow: 0 14px 30px rgba(49, 31, 16, .13);
+  text-decoration: none;
 }
 .button.primary {
   background: var(--accent);
   color: var(--bg);
   border-color: color-mix(in srgb, var(--accent), black 15%);
+}
+.button.secondary {
+  background: color-mix(in srgb, var(--surface) 80%, var(--surface-strong) 20%);
+}
+.button.contact {
+  border-style: dashed;
+  background: color-mix(in srgb, var(--surface-strong) 74%, transparent);
 }
 .grid { display: grid; gap: 1rem; }
 .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -154,6 +175,49 @@ p { margin: .55rem 0 1rem; }
 .table-block > h2 { margin-bottom: .55rem; }
 .table-block > p { max-width: 72rem; color: var(--muted); }
 .table-block table { margin-top: .85rem; }
+.route-cards-block > p {
+  max-width: 72rem;
+  color: var(--muted);
+}
+.route-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .9rem;
+  margin-top: 1rem;
+}
+.route-card {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--surface) 88%, var(--surface-strong) 12%);
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: 0 10px 26px rgba(49, 31, 16, .06);
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+.route-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--line) 54%, var(--accent) 46%);
+  box-shadow: 0 16px 34px rgba(49, 31, 16, .12);
+  text-decoration: none;
+}
+.route-card .badge {
+  margin-bottom: .75rem;
+}
+.route-card h3 {
+  margin-top: 0;
+  margin-bottom: .45rem;
+  color: var(--accent);
+}
+.route-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
 .sitemap-grid { align-items: stretch; }
 .sitemap-card ul { list-style: none; padding-left: 0; margin: .75rem 0 0; }
 .sitemap-card li { margin: 0; padding: .75rem 0; border-top: 1px solid var(--line); }
@@ -202,6 +266,19 @@ li + li { margin-top: .35rem; }
   background: color-mix(in srgb, var(--surface-strong) 68%, transparent);
 }
 .figure-section > p { max-width: 72rem; color: var(--muted); }
+.concept-stack-panel {
+  padding: 1.35rem;
+  border: 1px solid color-mix(in srgb, var(--line) 70%, var(--accent-2) 30%);
+  border-radius: calc(var(--radius) + 4px);
+  background: color-mix(in srgb, var(--surface) 88%, var(--surface-strong) 12%);
+}
+.concept-stack-panel h2 {
+  margin-top: 0;
+}
+.concept-stack-panel .figure-card {
+  background: color-mix(in srgb, var(--surface-strong) 55%, var(--surface) 45%);
+}
+
 .concept-diagram,
 .figure-card {
   margin: 1.25rem 0 0;
@@ -365,12 +442,16 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   color: var(--text);
   font-weight: 650;
 }
+@media (max-width: 1040px) {
+  .route-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 @media (max-width: 920px) {
   .route-strip,
   .route-strip.compact,
   .comparison-strip,
   .mini-steps,
-  .checklist-grid { grid-template-columns: 1fr; }
+  .checklist-grid,
+  .route-card-grid { grid-template-columns: 1fr; }
 }
 
 /* Glossary popup treatment: first meaningful occurrence of glossary terms outside the glossary page. */

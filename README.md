@@ -44,7 +44,7 @@ Before adding or changing pages, read:
 docs/site-governance.md
 ```
 
-That file sets the public-safe house style for page roles, paper routing, SEO metadata, internal links, writing tone, visual style and harmonisation expectations.
+That file sets the public-safe house style for page roles, paper routing, SEO metadata, internal links, writing tone, visual style, footer labels, CTA hierarchy, cards, callouts and harmonisation expectations.
 
 ## Deployment
 
