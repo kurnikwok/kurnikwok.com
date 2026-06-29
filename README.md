@@ -19,6 +19,8 @@ Public website pages may explain concepts, route readers, summarise public evide
 
 Implementation-level discussion belongs only in a protected-stage process with agreed purpose, confidentiality, ownership, scope and permitted use.
 
+Direct email exposure is intentionally limited. Public pages should route implementation-level enquiries through the protected-stage discussion page rather than repeating the email address across the site.
+
 ## Repository guide
 
 Key files and folders:

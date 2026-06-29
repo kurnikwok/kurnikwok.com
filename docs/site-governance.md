@@ -55,12 +55,26 @@ Each page should have one primary role.
 | `/faq/` | Question-and-answer support |
 | `/glossary/` | Term lookup |
 | `/about/` | Author and development-context page |
-| `/protected-stage-discussion/` | Protected-stage boundary and contact route |
+| `/protected-stage-discussion/` | Protected-stage boundary and the only routine direct-email route |
 | `/sitemap/` | Human-readable site map |
 
 Do not add a new page unless it answers a distinct reader intent.
 
-## 4. Paper-funnel rules
+## 4. Contact and protected-stage route rules
+
+The public website is category-first, not personal-sales-first. Direct email should not appear as a routine global footer item or general public-page CTA.
+
+Public pages should normally route implementation-level enquiries to the **Protected-stage discussion** page rather than directly to email. This keeps the reader sequence clear: category understanding, public evidence review, public/protected boundary, then protected-stage discussion where appropriate.
+
+Direct email may appear only in limited contexts:
+
+- on the **Protected-stage discussion** page;
+- in formal published artefacts where author/contact metadata is part of the publication record;
+- in exceptional maintenance, legal or administrative contexts where direct contact is necessary.
+
+Use **Protected-stage discussion** as the preferred implementation-level CTA outside the protected-stage page. Avoid routine public-page CTAs such as “email”, “contact”, “get in touch” or visible email-address buttons.
+
+## 5. Paper-funnel rules
 
 The website should route readers to the papers without repeatedly pushing the same link on the same page.
 
@@ -84,7 +98,7 @@ Use consistent labels:
 
 Avoid excessive same-page repetition of paper links, DOI links or public/protected boundary warnings.
 
-## 5. Boundary discipline
+## 6. Boundary discipline
 
 Every page should preserve the public/protected boundary.
 
@@ -105,7 +119,7 @@ Page-specific boundary labels:
 
 Do not publish protected method details, including private prompts, control files, schemas, validation mechanics, route controls, continuity structures, private artefacts or implementation materials.
 
-## 6. Harmonisation principle
+## 7. Harmonisation principle
 
 Harmonisation is structural, not reductive.
 
@@ -124,7 +138,7 @@ Do not:
 - duplicate long paper arguments on website pages;
 - add sales claims, implementation claims or unsupported evidence claims.
 
-## 7. Coherence QA
+## 8. Coherence QA
 
 Before publishing site updates, run a coherence pass across changed pages and high-traffic pages.
 
@@ -140,7 +154,7 @@ Check that:
 
 This pass is normative and structural, not reductive. Do not force paragraph merging, argument deletion or concept compression merely to satisfy a heading or shorten a page. If the content structure is better as multiple paragraphs, update the heading instead.
 
-## 8. Core terminology
+## 9. Core terminology
 
 Use these terms consistently:
 
@@ -156,7 +170,7 @@ Use these terms consistently:
 
 Do not casually replace these with looser synonyms where precision matters.
 
-## 9. Writing style
+## 10. Writing style
 
 Use a clear, public-facing, precise style.
 
@@ -180,7 +194,7 @@ Avoid:
 
 Use Australian English where relevant.
 
-## 10. Visual and layout conventions
+## 11. Visual and layout conventions
 
 Use one shared design system across the site, with different intensity by page type. The homepage may be more visually directive; concept, evidence, paper and reference pages should remain calmer and more text-led.
 
@@ -197,13 +211,15 @@ Use cards for reader routing on web pages where route choice is the main task. U
 
 Site-wide label rule: when linking to `/protected-stage-discussion/` in navigation, footers or route cards, use **Protected-stage discussion** rather than the clipped label **Protected-stage**.
 
+Footer contact rule: do not include direct email in the routine global footer. Use the footer for navigation to category, paper, evidence and protected-stage routes.
+
 Preferred visual hierarchy:
 
 | Element | Use |
 |---|---|
 | Primary button | Best first click for the current page |
 | Secondary button | Important supporting reader path |
-| Contact/protected-stage button | Implementation-level or serious follow-up route |
+| Contact/protected-stage button | Link to the Protected-stage discussion page outside that page; direct email only on the protected-stage page |
 | Badge | Page role, route type or evidence boundary label |
 | Card | Skimmable reader choice or distinct concept block |
 | Boundary/callout box | Public-stage limit, stop rule or non-implementation warning |
@@ -218,7 +234,7 @@ Preferred page-template intensity:
 | Paper pages | Formal source framing, citation route and limited summary |
 | Reference pages | Simple lookup structure, compact headings and restrained cards |
 
-## 11. SEO metadata conventions
+## 12. SEO metadata conventions
 
 Each page should have a clear primary search intent.
 
@@ -242,7 +258,7 @@ Each page should have:
 
 The `/ai-shaping/` page is the exact-term definition page for **AI shaping**. Other pages should support it rather than compete with it.
 
-## 12. Internal linking conventions
+## 13. Internal linking conventions
 
 Use descriptive anchor text.
 
@@ -259,7 +275,7 @@ Preferred examples:
 
 Avoid vague anchors such as “click here”, “read more” or “this page” where a descriptive link would help the reader and search engines.
 
-## 13. Future-page checklist
+## 14. Future-page checklist
 
 Before creating a new page, check:
 
@@ -273,7 +289,7 @@ Before creating a new page, check:
 - Do headings, labels and numbered claims match the content below them?
 - Does the page avoid protected implementation detail?
 
-## 14. Public repository caution
+## 15. Public repository caution
 
 The repository is public. Treat everything committed here as publicly disclosed.
 
