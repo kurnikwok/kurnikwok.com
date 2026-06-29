@@ -548,6 +548,9 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   color: var(--muted);
   line-height: 1.45;
 }
+.layer-grid span a {
+  font-weight: 720;
+}
 .public-stage-note {
   border-style: dashed;
 }

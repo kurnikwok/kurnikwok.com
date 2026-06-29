@@ -44,7 +44,13 @@ The website may simplify the reader journey, but it must not simplify the claim 
 
 Website pages may summarise and route. They must not become substitute papers or add claims beyond the published public papers.
 
-## 4. Page-role discipline
+## 4. Navigation-link discipline
+
+Public pages should not merely describe routes; they should provide them. Where a page names another reader layer or site route — for example homepage, start page, comparison page, FAQ, glossary, papers, public evaluation map or protected-stage discussion — the named route should normally be linked unless doing so would create clutter or duplicate an immediately adjacent link.
+
+Layer summaries should be useful navigation, not internal governance prose. Prefer linked route groups such as orientation, reference and formal route when a page is explaining how the site is layered.
+
+## 5. Page-role discipline
 
 Each page should answer one primary reader question.
 
@@ -57,7 +63,7 @@ Recommended page pattern:
 
 Do not add a new page unless it answers a distinct reader intent that is not already better served by FAQ, glossary or an existing concept page.
 
-## 5. Canonical page roles
+## 6. Canonical page roles
 
 | Page | Primary role |
 |---|---|
@@ -81,7 +87,7 @@ Do not add a new page unless it answers a distinct reader intent that is not alr
 | `/protected-stage-discussion/` | Protected-stage boundary and the only routine direct-email route. |
 | `/sitemap/` | Human-readable site map. |
 
-## 6. Public/protected boundary discipline
+## 7. Public/protected boundary discipline
 
 Standard public-stage principle:
 
@@ -91,7 +97,7 @@ Use the short note on ordinary concept and routing pages. Use the full boundary 
 
 Do not publish protected method details, including private prompts, control files, schemas, validation mechanics, route controls, continuity structures, private artefacts or implementation materials.
 
-## 7. Contact and protected-stage route rules
+## 8. Contact and protected-stage route rules
 
 The public website is category-first, not personal-sales-first. Direct email should not appear as a routine global footer item or general public-page CTA.
 
@@ -103,7 +109,7 @@ Direct email may appear only in limited contexts:
 - in formal published artefacts where author/contact metadata is part of the publication record;
 - in exceptional maintenance, legal or administrative contexts where direct contact is necessary.
 
-## 8. Paper-funnel rules
+## 9. Paper-funnel rules
 
 Preferred pattern:
 
@@ -125,7 +131,7 @@ Use consistent labels:
 
 Avoid excessive same-page repetition of paper links, DOI links or public/protected boundary warnings.
 
-## 9. Harmonisation principle
+## 10. Harmonisation principle
 
 Harmonisation is structural, not reductive.
 
@@ -147,7 +153,7 @@ Do not:
 - add sales claims, implementation claims or unsupported evidence claims;
 - make web simplification sound like “AI shaping is just better prompting”.
 
-## 10. Coherence QA
+## 11. Coherence QA
 
 Before publishing site updates, run a coherence pass across changed pages and high-traffic pages.
 
@@ -166,7 +172,7 @@ Check that:
 
 This pass is normative and structural, not reductive. Do not force paragraph merging, argument deletion or concept compression merely to shorten a page. If content structure is better as multiple paragraphs, update the heading or route instead.
 
-## 11. Core terminology
+## 12. Core terminology
 
 Use these terms consistently:
 
@@ -182,7 +188,7 @@ Use these terms consistently:
 
 Do not casually replace these with looser synonyms where precision matters.
 
-## 12. Writing style
+## 13. Writing style
 
 Use a clear, public-facing, precise style.
 
@@ -206,7 +212,7 @@ Avoid:
 
 Use Australian English where relevant.
 
-## 13. Visual and layout conventions
+## 14. Visual and layout conventions
 
 Use one shared design system across the site.
 
@@ -227,7 +233,7 @@ Site-wide label rule: when linking to `/protected-stage-discussion/`, use **Prot
 
 Footer contact rule: do not include direct email in the routine global footer. Use the footer for navigation to category, paper, evidence and protected-stage routes.
 
-## 14. SEO metadata conventions
+## 15. SEO metadata conventions
 
 Each page should have a clear primary search intent.
 
@@ -251,7 +257,7 @@ Each page should have:
 
 The `/ai-shaping/` page is the exact-term definition page for **AI shaping**. Other pages should support it rather than compete with it.
 
-## 15. Internal linking conventions
+## 16. Internal linking conventions
 
 Use descriptive anchor text.
 
@@ -268,7 +274,7 @@ Preferred examples:
 
 Avoid vague anchors such as “click here”, “read more” or “this page” where a descriptive link would help the reader and search engines.
 
-## 16. Future-page checklist
+## 17. Future-page checklist
 
 Before creating a new page, check:
 
@@ -282,7 +288,7 @@ Before creating a new page, check:
 - Do headings, labels and numbered claims match the content below them?
 - Does the page avoid protected implementation detail?
 
-## 17. Public repository caution
+## 18. Public repository caution
 
 The repository is public. Treat everything committed here as publicly disclosed.
 
