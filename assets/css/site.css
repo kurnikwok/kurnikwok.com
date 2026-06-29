@@ -549,7 +549,7 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   line-height: 1.45;
 }
 .layer-grid span a {
-  font-weight: 720;
+  font-weight: inherit;
 }
 .public-stage-note {
   border-style: dashed;

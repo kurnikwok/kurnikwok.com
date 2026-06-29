@@ -52,8 +52,9 @@ Recommended update order:
 3. Update individual public pages only for their primary reader question.
 4. Check sitemap, navigation, metadata, internal links and boundary language.
 5. Check route-link polish: when a page names another site layer or route, make that named route clickable unless an adjacent link already serves the same purpose.
-6. Check reference-page polish: glossary duplicates, FAQ grouping, repeated labels and route clarity.
-7. Do a final public-repository caution check before committing.
+6. Check visual-link polish: inline route links should use standard link styling, not bold emphasis, unless the bold text is a label, heading or card title.
+7. Check reference-page polish: glossary duplicates, FAQ grouping, repeated labels and route clarity.
+8. Do a final public-repository caution check before committing.
 
 ## Repository guide
 

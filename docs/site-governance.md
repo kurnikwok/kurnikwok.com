@@ -50,6 +50,8 @@ Public pages should not merely describe routes; they should provide them. Where 
 
 Layer summaries should be useful navigation, not internal governance prose. Prefer linked route groups such as orientation, reference and formal route when a page is explaining how the site is layered.
 
+Inline prose links should use the standard site link treatment. Do not bold route links inside sentences or layer summaries unless the bold text is a label, heading or card title. Use bold for labels such as Explain, Evaluate and Formalise; use ordinary link styling for page names.
+
 ## 5. Page-role discipline
 
 Each page should answer one primary reader question.
