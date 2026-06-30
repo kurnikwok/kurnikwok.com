@@ -255,11 +255,13 @@ Use this allocation as the canonical hero-image map:
 | `/papers/ai-shaping-intelligence-in-practice/` | `ai-shaping-capability-evidence-paper-route-diagram.png` | Highlight the capability evidence paper. |
 | `/public-evaluation-map/` | `ai-shaping-public-evaluation-map-route-diagram.png` | Highlight public-stage evaluation only. |
 | `/protected-stage-discussion/` | `ai-shaping-protected-stage-discussion-route-diagram.png` | Highlight protected-stage discussion as conditional. |
+| `/project-managing-shaped-intelligence/` | `project-managing-shaped-intelligence-evidence-diagram.png` | Show the evidence-instance transformation from messy project and BAU inputs to reviewable project state under human direction. |
+| `/work-burden-shift/` | `work-burden-shift-before-after-diagram.png` | Show the before/after mechanism where recurring work burden shifts from human reconstruction to shaped intelligence while human review, decision and action remain intact. |
 
 Hero diagram rules:
 
-- Match the diagram family to the page family: concept-stack diagrams for concept pages; paper-route diagrams for papers, public evaluation and protected-stage pages.
-- Highlight the box that matches the page's H1 or primary reader task.
+- Match the diagram family to the page family: concept-stack diagrams for core concept pages; paper-route diagrams for papers, public evaluation and protected-stage pages; evidence transformation diagrams for evidence-instance pages; before/after diagrams for mechanism pages.
+- Highlight the box that matches the page's H1 or primary reader task, or use a page-specific transformation where the page's purpose is evidence-instance or mechanism explanation.
 - Keep paper-route diagrams flowing through public-stage evaluation before protected-stage discussion.
 - Keep protected-stage discussion conditional; do not imply that reading a paper automatically authorises protected-stage access.
 - Use lowercase, hyphenated, descriptive PNG filenames that include the primary keyword and diagram type.

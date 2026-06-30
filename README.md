@@ -21,9 +21,9 @@ The site is deliberately layered:
 
 ## Hero diagram system
 
-The site uses page-specific hero diagrams to improve reader orientation and search alignment. Concept pages use concept-stack diagrams where the highlighted box matches the page's primary keyword. Paper, public-evaluation and protected-stage pages use paper-route diagrams so readers can distinguish category definition, capability evidence, public-stage evaluation and protected-stage discussion.
+The site uses page-specific hero diagrams to improve reader orientation and search alignment. Concept pages use concept-stack diagrams where the highlighted box matches the page's primary keyword. Paper, public-evaluation and protected-stage pages use paper-route diagrams so readers can distinguish category definition, capability evidence, public-stage evaluation and protected-stage discussion. Evidence-instance pages use evidence transformation diagrams, and mechanism pages use before/after diagrams where that gives the reader the clearest mental picture.
 
-Hero image assignments and filename rules are governed in `docs/site-governance.md`.
+Hero image assignments, captions, alt text and filename rules are governed in `docs/site-governance.md`.
 
 ## Formal source hierarchy
 
