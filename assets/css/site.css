@@ -279,6 +279,19 @@ li + li { margin-top: .35rem; }
   background: color-mix(in srgb, var(--surface-strong) 55%, var(--surface) 45%);
 }
 
+
+.hero-diagram {
+  margin-top: 1.35rem;
+  margin-bottom: 1.15rem;
+  background: color-mix(in srgb, var(--surface-strong) 52%, var(--surface) 48%);
+}
+.hero-diagram img {
+  background: transparent;
+}
+.hero-diagram figcaption {
+  font-size: .92rem;
+}
+
 .concept-diagram,
 .figure-card {
   margin: 1.25rem 0 0;

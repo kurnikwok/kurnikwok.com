@@ -235,7 +235,39 @@ Site-wide label rule: when linking to `/protected-stage-discussion/`, use **Prot
 
 Footer contact rule: do not include direct email in the routine global footer. Use the footer for navigation to category, paper, evidence and protected-stage routes.
 
-## 15. SEO metadata conventions
+
+## 15. Hero diagram governance
+
+Hero diagrams are part of the public reader route. They must support the page's primary reader task, primary keyword and public/protected boundary without turning the site into implementation guidance.
+
+Use this allocation as the canonical hero-image map:
+
+| Page | Hero image | Role |
+|---|---|---|
+| `/` | `ai-shaping-to-productive-ai-work-diagram.png` | Homepage value path from AI shaping and general-purpose AI to productive AI work. |
+| `/ai-shaping-in-5-minutes/` | `ai-shaping-to-productive-ai-work-diagram.png` | Cold-reader value path before formal terminology. |
+| `/ai-shaping/` | `ai-shaping-concept-stack-diagram.png` | Highlight the AI shaping category term. |
+| `/ai-shaping-intelligence/` | `ai-shaping-intelligence-concept-stack-diagram.png` | Highlight the reusable shaping capability. |
+| `/shaped-intelligence/` | `shaped-intelligence-concept-stack-diagram.png` | Highlight the reusable domain-facing capability. |
+| `/productive-ai-work/` | `productive-ai-work-concept-stack-diagram.png` | Highlight the outcome: productive AI work. |
+| `/papers/` | `ai-shaping-public-papers-route-diagram.png` | Frame the public paper route. |
+| `/papers/ai-shaping/` | `ai-shaping-category-definition-paper-route-diagram.png` | Highlight the category definition paper. |
+| `/papers/ai-shaping-intelligence-in-practice/` | `ai-shaping-capability-evidence-paper-route-diagram.png` | Highlight the capability evidence paper. |
+| `/public-evaluation-map/` | `ai-shaping-public-evaluation-map-route-diagram.png` | Highlight public-stage evaluation only. |
+| `/protected-stage-discussion/` | `ai-shaping-protected-stage-discussion-route-diagram.png` | Highlight protected-stage discussion as conditional. |
+
+Hero diagram rules:
+
+- Match the diagram family to the page family: concept-stack diagrams for concept pages; paper-route diagrams for papers, public evaluation and protected-stage pages.
+- Highlight the box that matches the page's H1 or primary reader task.
+- Keep paper-route diagrams flowing through public-stage evaluation before protected-stage discussion.
+- Keep protected-stage discussion conditional; do not imply that reading a paper automatically authorises protected-stage access.
+- Use lowercase, hyphenated, descriptive PNG filenames that include the primary keyword and diagram type.
+- Do not use `highlighted`, version suffixes or duplicate fallback filenames in public image names.
+- Each hero image must have descriptive alt text and a caption that reinforces the page role without adding new claims.
+- If a neutral fallback image is kept for internal use, document it as an alternative, not as a separate page assignment.
+
+## 16. SEO metadata conventions
 
 Each page should have a clear primary search intent.
 

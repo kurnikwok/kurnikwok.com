@@ -18,6 +18,13 @@ The site is deliberately layered:
 | Protected-stage discussion | Hold the boundary for method-level, collaboration-level or commercial review. |
 | Repository governance | Preserve consistency, public-stage limits and maintenance discipline over time. |
 
+
+## Hero diagram system
+
+The site uses page-specific hero diagrams to improve reader orientation and search alignment. Concept pages use concept-stack diagrams where the highlighted box matches the page's primary keyword. Paper, public-evaluation and protected-stage pages use paper-route diagrams so readers can distinguish category definition, capability evidence, public-stage evaluation and protected-stage discussion.
+
+Hero image assignments and filename rules are governed in `docs/site-governance.md`.
+
 ## Formal source hierarchy
 
 The website is a guided interpretation and routing layer. It must not become a substitute formal source.
