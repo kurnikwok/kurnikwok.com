@@ -269,31 +269,97 @@ Hero diagram rules:
 - Each hero image must have descriptive alt text and a caption that reinforces the page role without adding new claims.
 - If a neutral fallback image is kept for internal use, document it as an alternative, not as a separate page assignment.
 
-## 16. SEO metadata conventions
+## 16. SEO metadata, title and H1 conventions
 
-Each page should have a clear primary search intent.
+Each public HTML page should have a clear primary search intent and one primary reader promise.
 
-Title pattern:
+### Title discipline
+
+The `<title>` is the search-result promise. It should be concise, descriptive, unique and aligned with the page's search intent.
+
+Preferred title pattern:
 
 ```text
-[Primary query] — [Page role] · [AI Shaping or Kurni Kwok]
+[Primary query] — [Page role / differentiator] · [Kurni Kwok or AI Shaping]
 ```
 
-Use **AI Shaping** as the suffix for category/concept/comparison pages. Use **Kurni Kwok** where authorship, paper identity or protected-stage contact is central.
+Use **Kurni Kwok** where authorship, paper identity, credibility or protected-stage contact is central. Use **AI Shaping** only where the page is primarily a category/concept page and the shorter brand route is clearer. Do not force the suffix if it creates obvious repetition.
 
-Each page should have:
+Avoid:
+
+- vague titles such as `Home`, `About` or a bare term where a clearer page role is available;
+- keyword stuffing;
+- titles that promise implementation guidance, deployment assurance or method transfer;
+- titles that compete with the category paper or capability paper as formal sources.
+
+### H1 discipline
+
+The `<h1>` is the landing-page promise. It should orient a cold reader to the page's purpose and value.
+
+Preferred H1 pattern:
+
+```text
+[Primary term] + [reader outcome / function / page promise]
+```
+
+Concept and mechanism pages should usually use more than a label-only H1. A label-only H1 is acceptable for utility pages, paper landing pages and the human sitemap, but concept pages should normally explain what the term does.
+
+Examples:
+
+| Page type | Good H1 pattern |
+|---|---|
+| Homepage | Big value proposition. |
+| Start page | Plain reader route plus payoff. |
+| Concept page | Term plus practical meaning. |
+| Mechanism page | Term plus what changes. |
+| Evidence page | Evidence plus what is being evidenced. |
+| Paper page | Formal paper title. |
+| Reference page | Plain utility title. |
+| Protected-stage page | Boundary plus implementation-level review context. |
+
+The title and H1 should not need to be identical, but they must share the same primary entity and must not make different claims.
+
+### Required metadata
+
+Each indexable public page should have:
 
 - one unique `<title>`;
 - one unique `<meta name="description">`;
-- one clear H1 aligned with the page role;
+- one visible `<h1>` aligned with the page role;
 - a self-referencing canonical URL;
-- Open Graph and Twitter metadata;
+- Open Graph and Twitter metadata aligned with the title and description;
 - JSON-LD where useful;
 - inclusion in `sitemap.xml` unless there is a specific reason to exclude it.
 
 The `/ai-shaping/` page is the exact-term definition page for **AI shaping**. Other pages should support it rather than compete with it.
 
-## 16. Internal linking conventions
+## 17. Public title/H1 map
+
+Use this as the current public-page harmonisation target. Revise only when the page role changes.
+
+| Page | Title | H1 |
+|---|---|---|
+| `/` | `Kurni Kwok · AI Shaping` | `Make AI carry the work pattern, not just answer the prompt` |
+| `/ai-shaping-in-5-minutes/` | `AI Shaping in 5 Minutes — Plain-English Guide · Kurni Kwok` | `AI shaping in 5 minutes: from one-off prompts to reusable work patterns` |
+| `/ai-shaping/` | `AI Shaping — Productive AI Work Category · Kurni Kwok` | `AI shaping turns useful AI output into productive AI work` |
+| `/work-burden-shift/` | `Work-Burden Shift — AI Shaping Mechanism · Kurni Kwok` | `Work-burden shift shows what AI shaping changes` |
+| `/project-managing-shaped-intelligence/` | `Project-Managing Shaped Intelligence — Evidence Overview · Kurni Kwok` | `Evidence that project-managing shaped intelligence carries project work state` |
+| `/papers/` | `AI Shaping Papers — Category and Capability Evidence · Kurni Kwok` | `AI shaping papers: category definition and public capability evidence` |
+| `/faq/` | `AI Shaping FAQ — Productive AI Work Questions · Kurni Kwok` | `AI shaping FAQ for first-time readers and reviewers` |
+| `/glossary/` | `AI Shaping Glossary — Core Terms · Kurni Kwok` | `AI shaping glossary: core terms in plain language` |
+| `/ai-shaping-vs-prompts-agents-automation/` | `AI Shaping vs Prompts, Agents and Automation · Kurni Kwok` | `AI shaping vs prompts, agents, automation and workflow tools` |
+| `/public-evaluation-map/` | `Public Evaluation Map — AI Shaping Evidence Route · Kurni Kwok` | `Public evaluation map: where public AI shaping evidence stops` |
+| `/protected-stage-discussion/` | `Protected-Stage Discussion — AI Shaping Method Review · Kurni Kwok` | `Protected-stage discussion for implementation-level AI shaping review` |
+| `/papers/ai-shaping/` | `AI Shaping Category Definition Paper · Kurni Kwok` | `AI Shaping: Turning General-Purpose AI into Productive AI Work` |
+| `/papers/ai-shaping-intelligence-in-practice/` | `AI-Shaping Intelligence Capability Evidence Paper · Kurni Kwok` | `AI-Shaping Intelligence in Practice: Evidence from Project-Managing Shaped Intelligence` |
+| `/ai-shaping-intelligence/` | `AI-Shaping Intelligence — Reusable Shaping Capability · Kurni Kwok` | `AI-shaping intelligence builds and renews the reusable work pattern` |
+| `/shaped-intelligence/` | `Shaped Intelligence — Reusable Work Capability · Kurni Kwok` | `Shaped intelligence carries the reusable work pattern into real work` |
+| `/productive-ai-work/` | `Productive AI Work — Reviewable AI-Enabled Work · Kurni Kwok` | `Productive AI work can be reviewed, continued and reused` |
+| `/operating-model-design/` | `Operating-Model Design — AI Work Patterns · Kurni Kwok` | `Operating-model design makes AI work reviewable and resumable` |
+| `/about/` | `About AI Shaping and Kurni Kwok` | `About AI shaping: development context and credibility` |
+| `/sitemap/` | `Site Map · AI Shaping` | `Site map` |
+
+## 18. Internal linking conventions
 
 Use descriptive anchor text.
 
@@ -310,7 +376,7 @@ Preferred examples:
 
 Avoid vague anchors such as “click here”, “read more” or “this page” where a descriptive link would help the reader and search engines.
 
-## 17. Future-page checklist
+## 19. Future-page checklist
 
 Before creating a new page, check:
 
@@ -318,13 +384,14 @@ Before creating a new page, check:
 - Which existing page is the canonical source for the concept?
 - Which paper, if any, is the formal source?
 - What is the page’s primary SEO intent?
+- What is the page title and H1?
 - What is the single primary next step?
 - Does the page preserve the public/protected boundary?
 - Is any repeated content necessary for reader orientation, or should it link back instead?
 - Do headings, labels and numbered claims match the content below them?
 - Does the page avoid protected implementation detail?
 
-## 18. Public repository caution
+## 20. Public repository caution
 
 The repository is public. Treat everything committed here as publicly disclosed.
 
@@ -340,3 +407,9 @@ Do not commit:
 - credentials, tokens or private contact data.
 
 If a future development note would reveal protected method detail, keep it out of this repository.
+
+## 21. Markdown and source-document policy
+
+`README.md`, `README-upload.txt` and files under `docs/` are repository-maintenance artefacts. They support source control, not the public reader journey.
+
+They should not be linked from public navigation, included in `sitemap.xml`, or used as public explanations of AI shaping. If a repository or governance note must become reader-facing, convert it into a governed HTML page with title, H1, metadata, canonical URL, sitemap decision and public/protected boundary review.
