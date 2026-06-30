@@ -250,6 +250,7 @@ Use this allocation as the canonical hero-image map:
 | `/ai-shaping-intelligence/` | `ai-shaping-intelligence-concept-stack-diagram.png` | Highlight the reusable shaping capability. |
 | `/shaped-intelligence/` | `shaped-intelligence-concept-stack-diagram.png` | Highlight the reusable domain-facing capability. |
 | `/productive-ai-work/` | `productive-ai-work-concept-stack-diagram.png` | Highlight the outcome: productive AI work. |
+| `/ai-shaping-vs-prompts-agents-automation/` | `ai-shaping-vs-prompts-agents-automation-diagram.png` | Show the adjacent-category comparison: prompts, agents, automation, RAG, copilots, project-management tools and governance improve parts of AI use, while AI shaping carries the reusable work basis into productive AI work under human direction. |
 | `/papers/` | `ai-shaping-public-papers-route-diagram.png` | Frame the public paper route. |
 | `/papers/ai-shaping/` | `ai-shaping-category-definition-paper-route-diagram.png` | Highlight the category definition paper. |
 | `/papers/ai-shaping-intelligence-in-practice/` | `ai-shaping-capability-evidence-paper-route-diagram.png` | Highlight the capability evidence paper. |
@@ -260,7 +261,7 @@ Use this allocation as the canonical hero-image map:
 
 Hero diagram rules:
 
-- Match the diagram family to the page family: concept-stack diagrams for core concept pages; paper-route diagrams for papers, public evaluation and protected-stage pages; evidence transformation diagrams for evidence-instance pages; before/after diagrams for mechanism pages.
+- Match the diagram family to the page family: concept-stack diagrams for core concept pages; comparison diagrams for adjacent-category comparison pages; paper-route diagrams for papers, public evaluation and protected-stage pages; evidence transformation diagrams for evidence-instance pages; before/after diagrams for mechanism pages.
 - Highlight the box that matches the page's H1 or primary reader task, or use a page-specific transformation where the page's purpose is evidence-instance or mechanism explanation.
 - Keep paper-route diagrams flowing through public-stage evaluation before protected-stage discussion.
 - Keep protected-stage discussion conditional; do not imply that reading a paper automatically authorises protected-stage access.
