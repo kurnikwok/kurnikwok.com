@@ -38,6 +38,8 @@ H1: Primary phrase + reader outcome or page promise
 
 The site uses page-specific hero diagrams to improve reader orientation and search alignment. Concept pages use concept-stack diagrams where the highlighted box matches the page's primary keyword. Paper, public-evaluation and protected-stage pages use paper-route diagrams so readers can distinguish category definition, capability evidence, public-stage evaluation and protected-stage discussion. Evidence-instance pages use evidence transformation diagrams, and mechanism pages use before/after diagrams where that gives the reader the clearest mental picture.
 
+The site prefers one stable, universal hero image per assigned page that works in both light and dark presentation contexts. Avoid separate light/dark image variants unless there is a documented accessibility or legibility reason.
+
 Hero image assignments, captions, alt text and filename rules are governed in `docs/site-governance.md`.
 
 ## Site icon and favicon system

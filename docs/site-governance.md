@@ -260,7 +260,7 @@ Use this allocation as the canonical hero-image map:
 |---|---|---|
 | `/` | `ai-shaping-to-productive-ai-work-diagram.png` | Homepage value path from AI shaping and general-purpose AI to productive AI work. |
 | `/ai-shaping-in-5-minutes/` | `ai-shaping-to-productive-ai-work-diagram.png` | Cold-reader value path before formal terminology. |
-| `/ai-shaping/` | `ai-shaping-concept-stack-diagram.png` | Highlight the AI shaping category term. |
+| `/ai-shaping/` | `ai-shaping-concept-stack-diagram.png` | Show AI shaping as the discipline that guides general-purpose AI through AI-shaping intelligence and shaped intelligence into productive AI work under human direction. |
 | `/ai-shaping-intelligence/` | `ai-shaping-intelligence-concept-stack-diagram.png` | Highlight the reusable shaping capability. |
 | `/shaped-intelligence/` | `shaped-intelligence-concept-stack-diagram.png` | Highlight the reusable domain-facing capability. |
 | `/productive-ai-work/` | `productive-ai-work-concept-stack-diagram.png` | Highlight the outcome: productive AI work. |
@@ -282,7 +282,7 @@ Hero diagram rules:
 - Use lowercase, hyphenated, descriptive PNG filenames that include the primary keyword and diagram type.
 - Do not use `highlighted`, version suffixes or duplicate fallback filenames in public image names.
 - Each hero image must have descriptive alt text and a caption that reinforces the page role without adding new claims.
-- If a neutral fallback image is kept for internal use, document it as an alternative, not as a separate page assignment.
+- If an alternative or fallback image is kept for internal use, document it as an internal alternative only; do not reference it from public HTML unless it is intentionally part of the public image strategy.
 
 
 ## 15A. Site icon and favicon governance
@@ -472,3 +472,10 @@ If a future development note would reveal protected method detail, keep it out o
 `README.md`, `README-upload.txt` and files under `docs/` are repository-maintenance artefacts. They support source control, not the public reader journey.
 
 They should not be linked from public navigation, included in `sitemap.xml`, or used as public explanations of AI shaping. If a repository or governance note must become reader-facing, convert it into a governed HTML page with title, H1, metadata, canonical URL, sitemap decision and public/protected boundary review.
+
+### Hero diagram variant discipline
+
+- Prefer one stable canonical hero image per page that works in both light and dark presentation contexts.
+- Do not keep separate light/dark public image variants unless a specific accessibility or legibility need is documented.
+- When replacing an image with changed dimensions, update the corresponding HTML `width` and `height` attributes.
+- When removing an image variant, remove all `<picture>`, `<source>` and `<img>` references to the deleted filename.
