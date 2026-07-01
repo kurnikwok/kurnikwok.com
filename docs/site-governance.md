@@ -482,3 +482,15 @@ They should not be linked from public navigation, included in `sitemap.xml`, or 
 - When a page uses both a hero diagram and a supporting concept-stack diagram, use distinct filenames that identify their roles rather than reusing a broad filename for both images.
 
 | Supporting concept stack on `/` and `/ai-shaping/` | `ai-shaping-discipline-concept-stack-diagram.png` | Show AI shaping as the discipline that carries human direction, context, priorities, approval, correction and reusable lessons through general-purpose AI, AI-shaping intelligence and shaped intelligence into productive AI work. |
+| `/project-managing-shaped-intelligence/` supporting burden-shift figure | `project-managing-shaped-intelligence-work-burden-shift-diagram.png` | Show the before/after pattern where project-managing shaped intelligence shifts recurring project work burden from human reconstruction to shaped intelligence while the human reviews, decides and redirects. |
+
+### Supporting diagram discipline
+
+Supporting diagrams that appear below the hero section should follow the same public-image discipline as hero diagrams.
+
+- Use one stable, descriptive public filename unless a documented accessibility or legibility reason requires variants.
+- Do not retain public `<picture>` or `<source>` references to deleted light/dark variants.
+- Update HTML `width` and `height` attributes when replacing an image with changed dimensions.
+- Use `loading="lazy"` for supporting diagrams unless the image is the first primary visual on the page.
+- Omit `fetchpriority="high"` for supporting diagrams.
+

@@ -44,6 +44,9 @@ Where two AI-shaping diagrams serve different purposes, filenames should disting
 
 Hero image assignments, captions, alt text and filename rules are governed in `docs/site-governance.md`.
 
+Supporting diagrams should follow the same filename and public-reference discipline as hero diagrams: one stable public filename, descriptive alt text, accurate dimensions and no stale light/dark variant references.
+
+
 ## Site icon and favicon system
 
 The site uses a simplified AI-shaping site icon for browser tabs, bookmarks, Apple touch icons and Safari pinned tabs.
