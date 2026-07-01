@@ -52,6 +52,20 @@ Layer summaries should be useful navigation, not internal governance prose. Pref
 
 Inline prose links should use the standard site link treatment. Do not bold route links inside sentences or layer summaries unless the bold text is a label, heading or card title. Use bold for labels such as Explain, Evaluate and Formalise; use ordinary link styling for page names.
 
+### Global header and responsive menu discipline
+
+The global header should preserve a compact reader route without creating unnecessary vertical height.
+
+Preferred responsive behaviour:
+
+1. On wide screens, keep the brand and primary navigation on one header row where space allows.
+2. On medium and narrow screens, allow the primary navigation to move below the brand line.
+3. Keep `Kurni Kwok` and `AI shaping · operating-model design` on the same brand line where they fit cleanly.
+4. Stack the tagline below `Kurni Kwok` only at very narrow widths where the combined brand line no longer fits.
+5. Keep primary navigation labels stable and aligned with the canonical page roles unless a separate page-role review justifies changing them.
+6. Do not add repository-maintenance pages, direct email routes or protected-stage implementation material to the global public navigation.
+
+
 ## 5. Page-role discipline
 
 Each page should answer one primary reader question.

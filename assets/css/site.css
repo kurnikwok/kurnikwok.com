@@ -79,15 +79,23 @@ header.site-header {
   box-shadow: 0 16px 38px rgba(49, 31, 16, .16);
 }
 .brand {
-  display: inline-flex;
-  flex-direction: column;
-  gap: .05rem;
+  align-items: baseline;
   color: var(--text);
-  text-decoration: none;
+  column-gap: .55rem;
+  display: inline-flex;
+  flex-wrap: wrap;
   font-weight: 750;
   letter-spacing: -.02em;
+  row-gap: .05rem;
+  text-decoration: none;
 }
-.brand .brand-subtitle { font-size: .78rem; color: var(--muted); font-weight: 550; letter-spacing: .01em; }
+.brand .brand-subtitle {
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 550;
+  letter-spacing: .01em;
+  white-space: nowrap;
+}
 .nowrap { white-space: nowrap; }
 nav {
   display: flex;
@@ -576,3 +584,11 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
 .glossary-group dl { gap: .9rem; }
 .faq-group details:first-of-type { margin-top: .35rem; }
 .faq-group details + details { margin-top: .8rem; }
+
+@media (max-width: 520px) {
+  .brand {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .05rem;
+  }
+}
