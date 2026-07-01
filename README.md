@@ -40,6 +40,8 @@ The site uses page-specific hero diagrams to improve reader orientation and sear
 
 The site prefers one stable, universal hero image per assigned page that works in both light and dark presentation contexts. Avoid separate light/dark image variants unless there is a documented accessibility or legibility reason.
 
+Where two AI-shaping diagrams serve different purposes, filenames should distinguish the page hero from the supporting concept-stack image; for example, use `ai-shaping-hero-work-pattern-diagram.png` for the `/ai-shaping/` hero and `ai-shaping-discipline-concept-stack-diagram.png` for the full discipline stack.
+
 Hero image assignments, captions, alt text and filename rules are governed in `docs/site-governance.md`.
 
 ## Site icon and favicon system

@@ -260,7 +260,7 @@ Use this allocation as the canonical hero-image map:
 |---|---|---|
 | `/` | `ai-shaping-to-productive-ai-work-diagram.png` | Homepage value path from AI shaping and general-purpose AI to productive AI work. |
 | `/ai-shaping-in-5-minutes/` | `ai-shaping-to-productive-ai-work-diagram.png` | Cold-reader value path before formal terminology. |
-| `/ai-shaping/` | `ai-shaping-concept-stack-diagram.png` | Show AI shaping as the discipline that guides general-purpose AI through AI-shaping intelligence and shaped intelligence into productive AI work under human direction. |
+| `/ai-shaping/` | `ai-shaping-hero-work-pattern-diagram.png` | Show the AI-shaping work-pattern route: human direction, AI shaping, messy input and general-purpose AI leading through AI-shaping intelligence and shaped intelligence into productive AI work. |
 | `/ai-shaping-intelligence/` | `ai-shaping-intelligence-concept-stack-diagram.png` | Highlight the reusable shaping capability. |
 | `/shaped-intelligence/` | `shaped-intelligence-concept-stack-diagram.png` | Highlight the reusable domain-facing capability. |
 | `/productive-ai-work/` | `productive-ai-work-concept-stack-diagram.png` | Highlight the outcome: productive AI work. |
@@ -479,3 +479,6 @@ They should not be linked from public navigation, included in `sitemap.xml`, or 
 - Do not keep separate light/dark public image variants unless a specific accessibility or legibility need is documented.
 - When replacing an image with changed dimensions, update the corresponding HTML `width` and `height` attributes.
 - When removing an image variant, remove all `<picture>`, `<source>` and `<img>` references to the deleted filename.
+- When a page uses both a hero diagram and a supporting concept-stack diagram, use distinct filenames that identify their roles rather than reusing a broad filename for both images.
+
+| Supporting concept stack on `/` and `/ai-shaping/` | `ai-shaping-discipline-concept-stack-diagram.png` | Show AI shaping as the discipline that carries human direction, context, priorities, approval, correction and reusable lessons through general-purpose AI, AI-shaping intelligence and shaped intelligence into productive AI work. |
