@@ -494,3 +494,13 @@ Supporting diagrams that appear below the hero section should follow the same pu
 - Use `loading="lazy"` for supporting diagrams unless the image is the first primary visual on the page.
 - Omit `fetchpriority="high"` for supporting diagrams.
 
+Current supporting diagram map:
+
+| Page | Supporting image | Role |
+|---|---|---|
+| `/about/` | `ai-shaping-development-path-diagram.png` | Simplified development path from the original investment decision-workflow problem to AI-shaping intelligence, vendor-evaluating shaped intelligence and project-managing shaped intelligence as the current public evidence instance. Place between “How the work developed” and “From first wedge to domain-bounded shaped intelligence”. |
+| `/ai-shaping-intelligence/` | `ai-shaping-intelligence-to-project-managing-shaped-intelligence-diagram.png` | Explain why AI-shaping intelligence was needed before project-managing shaped intelligence could stabilise: direct general-purpose AI attempts remained unstable, AI-shaping intelligence established shaped intelligence, vendor-evaluating shaped intelligence became the first wedge, and project-managing shaped intelligence became the current public evidence instance. |
+
+Development-path diagrams must support the page’s existing narrative sequence. They must not narrow a broader origin story into a later evidence-instance story, and they must not imply implementation guidance, method transfer or autonomous AI authority.
+
+
