@@ -40,6 +40,15 @@ The site uses page-specific hero diagrams to improve reader orientation and sear
 
 Hero image assignments, captions, alt text and filename rules are governed in `docs/site-governance.md`.
 
+## Site icon and favicon system
+
+The site uses a simplified AI-shaping site icon for browser tabs, bookmarks, Apple touch icons and Safari pinned tabs.
+
+Favicon and site-icon assets are site-wide identity assets, not page-specific hero diagrams. They should be stable, simple, public-safe and recognisable at small sizes.
+
+Canonical favicon files and HTML head rules are governed in `docs/site-governance.md`.
+
+
 ## Formal source hierarchy
 
 The website is a guided interpretation and routing layer. It must not become a substitute formal source.

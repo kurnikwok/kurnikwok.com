@@ -270,6 +270,50 @@ Hero diagram rules:
 - Each hero image must have descriptive alt text and a caption that reinforces the page role without adding new claims.
 - If a neutral fallback image is kept for internal use, document it as an alternative, not as a separate page assignment.
 
+
+## 15A. Site icon and favicon governance
+
+Favicons and site icons are site-wide public identity assets. They support browser tabs, bookmarks, Apple touch icons, Safari pinned tabs and search-result recognition. They are not page-specific hero diagrams and must not carry page-specific claims.
+
+Canonical site-icon files:
+
+| File | Role |
+|---|---|
+| `/favicon.ico` | Broad browser fallback; stable root favicon. |
+| `/favicon.svg` | Modern scalable favicon using the orange rounded-square AI-shaping mark. |
+| `/apple-touch-icon.png` | Apple touch/home-screen icon. |
+| `/safari-pinned-tab.svg` | Safari pinned-tab mask icon. |
+| `/assets/images/ai-shaping-site-icon-source.svg` | Editable source artwork retained for maintenance. |
+
+Visual rules:
+
+- Use the simplified AI-shaping mark as the site identity basis.
+- Keep the ordinary favicon visually simple enough to remain recognisable at small browser-tab sizes.
+- Use orange `#EA580C` as the primary site-icon colour.
+- Use the orange rounded-square variant with a simplified white internal mark for ordinary favicons and the Apple touch icon.
+- Use a black-only transparent SVG mask for Safari pinned tabs; do not embed orange or white in the mask file.
+- Do not include text, slogans, diagrams, captions, protected-method references or implementation cues in favicon artwork.
+- Keep favicon URLs stable; do not use version suffixes in production favicon filenames.
+- Do not include favicon files in `sitemap.xml`.
+
+Required head snippet for public HTML pages:
+
+```html
+<link href="/favicon.ico" rel="icon" sizes="any"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link color="#EA580C" href="/safari-pinned-tab.svg" rel="mask-icon"/>
+<meta content="#EA580C" name="theme-color"/>
+```
+
+QA before publishing:
+
+- Confirm all public HTML pages include the same favicon head snippet.
+- Confirm the files exist at the repository root.
+- Confirm `robots.txt` does not block the favicon files.
+- Confirm the icon is legible at 16×16, 32×32, 48×48 and 180×180.
+- Confirm the Safari pinned-tab SVG is a simple mask icon, not a multi-colour logo.
+
 ## 16. SEO metadata, title and H1 conventions
 
 Each public HTML page should have a clear primary search intent and one primary reader promise.
