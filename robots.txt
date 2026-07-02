@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /README.md
+Disallow: /README-upload.txt
 Disallow: /docs/
 Sitemap: https://kurnikwok.com/sitemap.xml
