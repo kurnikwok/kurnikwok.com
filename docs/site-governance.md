@@ -87,7 +87,7 @@ Do not add a new page unless it answers a distinct reader intent that is not alr
 | `/ai-shaping-in-5-minutes/` | Plain-English first read. |
 | `/ai-shaping/` | Exact-term category definition page for AI shaping. |
 | `/ai-shaping-vs-prompts-agents-automation/` | Adjacent-category comparison shortcut. |
-| `/ai-shaping-intelligence/` | Reusable shaping capability concept. |
+| `/ai-shaping-intelligence/` | Dual reusable shaping capability concept: self-shaping capability and domain-shaping capability. |
 | `/shaped-intelligence/` | Domain-facing reusable capability concept. |
 | `/productive-ai-work/` | Productive AI work outcome concept. |
 | `/work-burden-shift/` | Mechanism and public evidence signal. |
@@ -194,6 +194,8 @@ Use these terms consistently:
 
 - AI shaping
 - AI-shaping intelligence
+- self-shaping capability
+- domain-shaping capability
 - shaped intelligence
 - productive AI work
 - work burden
@@ -203,6 +205,8 @@ Use these terms consistently:
 - protected-stage discussion
 
 Do not casually replace these with looser synonyms where precision matters.
+
+Use **self-shaping capability** and **domain-shaping capability** as paired capability-surface terms. Self-shaping capability covers building, auditing, improving and renewing the shaping pattern. Domain-shaping capability covers using that pattern to produce shaped intelligence for a recurring work domain. Do not present either side as the whole of AI-shaping intelligence.
 
 ## 13. Writing style
 
@@ -261,7 +265,7 @@ Use this allocation as the canonical hero-image map:
 | `/` | `ai-shaping-to-productive-ai-work-diagram.png` | Homepage value path from AI shaping and general-purpose AI to productive AI work. |
 | `/ai-shaping-in-5-minutes/` | `ai-shaping-to-productive-ai-work-diagram.png` | Cold-reader value path before formal terminology. |
 | `/ai-shaping/` | `ai-shaping-hero-work-pattern-diagram.png` | Show the AI-shaping work-pattern route: human direction, AI shaping, messy input and general-purpose AI leading through AI-shaping intelligence and shaped intelligence into productive AI work. |
-| `/ai-shaping-intelligence/` | `ai-shaping-intelligence-concept-stack-diagram.png` | Highlight the reusable shaping capability. |
+| `/ai-shaping-intelligence/` | `ai-shaping-intelligence-concept-stack-diagram.png` | Highlight AI-shaping intelligence as the reusable shaping capability that combines self-shaping capability and domain-shaping capability: it renews its own shaping pattern and uses that pattern to produce shaped intelligence. |
 | `/shaped-intelligence/` | `shaped-intelligence-concept-stack-diagram.png` | Highlight the reusable domain-facing capability. |
 | `/productive-ai-work/` | `productive-ai-work-concept-stack-diagram.png` | Highlight the outcome: productive AI work. |
 | `/ai-shaping-vs-prompts-agents-automation/` | `ai-shaping-vs-prompts-agents-automation-diagram.png` | Show the adjacent-category comparison: prompts, agents, automation, RAG, copilots, project-management tools and governance improve parts of AI use, while AI shaping carries the reusable work basis into productive AI work under human direction. |
@@ -411,7 +415,7 @@ Use this as the current public-page harmonisation target. Revise only when the p
 | `/protected-stage-discussion/` | `Protected-Stage Discussion — AI Shaping Method Review · Kurni Kwok` | `Protected-stage discussion for implementation-level AI shaping review` |
 | `/papers/ai-shaping/` | `AI Shaping Category Definition Paper · Kurni Kwok` | `AI Shaping: Turning General-Purpose AI into Productive AI Work` |
 | `/papers/ai-shaping-intelligence-in-practice/` | `AI-Shaping Intelligence Capability Evidence Paper · Kurni Kwok` | `AI-Shaping Intelligence in Practice: Evidence from Project-Managing Shaped Intelligence` |
-| `/ai-shaping-intelligence/` | `AI-Shaping Intelligence — Reusable Shaping Capability · Kurni Kwok` | `AI-shaping intelligence builds and renews the reusable work pattern` |
+| `/ai-shaping-intelligence/` | `AI-Shaping Intelligence — Reusable Shaping Capability · Kurni Kwok` | `AI-shaping intelligence renews the shaping pattern and produces shaped intelligence` |
 | `/shaped-intelligence/` | `Shaped Intelligence — Reusable Work Capability · Kurni Kwok` | `Shaped intelligence carries the reusable work pattern into real work` |
 | `/productive-ai-work/` | `Productive AI Work — Reviewable AI-Enabled Work · Kurni Kwok` | `Productive AI work can be reviewed, continued and reused` |
 | `/operating-model-design/` | `Operating-Model Design — AI Work Patterns · Kurni Kwok` | `Operating-model design makes AI work reviewable and resumable` |

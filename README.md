@@ -67,6 +67,10 @@ Formal public sources remain the DOI-backed papers linked from the site:
 
 Use the website to orient, explain, route and frame. Use the papers for formal category definition, capability evidence, versioning and citation.
 
+### AI-shaping intelligence wording rule
+
+Describe AI-shaping intelligence as a dual capability. It both builds, improves and renews its own shaping pattern, and uses that pattern to produce shaped intelligence. Where the paper-surface terms are needed, use **self-shaping capability** and **domain-shaping capability** as a pair. Do not present either side as the whole of AI-shaping intelligence.
+
 ## Public/protected boundary
 
 Public website pages may explain concepts, route readers, summarise public evidence boundaries and link to the papers. They must not disclose protected method details, private prompts, control files, schemas, validation mechanics, route controls, continuity structures, private artefacts or implementation materials.
