@@ -147,6 +147,14 @@ Use consistent labels:
 
 Avoid excessive same-page repetition of paper links, DOI links or public/protected boundary warnings.
 
+## 9A. Internal-linking and glossary-popover rules
+
+Internal links should reduce reader friction without turning prose into a link catalogue. Use first-use contextual links for canonical concept pages, formal paper pages and protected-stage routes where those terms are part of a page's reader task. Avoid repeated links for the same term, links in headings and figure captions, or glossary-style overlinking inside ordinary narrative.
+
+The About page should use first-use contextual links for canonical concept pages, formal paper pages, public-evaluation routes and protected-stage routes where those terms appear in the development narrative. It should remain a credibility and development-context page, not a second glossary or paper index.
+
+Glossary popovers should support passing uses of canonical terms where a reader may need quick recall. Do not use popovers in headings, figure captions, tables, FAQ answers, glossary entries or sections that are primarily defining the term in visible prose. Where a section is already explaining a term directly, visible explanation should take priority over duplicate popover explanation.
+
 ## 10. Harmonisation principle
 
 Harmonisation is structural, not reductive.
@@ -182,6 +190,7 @@ Check that:
 - public/protected boundary language remains intact;
 - paper-routing links remain clear without becoming repetitive;
 - metadata, H1s and internal links support the page's primary role;
+- glossary popovers support passing term recall without duplicating visible definitions;
 - reference pages avoid accidental duplicate entries or near-duplicate labels;
 - FAQ and glossary material is grouped by reader task where grouping improves scanability;
 - no public page exceeds the published paper claims.
