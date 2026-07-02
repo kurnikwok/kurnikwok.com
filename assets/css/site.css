@@ -41,6 +41,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 7.5rem;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 [id] { scroll-margin-top: 7.5rem; }
 body {
@@ -127,14 +129,20 @@ h1, h2, h3 {
   margin: 0 0 .8rem;
   text-wrap: balance;
 }
-h1 { font-size: clamp(2.25rem, 6vw, 5.2rem); max-width: min(100%, 22ch); }
-.page h1 { font-size: clamp(2.15rem, 5vw, 4.35rem); max-width: min(100%, 28ch); }
+h1 { font-size: 2.25rem; max-width: min(100%, 22ch); }
+.page h1 { font-size: 2.15rem; max-width: min(100%, 28ch); }
 .hero h1 { max-width: min(100%, 24ch); }
 .page h1.wide-title { max-width: min(100%, 34ch); }
-h2 { font-size: clamp(1.55rem, 3vw, 2.25rem); margin-top: 2.2rem; }
+h2 { font-size: 1.55rem; margin-top: 2.2rem; }
 h3 { font-size: 1.15rem; margin-top: 1.35rem; }
 p { margin: .55rem 0 1rem; }
-.lead { font-size: clamp(1.1rem, 2vw, 1.42rem); color: var(--muted); max-width: 65rem; }
+.lead { font-size: 1.1rem; color: var(--muted); max-width: 65rem; }
+@media (min-width: 960px) {
+  h1 { font-size: clamp(2.6rem, 4.4vw, 5.2rem); }
+  .page h1 { font-size: clamp(2.35rem, 3.6vw, 4.35rem); }
+  h2 { font-size: clamp(1.7rem, 2.2vw, 2.25rem); }
+  .lead { font-size: clamp(1.15rem, 1.35vw, 1.42rem); }
+}
 .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.3rem; }
 .button {
   display: inline-flex;
