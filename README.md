@@ -71,6 +71,10 @@ Use the website to orient, explain, route and frame. Use the papers for formal c
 
 Describe AI-shaping intelligence as a dual capability. It both builds, improves and renews its own shaping pattern, and uses that pattern to produce shaped intelligence. Where the paper-surface terms are needed, use **self-shaping capability** and **domain-shaping capability** as a pair. Do not present either side as the whole of AI-shaping intelligence.
 
+### Domain extension and domain transfer wording rule
+
+Use **domain extension** for widening shaped intelligence within a related work family where the earlier capability becomes a subset of the broader capability. Use **domain transfer** for evaluating shaped intelligence in a different work domain. Do not treat domain extension as proof of domain transfer. Do not confuse domain transfer with protected-method transfer, implementation guidance, deployment assurance or commercial-use rights.
+
 ## Public/protected boundary
 
 Public website pages may explain concepts, route readers, summarise public evidence boundaries and link to the papers. They must not disclose protected method details, private prompts, control files, schemas, validation mechanics, route controls, continuity structures, private artefacts or implementation materials.

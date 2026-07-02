@@ -208,6 +208,12 @@ Do not casually replace these with looser synonyms where precision matters.
 
 Use **self-shaping capability** and **domain-shaping capability** as paired capability-surface terms. Self-shaping capability covers building, auditing, improving and renewing the shaping pattern. Domain-shaping capability covers using that pattern to produce shaped intelligence for a recurring work domain. Do not present either side as the whole of AI-shaping intelligence.
 
+### Domain extension / domain transfer wording rule
+
+Use **domain extension** for widening shaped intelligence within a related work family where the earlier capability becomes a subset of the broader capability. Use **domain transfer** for evaluating shaped intelligence in a different work domain. Do not treat domain extension as proof of domain transfer. Do not confuse domain transfer with protected-method transfer, implementation guidance, deployment assurance or commercial-use rights.
+
+For public pages, the current public example of domain extension is vendor-evaluating shaped intelligence extending into project-managing shaped intelligence. Investment-evaluating shaped intelligence is a planned domain-transfer direction into investment portfolio management, not a current public capability-evidence claim and not part of the DOI-backed papers. Portfolio-managing shaped intelligence is a possible later domain extension within the investment portfolio management work family and requires separate evidence before being treated as a public capability-evidence claim.
+
 ## 13. Writing style
 
 Use a clear, public-facing, precise style.
@@ -504,6 +510,7 @@ Current supporting diagram map:
 |---|---|---|
 | `/about/` | `ai-shaping-development-path-diagram.png` | Simplified development path from the original investment decision-workflow problem to AI-shaping intelligence, vendor-evaluating shaped intelligence and project-managing shaped intelligence as the current public evidence instance. Place between “How the work developed” and “From first wedge to domain-bounded shaped intelligence”. |
 | `/ai-shaping-intelligence/` | `ai-shaping-intelligence-to-project-managing-shaped-intelligence-diagram.png` | Explain why AI-shaping intelligence was needed before project-managing shaped intelligence could stabilise: direct general-purpose AI attempts remained unstable, AI-shaping intelligence established shaped intelligence, vendor-evaluating shaped intelligence became the first wedge, and project-managing shaped intelligence became the current public evidence instance. |
+| `/ai-shaping-intelligence/` | `ai-shaping-intelligence-domain-transfer-extension-investment-portfolio-management-diagram.png` | Supporting conceptual diagram for domain extensibility and transferability. It may show the current public domain-extension path from vendor-evaluating shaped intelligence to project-managing shaped intelligence, and a planned domain-transfer direction into investment-evaluating shaped intelligence followed by possible domain extension into portfolio-managing shaped intelligence. Captions must state that the planned investment portfolio management branch is website-only, not part of the DOI-backed papers and not a current public capability-evidence claim. |
 
 Development-path diagrams must support the page’s existing narrative sequence. They must not narrow a broader origin story into a later evidence-instance story, and they must not imply implementation guidance, method transfer or autonomous AI authority.
 
