@@ -46,6 +46,8 @@ Hero image assignments, captions, alt text and filename rules are governed in `d
 
 Supporting diagrams should follow the same filename and public-reference discipline as hero diagrams: one stable public filename, descriptive alt text, accurate dimensions and no stale light/dark variant references.
 
+Production image filenames should be lowercase, hyphenated and descriptive, with no spaces, brackets, duplicate export suffixes or temporary version markers. Rename exported files before publishing and update all HTML, governance and sitemap references at the same time.
+
 
 ## Site icon and favicon system
 
