@@ -1,12 +1,13 @@
 (() => {
   const header = document.querySelector('.site-header');
+  const topbar = document.querySelector('.topbar');
   const shell = document.querySelector('[data-primary-nav-shell]');
   const nav = document.querySelector('[data-primary-nav]');
   const toggle = document.querySelector('.all-pages-toggle');
   const panel = document.getElementById('all-pages-panel');
   const closeButton = panel ? panel.querySelector('.all-pages-close') : null;
 
-  if (!header || !shell || !nav || !toggle || !panel) return;
+  if (!header || !topbar || !shell || !nav || !toggle || !panel) return;
 
   let viewportListenerAttached = false;
   let windowScrollListenerAttached = false;
@@ -69,9 +70,17 @@
 
   function updateMenuGeometry() {
     const headerRect = header.getBoundingClientRect();
+    const topbarRect = topbar.getBoundingClientRect();
     const viewportHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+    const viewportWidth = window.visualViewport ? window.visualViewport.width : window.innerWidth;
     const navBottom = Math.max(0, headerRect.bottom) + 8;
+    const safeInset = 12;
+    const menuLeft = Math.max(safeInset, topbarRect.left);
+    const menuRight = Math.max(safeInset, viewportWidth - topbarRect.right);
+    const menuWidth = Math.max(280, viewportWidth - menuLeft - menuRight);
     document.documentElement.style.setProperty('--site-nav-bottom', `${navBottom}px`);
+    document.documentElement.style.setProperty('--site-menu-left', `${menuLeft}px`);
+    document.documentElement.style.setProperty('--site-menu-width', `${menuWidth}px`);
     document.documentElement.style.setProperty('--vvh', `${viewportHeight}px`);
   }
 

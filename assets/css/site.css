@@ -146,10 +146,12 @@ nav.primary-nav a:hover,
 }
 .all-pages-panel {
   position: fixed;
-  left: max(.75rem, env(safe-area-inset-left));
-  right: max(.75rem, env(safe-area-inset-right));
+  left: var(--site-menu-left, max(.75rem, env(safe-area-inset-left)));
+  right: auto;
   top: var(--site-nav-bottom, 5.5rem);
   z-index: 70;
+  width: var(--site-menu-width, calc(100vw - max(.75rem, env(safe-area-inset-left)) - max(.75rem, env(safe-area-inset-right))));
+  max-width: calc(100vw - max(.75rem, env(safe-area-inset-left)) - max(.75rem, env(safe-area-inset-right)));
   max-height: calc(100vh - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .75rem);
   max-height: calc(100dvh - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .75rem);
   max-height: calc(var(--vvh, 100dvh) - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .75rem);
@@ -637,10 +639,7 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
 }
 @media (min-width: 821px) {
   .all-pages-panel {
-    left: 50%;
-    right: auto;
-    width: min(68rem, calc(100vw - 2rem));
-    transform: translateX(-50%);
+    transform: none;
   }
 }
 @media (max-width: 520px) {
