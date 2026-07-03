@@ -8,8 +8,8 @@
 
   if (!header || !shell || !nav || !toggle || !panel) return;
 
-  let savedScrollY = 0;
   let viewportListenerAttached = false;
+  let windowScrollListenerAttached = false;
 
   markCurrentPanelLink();
   updateNavFadeState();
@@ -43,21 +43,19 @@
   });
 
   function openMenu() {
-    savedScrollY = window.scrollY || window.pageYOffset || 0;
     updateMenuGeometry();
     panel.hidden = false;
     toggle.setAttribute('aria-expanded', 'true');
-    document.documentElement.classList.add('nav-menu-open');
-    document.body.classList.add('nav-menu-open');
     attachViewportListener();
+    attachWindowScrollListener();
+    window.requestAnimationFrame(updateMenuGeometry);
   }
 
   function closeMenu(options = {}) {
     panel.hidden = true;
     toggle.setAttribute('aria-expanded', 'false');
     detachViewportListener();
-    document.documentElement.classList.remove('nav-menu-open');
-    document.body.classList.remove('nav-menu-open');
+    detachWindowScrollListener();
     if (!options.skipFocus) toggle.focus({ preventScroll: true });
   }
 
@@ -89,6 +87,18 @@
     window.visualViewport.removeEventListener('resize', updateMenuGeometry);
     window.visualViewport.removeEventListener('scroll', updateMenuGeometry);
     viewportListenerAttached = false;
+  }
+
+  function attachWindowScrollListener() {
+    if (windowScrollListenerAttached) return;
+    window.addEventListener('scroll', updateMenuGeometry, { passive: true });
+    windowScrollListenerAttached = true;
+  }
+
+  function detachWindowScrollListener() {
+    if (!windowScrollListenerAttached) return;
+    window.removeEventListener('scroll', updateMenuGeometry);
+    windowScrollListenerAttached = false;
   }
 
   function markCurrentPanelLink() {

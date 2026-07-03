@@ -224,10 +224,6 @@ nav.primary-nav a:hover,
   text-decoration-thickness: .08em;
   text-underline-offset: .18em;
 }
-html.nav-menu-open,
-body.nav-menu-open {
-  overflow: hidden;
-}
 main { padding: 3.2rem 0 4rem; }
 .hero {
   padding: 2.4rem;
