@@ -224,7 +224,7 @@ nav.primary-nav a:hover,
   text-decoration-thickness: .08em;
   text-underline-offset: .18em;
 }
-main { padding: 3.2rem 0 4rem; }
+main { padding: 2rem 0 4rem; }
 .hero {
   padding: 2.4rem;
   border: 1px solid var(--line);
@@ -551,6 +551,7 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: .95rem;
   }
+  main { padding: 1.6rem 0 3.25rem; }
   .hero { padding: 1.4rem; }
   .grid.two, .grid.three { grid-template-columns: 1fr; }
   table, thead, tbody, tr, th, td { display: block; }
