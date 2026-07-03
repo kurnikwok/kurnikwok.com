@@ -5,8 +5,14 @@
   const toggle = document.querySelector('.all-pages-toggle');
   const panel = document.getElementById('all-pages-panel');
   const closeButton = panel ? panel.querySelector('.all-pages-close') : null;
+  const backdrop = document.createElement('div');
+  backdrop.className = 'all-pages-backdrop';
+  backdrop.hidden = true;
+  backdrop.setAttribute('aria-hidden', 'true');
 
   if (!header || !shell || !nav || !toggle || !panel) return;
+
+  document.body.appendChild(backdrop);
 
   let viewportListenerAttached = false;
   let windowScrollListenerAttached = false;
@@ -27,6 +33,9 @@
   });
 
   if (closeButton) closeButton.addEventListener('click', closeMenu);
+  backdrop.addEventListener('click', closeMenu);
+  backdrop.addEventListener('touchmove', preventDefault, { passive: false });
+  backdrop.addEventListener('wheel', preventDefault, { passive: false });
 
   panel.addEventListener('click', (event) => {
     if (event.target.closest('a')) closeMenu({ skipFocus: true });
@@ -43,6 +52,10 @@
   });
 
   function openMenu() {
+    document.documentElement.classList.add('all-pages-open');
+    document.body.classList.add('all-pages-open');
+    header.classList.add('all-pages-open');
+    backdrop.hidden = false;
     updateMenuGeometry();
     panel.hidden = false;
     toggle.setAttribute('aria-expanded', 'true');
@@ -53,9 +66,14 @@
 
   function closeMenu(options = {}) {
     panel.hidden = true;
+    backdrop.hidden = true;
     toggle.setAttribute('aria-expanded', 'false');
+    document.documentElement.classList.remove('all-pages-open');
+    document.body.classList.remove('all-pages-open');
+    header.classList.remove('all-pages-open');
     detachViewportListener();
     detachWindowScrollListener();
+    updateMenuGeometry();
     if (!options.skipFocus) toggle.focus({ preventScroll: true });
   }
 
@@ -70,7 +88,7 @@
   function updateMenuGeometry() {
     const headerRect = header.getBoundingClientRect();
     const viewportHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
-    const navBottom = Math.max(0, headerRect.bottom) + 8;
+    const navBottom = Math.max(0, headerRect.bottom);
     document.documentElement.style.setProperty('--site-nav-bottom', `${navBottom}px`);
     document.documentElement.style.setProperty('--vvh', `${viewportHeight}px`);
   }
@@ -99,6 +117,10 @@
     if (!windowScrollListenerAttached) return;
     window.removeEventListener('scroll', updateMenuGeometry);
     windowScrollListenerAttached = false;
+  }
+
+  function preventDefault(event) {
+    event.preventDefault();
   }
 
   function markCurrentPanelLink() {
