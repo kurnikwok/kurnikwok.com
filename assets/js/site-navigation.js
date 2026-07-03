@@ -1,13 +1,12 @@
 (() => {
   const header = document.querySelector('.site-header');
   const shell = document.querySelector('[data-primary-nav-shell]');
-  const topbar = header ? header.querySelector('.topbar') || header : null;
   const nav = document.querySelector('[data-primary-nav]');
   const toggle = document.querySelector('.all-pages-toggle');
   const panel = document.getElementById('all-pages-panel');
   const closeButton = panel ? panel.querySelector('.all-pages-close') : null;
 
-  if (!header || !topbar || !shell || !nav || !toggle || !panel) return;
+  if (!header || !shell || !nav || !toggle || !panel) return;
 
   let viewportListenerAttached = false;
   let windowScrollListenerAttached = false;
@@ -69,17 +68,10 @@
   }
 
   function updateMenuGeometry() {
-    const topbarRect = topbar.getBoundingClientRect();
-    const viewport = window.visualViewport;
-    const viewportHeight = viewport ? viewport.height : window.innerHeight;
-    const viewportWidth = viewport ? viewport.width : window.innerWidth;
-    const panelGap = 8;
-    const navBottom = Math.max(0, topbarRect.bottom) + panelGap;
-    const menuLeft = Math.max(0, topbarRect.left);
-    const menuWidth = Math.max(0, Math.min(topbarRect.width, viewportWidth - menuLeft));
+    const headerRect = header.getBoundingClientRect();
+    const viewportHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+    const navBottom = Math.max(0, headerRect.bottom) + 8;
     document.documentElement.style.setProperty('--site-nav-bottom', `${navBottom}px`);
-    document.documentElement.style.setProperty('--site-menu-left', `${menuLeft}px`);
-    document.documentElement.style.setProperty('--site-menu-width', `${menuWidth}px`);
     document.documentElement.style.setProperty('--vvh', `${viewportHeight}px`);
   }
 
