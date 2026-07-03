@@ -71,11 +71,13 @@ header.site-header {
 }
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
 .topbar {
+  --topbar-inline-pad: 1rem;
+  position: relative;
   display: flex;
   gap: 1.25rem;
   align-items: center;
   justify-content: space-between;
-  padding: .9rem 1rem;
+  padding: .9rem var(--topbar-inline-pad);
   border: 1px solid color-mix(in srgb, var(--line) 76%, var(--accent) 24%);
   border-radius: var(--radius);
   background: color-mix(in srgb, var(--surface) 96%, transparent);
@@ -150,13 +152,13 @@ nav.primary-nav a:hover,
   outline-offset: .18rem;
 }
 .all-pages-panel {
-  position: fixed;
-  left: var(--site-menu-left, max(.75rem, env(safe-area-inset-left)));
-  right: auto;
-  top: var(--site-nav-bottom, 5.5rem);
+  position: absolute;
+  left: calc(-1 * var(--topbar-inline-pad) - 1px);
+  right: calc(-1 * var(--topbar-inline-pad) - 1px);
+  top: calc(100% - 1px);
   z-index: 70;
-  width: var(--site-menu-width, calc(100vw - max(.75rem, env(safe-area-inset-left)) - max(.75rem, env(safe-area-inset-right))));
-  max-width: calc(100vw - max(.75rem, env(safe-area-inset-left)) - max(.75rem, env(safe-area-inset-right)));
+  width: auto;
+  max-width: none;
   max-height: calc(100vh - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .75rem);
   max-height: calc(100dvh - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .75rem);
   max-height: calc(var(--vvh, 100dvh) - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .75rem);
@@ -501,7 +503,7 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
     align-items: flex-start;
     flex-direction: column;
     gap: .45rem;
-    padding: .8rem 1rem .7rem;
+    padding: .8rem var(--topbar-inline-pad) .7rem;
   }
   .primary-nav-shell {
     width: 100%;
