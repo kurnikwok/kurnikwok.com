@@ -101,15 +101,133 @@ header.site-header {
   white-space: nowrap;
 }
 .nowrap { white-space: nowrap; }
-nav {
+.primary-nav-shell {
+  position: relative;
+  min-width: 0;
+}
+.topbar .primary-nav-shell {
+  margin-left: auto;
+}
+nav.primary-nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: .35rem .75rem;
   font-size: .92rem;
 }
-nav a { color: var(--muted); text-decoration: none; padding: .25rem .1rem; }
-nav a[aria-current="page"], nav a:hover { color: var(--accent); }
+nav.primary-nav a,
+.all-pages-toggle {
+  color: var(--muted);
+  text-decoration: none;
+  padding: .25rem .1rem;
+}
+nav.primary-nav a[aria-current="page"],
+nav.primary-nav a:hover,
+.all-pages-toggle:hover,
+.all-pages-toggle[aria-expanded="true"] {
+  color: var(--accent);
+}
+.all-pages-toggle {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  border-radius: .4rem;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font: inherit;
+  line-height: inherit;
+  white-space: nowrap;
+}
+.all-pages-toggle:focus-visible,
+.all-pages-close:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 64%, transparent);
+  outline-offset: .18rem;
+}
+.all-pages-panel {
+  position: fixed;
+  left: max(.75rem, env(safe-area-inset-left));
+  right: max(.75rem, env(safe-area-inset-right));
+  top: var(--site-nav-bottom, 5.5rem);
+  z-index: 70;
+  max-height: calc(100vh - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .75rem);
+  max-height: calc(100dvh - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .75rem);
+  max-height: calc(var(--vvh, 100dvh) - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .75rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem;
+  border: 1px solid color-mix(in srgb, var(--line) 72%, var(--accent) 28%);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--surface) 97%, transparent);
+  box-shadow: var(--shadow);
+}
+.all-pages-panel[hidden] { display: none; }
+.all-pages-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid var(--line);
+}
+.all-pages-head strong {
+  color: var(--accent);
+  font-size: 1rem;
+}
+.all-pages-close {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface-strong) 72%, transparent);
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: .86rem;
+  font-weight: 720;
+  padding: .35rem .7rem;
+}
+.all-pages-close:hover { color: var(--accent); }
+.all-pages-nav {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem 1.25rem;
+  padding-top: .95rem;
+}
+.all-pages-nav section { min-width: 0; }
+.all-pages-nav h2 {
+  margin: 0 0 .45rem;
+  color: var(--accent);
+  font-size: .86rem;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+.all-pages-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.all-pages-nav li + li { margin-top: .35rem; }
+.all-pages-nav a {
+  display: inline-block;
+  padding: .1rem 0;
+  color: var(--muted);
+  text-decoration: none;
+  line-height: 1.35;
+}
+.all-pages-nav a:hover,
+.all-pages-nav a[aria-current="page"] {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: .08em;
+  text-underline-offset: .18em;
+}
+html.nav-menu-open,
+body.nav-menu-open {
+  overflow: hidden;
+}
 main { padding: 3.2rem 0 4rem; }
 .hero {
   padding: 2.4rem;
@@ -381,7 +499,34 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
     gap: .45rem;
     padding: .8rem 1rem .7rem;
   }
-  nav {
+  .primary-nav-shell {
+    width: 100%;
+  }
+  .primary-nav-shell::before,
+  .primary-nav-shell::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 2rem;
+    height: 2.25rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .16s ease;
+  }
+  .primary-nav-shell::before {
+    left: 0;
+    background: linear-gradient(to right, var(--surface) 18%, transparent);
+  }
+  .primary-nav-shell::after {
+    right: 0;
+    background: linear-gradient(to left, var(--surface) 18%, transparent);
+  }
+  .primary-nav-shell.can-scroll-left::before,
+  .primary-nav-shell.can-scroll-right::after {
+    opacity: 1;
+  }
+  nav.primary-nav {
     width: 100%;
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -392,12 +537,23 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
   }
-  nav a {
+  nav.primary-nav a,
+  .all-pages-toggle {
     flex: 0 0 auto;
     white-space: nowrap;
   }
-  nav a:first-child {
+  nav.primary-nav a:first-child {
     padding-left: 0;
+  }
+  .all-pages-panel {
+    border-radius: calc(var(--radius) - 4px);
+    max-height: calc(100vh - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .65rem);
+    max-height: calc(100dvh - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .65rem);
+    max-height: calc(var(--vvh, 100dvh) - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .65rem);
+  }
+  .all-pages-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .95rem;
   }
   .hero { padding: 1.4rem; }
   .grid.two, .grid.three { grid-template-columns: 1fr; }
@@ -483,6 +639,29 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   .checklist-grid,
   .route-card-grid { grid-template-columns: 1fr; }
 }
+@media (min-width: 821px) {
+  .all-pages-panel {
+    left: 50%;
+    right: auto;
+    width: min(68rem, calc(100vw - 2rem));
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 520px) {
+  .all-pages-nav { grid-template-columns: 1fr; }
+}
+@media (max-height: 460px) and (orientation: landscape) {
+  .all-pages-panel {
+    padding: .85rem;
+  }
+  .all-pages-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .75rem .95rem;
+  }
+  .all-pages-nav h2 { font-size: .78rem; }
+  .all-pages-nav a { line-height: 1.28; }
+}
+
 
 /* Glossary popup treatment: first meaningful occurrence of glossary terms outside the glossary page. */
 .glossary-term-phrase {
