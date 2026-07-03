@@ -213,7 +213,7 @@ nav.primary-nav a:hover,
 .all-pages-nav {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1.55rem 1.25rem;
+  gap: 2.35rem 1.25rem;
   padding-top: .95rem;
 }
 .all-pages-nav section { min-width: 0; }
@@ -569,7 +569,7 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   }
   .all-pages-nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2.75rem .95rem;
+    gap: 3.1rem .95rem;
   }
   main { padding: 1.6rem 0 3.25rem; }
   .hero { padding: 1.4rem; }
@@ -665,7 +665,10 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   }
 }
 @media (max-width: 520px) {
-  .all-pages-nav { grid-template-columns: 1fr; }
+  .all-pages-nav {
+    grid-template-columns: 1fr;
+    row-gap: 2.8rem;
+  }
 }
 @media (max-height: 460px) and (orientation: landscape) {
   .all-pages-panel {
@@ -673,7 +676,7 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   }
   .all-pages-nav {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem .95rem;
+    gap: 2.65rem .95rem;
   }
   .all-pages-nav h2 { font-size: .78rem; }
   .all-pages-nav a { line-height: 1.28; }
