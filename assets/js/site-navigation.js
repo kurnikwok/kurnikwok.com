@@ -47,6 +47,7 @@
     updateMenuGeometry();
     panel.hidden = false;
     toggle.setAttribute('aria-expanded', 'true');
+    topbar.classList.add('all-pages-open');
     attachViewportListener();
     attachWindowScrollListener();
     window.requestAnimationFrame(updateMenuGeometry);
@@ -55,6 +56,7 @@
   function closeMenu(options = {}) {
     panel.hidden = true;
     toggle.setAttribute('aria-expanded', 'false');
+    topbar.classList.remove('all-pages-open');
     detachViewportListener();
     detachWindowScrollListener();
     if (!options.skipFocus) toggle.focus({ preventScroll: true });
@@ -69,15 +71,14 @@
   }
 
   function updateMenuGeometry() {
-    const headerRect = header.getBoundingClientRect();
     const topbarRect = topbar.getBoundingClientRect();
     const viewportHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
     const viewportWidth = window.visualViewport ? window.visualViewport.width : window.innerWidth;
-    const navBottom = Math.max(0, headerRect.bottom) + 8;
     const safeInset = 12;
     const menuLeft = Math.max(safeInset, topbarRect.left);
     const menuRight = Math.max(safeInset, viewportWidth - topbarRect.right);
     const menuWidth = Math.max(280, viewportWidth - menuLeft - menuRight);
+    const navBottom = Math.max(0, topbarRect.bottom - 1);
     document.documentElement.style.setProperty('--site-nav-bottom', `${navBottom}px`);
     document.documentElement.style.setProperty('--site-menu-left', `${menuLeft}px`);
     document.documentElement.style.setProperty('--site-menu-width', `${menuWidth}px`);

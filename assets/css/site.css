@@ -82,6 +82,11 @@ header.site-header {
   backdrop-filter: blur(14px);
   box-shadow: 0 16px 38px rgba(49, 31, 16, .16);
 }
+
+.topbar.all-pages-open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
 .brand {
   align-items: baseline;
   color: var(--text);
@@ -161,7 +166,8 @@ nav.primary-nav a:hover,
   -webkit-overflow-scrolling: touch;
   padding: 1rem;
   border: 1px solid color-mix(in srgb, var(--line) 72%, var(--accent) 28%);
-  border-radius: var(--radius);
+  border-top: 0;
+  border-radius: 0 0 var(--radius) var(--radius);
   background: color-mix(in srgb, var(--surface) 97%, transparent);
   box-shadow: var(--shadow);
 }
@@ -544,7 +550,7 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
     padding-left: 0;
   }
   .all-pages-panel {
-    border-radius: calc(var(--radius) - 4px);
+    border-radius: 0 0 calc(var(--radius) - 4px) calc(var(--radius) - 4px);
     max-height: calc(100vh - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .65rem);
     max-height: calc(100dvh - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .65rem);
     max-height: calc(var(--vvh, 100dvh) - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .65rem);
