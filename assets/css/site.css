@@ -569,7 +569,7 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   }
   .all-pages-nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem .95rem;
+    gap: 2.75rem .95rem;
   }
   main { padding: 1.6rem 0 3.25rem; }
   .hero { padding: 1.4rem; }
@@ -673,7 +673,7 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   }
   .all-pages-nav {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.45rem .95rem;
+    gap: 2rem .95rem;
   }
   .all-pages-nav h2 { font-size: .78rem; }
   .all-pages-nav a { line-height: 1.28; }
