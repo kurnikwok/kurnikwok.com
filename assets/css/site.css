@@ -86,8 +86,9 @@ header.site-header {
 }
 
 .topbar.all-pages-open {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  flex-wrap: wrap;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
 }
 .brand {
   align-items: baseline;
@@ -152,26 +153,25 @@ nav.primary-nav a:hover,
   outline-offset: .18rem;
 }
 .all-pages-panel {
-  position: absolute;
-  left: calc(-1 * var(--topbar-inline-pad) - 1px);
-  right: calc(-1 * var(--topbar-inline-pad) - 1px);
-  top: calc(100% - 1px);
+  position: static;
   z-index: 70;
-  width: auto;
+  flex: 0 0 calc(100% + (2 * var(--topbar-inline-pad)));
+  width: calc(100% + (2 * var(--topbar-inline-pad)));
   max-width: none;
   max-height: calc(100vh - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .75rem);
   max-height: calc(100dvh - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .75rem);
   max-height: calc(var(--vvh, 100dvh) - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .75rem);
+  margin: .75rem calc(-1 * var(--topbar-inline-pad)) 0;
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
-  padding: 1rem;
-  border: 1px solid color-mix(in srgb, var(--line) 72%, var(--accent) 28%);
-  border-top: 0;
-  border-radius: 0 0 var(--radius) var(--radius);
-  background: color-mix(in srgb, var(--surface) 97%, transparent);
-  box-shadow: var(--shadow);
+  padding: .95rem var(--topbar-inline-pad) .15rem;
+  border: 0;
+  border-top: 1px solid color-mix(in srgb, var(--line) 72%, var(--accent) 28%);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 .all-pages-panel[hidden] { display: none; }
 .all-pages-head {
@@ -552,7 +552,7 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
     padding-left: 0;
   }
   .all-pages-panel {
-    border-radius: 0 0 calc(var(--radius) - 4px) calc(var(--radius) - 4px);
+    border-radius: 0;
     max-height: calc(100vh - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .65rem);
     max-height: calc(100dvh - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .65rem);
     max-height: calc(var(--vvh, 100dvh) - var(--site-nav-bottom, 5.5rem) - env(safe-area-inset-bottom) - .65rem);
@@ -644,11 +644,6 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   .mini-steps,
   .checklist-grid,
   .route-card-grid { grid-template-columns: 1fr; }
-}
-@media (min-width: 821px) {
-  .all-pages-panel {
-    transform: none;
-  }
 }
 @media (max-width: 520px) {
   .all-pages-nav { grid-template-columns: 1fr; }

@@ -72,10 +72,10 @@
   }
 
   function updateMenuGeometry() {
-    const topbarRect = topbar.getBoundingClientRect();
     const viewportHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
-    const navBottom = Math.max(0, topbarRect.bottom - 1);
-    document.documentElement.style.setProperty('--site-nav-bottom', `${navBottom}px`);
+    const anchorRect = panel.hidden ? topbar.getBoundingClientRect() : panel.getBoundingClientRect();
+    const panelTop = Math.max(0, panel.hidden ? anchorRect.bottom : anchorRect.top);
+    document.documentElement.style.setProperty('--site-nav-bottom', `${panelTop}px`);
     document.documentElement.style.setProperty('--vvh', `${viewportHeight}px`);
   }
 
