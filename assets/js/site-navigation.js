@@ -1,18 +1,16 @@
 (() => {
   const header = document.querySelector('.site-header');
-  const topbar = document.querySelector('.topbar');
   const shell = document.querySelector('[data-primary-nav-shell]');
   const nav = document.querySelector('[data-primary-nav]');
   const toggle = document.querySelector('.all-pages-toggle');
   const panel = document.getElementById('all-pages-panel');
   const closeButton = panel ? panel.querySelector('.all-pages-close') : null;
 
-  if (!header || !topbar || !shell || !nav || !toggle || !panel) return;
+  if (!header || !shell || !nav || !toggle || !panel) return;
 
   let viewportListenerAttached = false;
   let windowScrollListenerAttached = false;
 
-  topbar.appendChild(panel);
   markCurrentPanelLink();
   updateNavFadeState();
   updateMenuGeometry();
@@ -36,7 +34,7 @@
 
   document.addEventListener('click', (event) => {
     if (panel.hidden) return;
-    if (topbar.contains(event.target)) return;
+    if (shell.contains(event.target)) return;
     closeMenu();
   });
 
@@ -48,7 +46,6 @@
     updateMenuGeometry();
     panel.hidden = false;
     toggle.setAttribute('aria-expanded', 'true');
-    topbar.classList.add('all-pages-open');
     attachViewportListener();
     attachWindowScrollListener();
     window.requestAnimationFrame(updateMenuGeometry);
@@ -57,7 +54,6 @@
   function closeMenu(options = {}) {
     panel.hidden = true;
     toggle.setAttribute('aria-expanded', 'false');
-    topbar.classList.remove('all-pages-open');
     detachViewportListener();
     detachWindowScrollListener();
     if (!options.skipFocus) toggle.focus({ preventScroll: true });
@@ -72,10 +68,10 @@
   }
 
   function updateMenuGeometry() {
+    const headerRect = header.getBoundingClientRect();
     const viewportHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
-    const anchorRect = panel.hidden ? topbar.getBoundingClientRect() : panel.getBoundingClientRect();
-    const panelTop = Math.max(0, panel.hidden ? anchorRect.bottom : anchorRect.top);
-    document.documentElement.style.setProperty('--site-nav-bottom', `${panelTop}px`);
+    const navBottom = Math.max(0, headerRect.bottom) + 8;
+    document.documentElement.style.setProperty('--site-nav-bottom', `${navBottom}px`);
     document.documentElement.style.setProperty('--vvh', `${viewportHeight}px`);
   }
 
