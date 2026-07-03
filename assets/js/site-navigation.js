@@ -29,7 +29,7 @@
   if (closeButton) closeButton.addEventListener('click', closeMenu);
 
   panel.addEventListener('click', (event) => {
-    if (event.target.closest('a')) closeMenu();
+    if (event.target.closest('a')) closeMenu({ skipFocus: true });
   });
 
   document.addEventListener('click', (event) => {
@@ -49,27 +49,16 @@
     toggle.setAttribute('aria-expanded', 'true');
     document.documentElement.classList.add('nav-menu-open');
     document.body.classList.add('nav-menu-open');
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${savedScrollY}px`;
-    document.body.style.left = '0';
-    document.body.style.right = '0';
-    document.body.style.width = '100%';
     attachViewportListener();
   }
 
-  function closeMenu() {
+  function closeMenu(options = {}) {
     panel.hidden = true;
     toggle.setAttribute('aria-expanded', 'false');
     detachViewportListener();
     document.documentElement.classList.remove('nav-menu-open');
     document.body.classList.remove('nav-menu-open');
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.left = '';
-    document.body.style.right = '';
-    document.body.style.width = '';
-    window.scrollTo(0, savedScrollY);
-    toggle.focus({ preventScroll: true });
+    if (!options.skipFocus) toggle.focus({ preventScroll: true });
   }
 
   function updateNavFadeState() {
