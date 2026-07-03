@@ -121,6 +121,14 @@ nav.primary-nav a,
   text-decoration: none;
   padding: .25rem .1rem;
 }
+.all-pages-toggle span[aria-hidden="true"] {
+  display: inline-block;
+  margin-left: .08rem;
+  font-size: 1.2em;
+  font-weight: 850;
+  line-height: .8;
+  transform: translateY(.03em);
+}
 nav.primary-nav a[aria-current="page"],
 nav.primary-nav a:hover,
 .all-pages-toggle:hover,
