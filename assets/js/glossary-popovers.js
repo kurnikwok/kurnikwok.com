@@ -22,6 +22,7 @@
     '.breadcrumbs', '.eyebrow', '.badge',
     '.sitemap-card', '.sitemap-grid', '.link-note',
     '.figure-section', '.concept-diagram', '.figure-card', '.diagram-note',
+    '.mini-steps',
     '.actions',
     '.no-glossary-popovers', '[data-no-glossary-popovers]'
   ].join(',');
