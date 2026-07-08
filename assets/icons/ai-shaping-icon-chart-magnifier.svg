@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="0 0 24 24" width="24" height="24">
+  <defs/>
+  <g id="Icons" transform="translate(551 720)" stroke="none" fill="none" fill-opacity="1" stroke-opacity="1" stroke-dasharray="none">
+    <title>Icons</title>
+    <g id="Icons_ai_shaping_icon_chart_magnifier">
+      <title>ai-shaping-icon-chart-magnifier</title>
+      <g id="Group_324">
+        <g id="Group_326">
+          <g id="Graphic_332">
+            <circle cx="-540.37756" cy="-709.3776" r="8.62244616691656" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_331">
+            <line x1="-534.17346" y1="-703.17346" x2="-529" y2="-698" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_330">
+            <line x1="-543.6424" y1="-705.5491" x2="-543.6424" y2="-709.8603" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_329">
+            <line x1="-540.3978" y1="-705.5514" x2="-540.3978" y2="-712.0182" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_328">
+            <line x1="-537.15313" y1="-705.5536" x2="-537.15313" y2="-714.176" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_327">
+            <line x1="-544.67306" y1="-704.6869" x2="-536.0506" y2="-704.6869" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+        </g>
+        <g id="Graphic_325"/>
+      </g>
+    </g>
+  </g>
+</svg>

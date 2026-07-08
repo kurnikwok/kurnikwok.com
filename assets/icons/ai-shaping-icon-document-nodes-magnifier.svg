@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="0 0 24 24" width="24" height="24">
+  <defs/>
+  <g id="Icons" transform="translate(551 720)" stroke="none" fill="none" fill-opacity="1" stroke-opacity="1" stroke-dasharray="none">
+    <title>Icons</title>
+    <g id="Icons_ai_shaping_icon_document_nodes_magnifier">
+      <title>ai-shaping-icon-document-nodes-magnifier</title>
+      <g id="Group_250">
+        <g id="Group_252">
+          <g id="Group_262">
+            <g id="Graphic_264">
+              <path d="M -548.8385 -718 L -539.50515 -718 L -534.8385 -713.3333 L -534.8385 -698 L -548.8385 -698 Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+            <g id="Graphic_263">
+              <path d="M -539.50515 -718 L -539.50515 -713.3333 L -534.8385 -713.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+          </g>
+          <g id="Group_256">
+            <g id="Graphic_261">
+              <circle cx="-544.6203" cy="-712.63825" r="1.34615667025366" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+            <g id="Graphic_260">
+              <circle cx="-540.96694" cy="-708.9738" r="1.34615667025363" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+            <g id="Graphic_259">
+              <circle cx="-544.6106" cy="-705.7045" r="1.34615667025366" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+            <g id="Graphic_258">
+              <line x1="-543.5149" y1="-711.7117" x2="-542.0723" y2="-709.9003" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+            <g id="Graphic_257">
+              <line x1="-542.0803" y1="-707.9748" x2="-543.49727" y2="-706.70345" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+          </g>
+          <g id="Group_253">
+            <g id="Graphic_255">
+              <circle cx="-534.80254" cy="-703.6596" r="3.26923762775884" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+            <g id="Graphic_254">
+              <line x1="-532.49485" y1="-701.3519" x2="-529.1615" y2="-698.01854" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+          </g>
+        </g>
+        <g id="Graphic_251"/>
+      </g>
+    </g>
+  </g>
+</svg>

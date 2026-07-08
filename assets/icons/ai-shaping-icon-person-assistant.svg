@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="0 0 24 24" width="24" height="24">
+  <defs/>
+  <g id="Icons" transform="translate(551 720)" stroke="none" fill="none" fill-opacity="1" stroke-opacity="1" stroke-dasharray="none">
+    <title>Icons</title>
+    <g id="Icons_ai_shaping_icon_person_assistant">
+      <title>ai-shaping-icon-person-assistant</title>
+      <g id="Group_237">
+        <g id="Group_239">
+          <g id="Graphic_243">
+            <circle cx="-539" cy="-713.625" r="3.7500078671351" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_242">
+            <path d="M -549 -698.625 C -547.4375 -704.09375 -543.6875 -707.375 -539 -707.375 C -534.3125 -707.375 -530.5625 -704.09375 -529 -698.625" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_241">
+            <line x1="-543.375" y1="-698.625" x2="-543.375" y2="-701.125" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_240">
+            <line x1="-534.625" y1="-698.625" x2="-534.625" y2="-701.125" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+        </g>
+        <g id="Graphic_238"/>
+      </g>
+    </g>
+  </g>
+</svg>

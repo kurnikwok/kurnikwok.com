@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="0 0 24 24" width="24" height="24">
+  <defs/>
+  <g id="Icons" transform="translate(551 720)" stroke="none" fill="none" fill-opacity="1" stroke-opacity="1" stroke-dasharray="none">
+    <title>Icons</title>
+    <g id="Icons_ai_shaping_icon_database_magnifier">
+      <title>ai-shaping-icon-database-magnifier</title>
+      <g id="Group_217">
+        <g id="Group_219">
+          <g id="Graphic_226">
+            <ellipse cx="-542.28845" cy="-714.02494" rx="6.71155785287968" ry="2.68462314115192" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_225">
+            <path d="M -549 -714.02494 L -549 -705.9711 C -549 -704.461 -545.9798 -703.2865 -542.28845 -703.2865 C -540.61056 -703.2865 -539.10047 -703.53816 -537.92595 -703.9576" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_224">
+            <line x1="-535.5769" y1="-714.02494" x2="-535.5769" y2="-708.3201" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_223">
+            <path d="M -549 -709.998 C -549 -708.4879 -545.9798 -707.3134 -542.28845 -707.3134 C -539.26825 -707.3134 -536.7514 -708.15234 -535.9125 -709.3269" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Group_220">
+            <g id="Graphic_222">
+              <circle cx="-534.679" cy="-704.9694" r="3.29124471631597" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+            <g id="Graphic_221">
+              <line x1="-532.3558" y1="-702.6462" x2="-529" y2="-699.2904" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+          </g>
+        </g>
+        <g id="Graphic_218"/>
+      </g>
+    </g>
+  </g>
+</svg>

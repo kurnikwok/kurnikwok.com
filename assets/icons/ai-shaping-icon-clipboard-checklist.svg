@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="0 0 24 24" width="24" height="24">
+  <defs/>
+  <g id="Icons" transform="translate(551 720)" stroke="none" fill="none" fill-opacity="1" stroke-opacity="1" stroke-dasharray="none">
+    <title>Icons</title>
+    <g id="Icons_ai_shaping_icon_clipboard_checklist">
+      <title>ai-shaping-icon-clipboard-checklist</title>
+      <g id="Group_22">
+        <g id="Group_3">
+          <g id="Graphic_11">
+            <path d="M -545 -716.6667 L -533 -716.6667 C -531.8954 -716.6667 -531 -715.7712 -531 -714.6667 L -531 -700 C -531 -698.8954 -531.8954 -698 -533 -698 L -545 -698 C -546.1046 -698 -547 -698.8954 -547 -700 L -547 -714.6667 C -547 -715.7712 -546.1046 -716.6667 -545 -716.6667 Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_10">
+            <path d="M -541.66667 -718 L -536.33333 -718 L -535 -715.3333 L -543 -715.3333 Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_9">
+            <path d="M -543.33333 -711.9259 L -541.66667 -710.2593 L -539 -712.9259" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_8">
+            <line x1="-537.33333" y1="-711.5926" x2="-533.66667" y2="-711.5926" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_7">
+            <path d="M -543.33333 -706.9259 L -541.66667 -705.2593 L -539 -707.9259" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_6">
+            <line x1="-537.33333" y1="-706.5926" x2="-533.66667" y2="-706.5926" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_5">
+            <path d="M -543.33333 -701.9259 L -541.66667 -700.2593 L -539 -702.9259" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_4">
+            <line x1="-537.33333" y1="-701.5926" x2="-533.66667" y2="-701.5926" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+        </g>
+        <g id="Graphic_2"/>
+      </g>
+    </g>
+  </g>
+</svg>

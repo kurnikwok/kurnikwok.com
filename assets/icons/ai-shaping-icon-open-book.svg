@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="0 0 24 24" width="24" height="24">
+  <defs/>
+  <g id="Icons" transform="translate(551 720)" stroke="none" fill="none" fill-opacity="1" stroke-opacity="1" stroke-dasharray="none">
+    <title>Icons</title>
+    <g id="Icons_ai_shaping_icon_open_book">
+      <title>ai-shaping-icon-open-book</title>
+      <g id="Group_244">
+        <g id="Group_246">
+          <g id="Graphic_249">
+            <path d="M -549 -716.6667 C -545.33333 -718 -542.33333 -717.3333 -539 -714.6667 L -539 -698.6667 C -542.33333 -701.3333 -545.33333 -702 -549 -700.6667 Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_248">
+            <path d="M -529 -716.6667 C -532.66667 -718 -535.66667 -717.3333 -539 -714.6667 L -539 -698.6667 C -535.66667 -701.3333 -532.66667 -702 -529 -700.6667 Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_247">
+            <line x1="-539" y1="-714.6667" x2="-539" y2="-698.6667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+        </g>
+        <g id="Graphic_245"/>
+      </g>
+    </g>
+  </g>
+</svg>

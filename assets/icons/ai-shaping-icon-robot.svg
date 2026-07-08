@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="0 0 24 24" width="24" height="24">
+  <defs/>
+  <g id="Icons" transform="translate(551 720)" stroke="none" fill="none" fill-opacity="1" stroke-opacity="1" stroke-dasharray="none">
+    <title>Icons</title>
+    <g id="Icons_ai_shaping_icon_robot">
+      <title>ai-shaping-icon-robot</title>
+      <g id="Group_21">
+        <g id="Group_13">
+          <g id="Graphic_20">
+            <line x1="-539" y1="-717.375" x2="-539" y2="-714.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_19">
+            <path d="M -544 -713.625 L -534 -713.625 C -532.2741 -713.625 -530.875 -712.0987 -530.875 -710.2159 L -530.875 -702.0341 C -530.875 -700.1513 -532.2741 -698.625 -534 -698.625 L -544 -698.625 C -545.7259 -698.625 -547.125 -700.1513 -547.125 -702.0341 L -547.125 -710.2159 C -547.125 -712.0987 -545.7259 -713.625 -544 -713.625 Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_18">
+            <circle cx="-542.125" cy="-706.86905" r="1.09375229458104" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_17">
+            <circle cx="-535.875" cy="-706.86905" r="1.09375229458104" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_16">
+            <line x1="-542.125" y1="-702.6875" x2="-535.875" y2="-702.6875" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_15">
+            <line x1="-549" y1="-706.8068" x2="-547.125" y2="-706.8068" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_14">
+            <line x1="-530.875" y1="-706.8068" x2="-529" y2="-706.8068" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+        </g>
+        <g id="Graphic_12"/>
+      </g>
+    </g>
+  </g>
+</svg>
