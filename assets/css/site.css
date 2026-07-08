@@ -506,6 +506,22 @@ li + li { margin-top: .35rem; }
 .comparison-table td {
   background: color-mix(in srgb, var(--surface) 95%, transparent);
 }
+
+.burden-shift-components-table {
+  table-layout: fixed;
+}
+.burden-shift-components-table th:nth-child(1),
+.burden-shift-components-table td:nth-child(1) {
+  width: 31%;
+}
+.burden-shift-components-table th:nth-child(2),
+.burden-shift-components-table td:nth-child(2) {
+  width: 28%;
+}
+.burden-shift-components-table th:nth-child(3),
+.burden-shift-components-table td:nth-child(3) {
+  width: 41%;
+}
 .breadcrumbs { color: var(--muted); font-size: .92rem; margin-bottom: 1.1rem; }
 .breadcrumbs a { color: var(--muted); text-decoration: none; }
 footer {
@@ -606,6 +622,11 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
 
   .comparison-table th:first-child,
   .comparison-table td:first-child {
+    width: auto;
+  }
+
+  .burden-shift-components-table th,
+  .burden-shift-components-table td {
     width: auto;
   }
 }
