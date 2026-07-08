@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="0 0 24 24" width="24" height="24">
+  <defs/>
+  <g id="Icons" transform="translate(551 720)" stroke="none" fill="none" fill-opacity="1" stroke-opacity="1" stroke-dasharray="none">
+    <title>Icons</title>
+    <g id="Icons_ai_shaping_icon_repeat_arrows">
+      <title>ai-shaping-icon-repeat-arrows</title>
+      <g id="Group_295">
+        <g id="Group_297">
+          <g id="Graphic_302">
+            <path d="M -530.23554 -717.0603 L -530.23554 -711.72694 L -535.5689 -711.72694" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Graphic_301">
+            <path d="M -547.7683 -698.94715 L -547.7683 -704.2805 L -542.43496 -704.2805" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="Group_298">
+            <g id="Graphic_300">
+              <path d="M -530.25 -711.75 C -531.91667 -715.5 -535.25 -718 -539.41667 -718 C -544.625 -718 -549 -713.625 -549 -708.4167" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+            <g id="Graphic_299">
+              <path d="M -547.75 -704.25 C -546.08333 -700.5 -542.75 -698 -538.58333 -698 C -533.375 -698 -529 -702.375 -529 -707.5833" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+          </g>
+        </g>
+        <g id="Graphic_296"/>
+      </g>
+    </g>
+  </g>
+</svg>

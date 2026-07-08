@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="0 0 24 24" width="24" height="24">
+  <defs/>
+  <g id="Icons" transform="translate(551 720)" stroke="none" fill="none" fill-opacity="1" stroke-opacity="1" stroke-dasharray="none">
+    <title>Icons</title>
+    <g id="Icons_ai_shaping_icon_domain_shaping_capability">
+      <title>ai-shaping-icon-domain-shaping-capability</title>
+      <g id="Group_694">
+        <g id="Graphic_684"/>
+        <g id="Graphic_689">
+          <path d="M -545 -718 L -537.66667 -718 C -537.66667 -715.6667 -535 -715.6667 -535 -718 L -529 -718 L -529 -710.6667 C -531.33333 -710.6667 -531.33333 -708 -529 -708 L -529 -698 L -536.33333 -698 C -536.33333 -700.3333 -539 -700.3333 -539 -698 L -549 -698 L -549 -705.3333 C -546.66667 -705.3333 -546.66667 -708 -549 -708 L -549 -718 Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
