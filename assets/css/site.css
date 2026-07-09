@@ -643,51 +643,18 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
     width: auto;
   }
 
-  .burden-shift-components-table th,
-  .burden-shift-components-table td {
-    width: auto;
-  }
-
-
-  /* Keep the two-sided burden table readable as purpose-built mobile cards. */
   .burden-shift-components-table {
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    overflow: visible;
+    table-layout: auto;
   }
-  .burden-shift-components-table tbody {
-    display: grid;
-    gap: .9rem;
-  }
-  .burden-shift-components-table tr {
-    display: block;
-    overflow: hidden;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: var(--surface);
-  }
-  .burden-shift-components-table td {
-    border: 0;
-    padding: .8rem 1rem;
-    background: transparent;
-  }
-  .burden-shift-components-table td + td {
-    border-top: 1px solid var(--line);
-  }
-  .burden-shift-components-table td:first-child {
-    color: var(--text);
-    font-weight: 800;
-    font-size: 1.04rem;
-    line-height: 1.35;
-    background: color-mix(in srgb, var(--surface-strong) 76%, transparent);
-  }
-  .burden-shift-components-table td:first-child::before {
-    content: none;
-  }
-  .burden-shift-components-table td:nth-child(2)::before,
-  .burden-shift-components-table td:nth-child(3)::before {
-    margin-bottom: .32rem;
+
+  .burden-shift-components-table th:nth-child(1),
+  .burden-shift-components-table td:nth-child(1),
+  .burden-shift-components-table th:nth-child(2),
+  .burden-shift-components-table td:nth-child(2),
+  .burden-shift-components-table th:nth-child(3),
+  .burden-shift-components-table td:nth-child(3) {
+    box-sizing: border-box;
+    width: 100%;
   }
 }
 
