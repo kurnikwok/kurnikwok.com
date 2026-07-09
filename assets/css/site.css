@@ -406,7 +406,7 @@ th, td {
 th { color: var(--accent); background: color-mix(in srgb, var(--surface-strong) 76%, transparent); }
 tr:last-child td { border-bottom: 0; }
 
-/* Table cue icons: decorative visual correlation between hero diagrams and dense comparison/mechanism tables. */
+/* Cue icons: decorative visual correlation between diagrams, prose and dense comparison/mechanism tables. */
 .icon-label {
   align-items: center;
   display: inline-flex;
