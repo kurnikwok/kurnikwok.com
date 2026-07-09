@@ -425,6 +425,23 @@ tr:last-child td { border-bottom: 0; }
 .icon-blue { --icon-colour: #1D4ED8; }
 .icon-orange { --icon-colour: #EA580C; }
 .icon-green { --icon-colour: #16843A; }
+
+/* Running-prose cue icons align like inline symbols rather than locking the labelled term as a flex object. */
+main :where(p, li) .icon-label {
+  display: inline;
+  line-height: inherit;
+  vertical-align: baseline;
+}
+main :where(p, li) .icon-label .icon-cue {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  margin-inline-end: .35rem;
+  vertical-align: -0.14em;
+}
+main :where(p, li) .icon-label > :last-child {
+  vertical-align: baseline;
+}
 .term-list {
   display: grid;
   gap: .35rem;
