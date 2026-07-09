@@ -426,11 +426,12 @@ tr:last-child td { border-bottom: 0; }
 .icon-orange { --icon-colour: #EA580C; }
 .icon-green { --icon-colour: #16843A; }
 
-/* Running-prose cue icons align like inline symbols rather than locking the labelled term as a flex object. */
+/* Running-prose cue icons align like inline symbols and keep the icon with its labelled term. */
 main :where(p, li) .icon-label {
   display: inline;
   line-height: inherit;
   vertical-align: baseline;
+  white-space: nowrap;
 }
 main :where(p, li) .icon-label .icon-cue {
   display: inline-block;
