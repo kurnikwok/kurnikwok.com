@@ -757,7 +757,9 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
 
 /* Glossary popup treatment: first meaningful occurrence of glossary terms outside the glossary page. */
 .glossary-term-phrase {
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 .glossary-term {
   appearance: none;
@@ -775,6 +777,9 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   text-align: inherit;
   text-decoration: none;
   cursor: help;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 .glossary-term:hover,
 .glossary-term:focus-visible,
