@@ -151,14 +151,11 @@
   }
 
   function makeTermPhrase(term, label, punctuation = '') {
-    const button = makeButton(term, label);
-    if (!punctuation) return button;
-
-    const span = document.createElement('span');
-    span.className = 'glossary-term-phrase';
-    span.appendChild(button);
-    span.appendChild(document.createTextNode(`\u2060${punctuation}`));
-    return span;
+    // Keep following punctuation visually attached to the wrapped trigger.
+    // Safari can orphan punctuation when it sits in a separate text node after
+    // an inline button, even with a word joiner. Include the punctuation in the
+    // visible button label while keeping data-term on the canonical term name.
+    return makeButton(term, `${label}${punctuation}`);
   }
 
   function makeButton(term, label) {
