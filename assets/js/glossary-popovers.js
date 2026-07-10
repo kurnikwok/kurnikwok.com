@@ -147,12 +147,18 @@
 
   function getAttachedAttachment(text, index) {
     const rest = text.slice(index);
-    const connector = /^([,;:]\s+(?:and|or)\b)/i.exec(rest);
+
+    // Keep short punctuation-plus-connector phrases attached to the final
+    // word of the trigger so mobile Safari does not orphan punctuation or
+    // the connector on a new line. Keep this list deliberately short; long
+    // clauses should remain normal text and may wrap naturally.
+    const connector = /^([,;:]\s+(?:and|or|but|so|yet|for example|for instance)\b)/i.exec(rest);
     if (connector) {
       return { type: 'connector', text: connector[1], length: connector[1].length };
     }
 
-    const punctuation = /^([,.;:!?])/.exec(rest);
+    // Attach standalone closing punctuation to the final word of the trigger.
+    const punctuation = /^([,.;:!?\)\]\}”’])/.exec(rest);
     if (punctuation) {
       return { type: 'punctuation', text: punctuation[1], length: punctuation[1].length };
     }
@@ -162,40 +168,66 @@
 
   function makeTermPhrase(term, label, attachment = { type: 'none', text: '', length: 0 }) {
     const frag = document.createDocumentFragment();
-    const WORD_JOINER = '\u2060';
-
-    // Keep the interactive label on the canonical term. Short connector text
-    // such as ", and" or ", or" belongs beside the trigger, not inside it.
-    // Prefix the connector with a word joiner so Safari treats the connector as
-    // attached to the final trigger fragment while leaving the trigger label clean.
-    frag.appendChild(makeButton(term, label));
-
-    if (attachment.type === 'connector') {
-      const connector = document.createElement('span');
-      connector.className = 'glossary-term-connector';
-      connector.textContent = `${WORD_JOINER}${attachment.text}`;
-      frag.appendChild(connector);
-    } else if (attachment.type === 'punctuation') {
-      const punctuation = document.createElement('span');
-      punctuation.className = 'glossary-term-punctuation';
-      punctuation.textContent = `${WORD_JOINER}${attachment.text}`;
-      frag.appendChild(punctuation);
-    }
-
+    frag.appendChild(makeButton(term, label, attachment));
     return frag;
   }
 
-  function makeButton(term, label) {
+  function makeButton(term, label, attachment = { type: 'none', text: '', length: 0 }) {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'glossary-term';
-    button.textContent = label;
     button.dataset.term = term.name;
     button.dataset.definition = term.definition;
     button.dataset.url = term.url;
     button.setAttribute('aria-describedby', popover.id);
     button.setAttribute('aria-expanded', 'false');
+
+    appendVisibleTrigger(button, label, attachment);
     return button;
+  }
+
+  function appendVisibleTrigger(button, label, attachment) {
+    const hasAttachment = attachment && attachment.type !== 'none' && attachment.text;
+    if (!hasAttachment) {
+      const main = document.createElement('span');
+      main.className = 'glossary-term-main';
+      main.textContent = label;
+      button.appendChild(main);
+      return;
+    }
+
+    const split = splitFinalToken(label);
+    if (split.before) {
+      const before = document.createElement('span');
+      before.className = 'glossary-term-main';
+      before.textContent = split.before;
+      button.appendChild(before);
+    }
+
+    // Keep the final token and following punctuation/connector in one
+    // no-break tail. This is more robust than putting punctuation in a
+    // sibling span after the button, because browsers may still break between
+    // separate inline elements at narrow mobile widths.
+    const tail = document.createElement('span');
+    tail.className = 'glossary-term-tail';
+
+    const finalToken = document.createElement('span');
+    finalToken.className = 'glossary-term-main';
+    finalToken.textContent = split.finalToken;
+    tail.appendChild(finalToken);
+
+    const attached = document.createElement('span');
+    attached.className = attachment.type === 'connector' ? 'glossary-term-attachment glossary-term-connector' : 'glossary-term-attachment glossary-term-punctuation';
+    attached.textContent = attachment.text;
+    tail.appendChild(attached);
+
+    button.appendChild(tail);
+  }
+
+  function splitFinalToken(label) {
+    const match = /^(.*\s)(\S+)$/.exec(label);
+    if (!match) return { before: '', finalToken: label };
+    return { before: match[1], finalToken: match[2] };
   }
 
   function bindPopoverEvents() {

@@ -761,8 +761,10 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   overflow-wrap: normal;
   word-break: normal;
 }
+.glossary-term-tail,
 .glossary-term-connector,
-.glossary-term-punctuation {
+.glossary-term-punctuation,
+.glossary-term-attachment {
   white-space: nowrap;
 }
 .glossary-term {
@@ -778,20 +780,29 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   font: inherit;
   line-height: inherit;
   text-align: inherit;
-  text-decoration-line: underline;
-  text-decoration-style: dotted;
-  text-decoration-thickness: 1px;
-  text-underline-offset: .18em;
-  text-decoration-skip-ink: auto;
   cursor: help;
   white-space: normal;
   overflow-wrap: normal;
   word-break: normal;
 }
+.glossary-term-main {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .18em;
+  text-decoration-skip-ink: auto;
+}
+.glossary-term-attachment {
+  text-decoration: none;
+}
 .glossary-term:hover,
 .glossary-term:focus-visible,
 .glossary-term[aria-expanded="true"] {
   color: var(--accent);
+}
+.glossary-term:hover .glossary-term-main,
+.glossary-term:focus-visible .glossary-term-main,
+.glossary-term[aria-expanded="true"] .glossary-term-main {
   text-decoration-style: solid;
   text-decoration-thickness: 1.5px;
 }
