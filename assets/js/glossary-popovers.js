@@ -157,7 +157,7 @@
     const span = document.createElement('span');
     span.className = 'glossary-term-phrase';
     span.appendChild(button);
-    span.appendChild(document.createTextNode(punctuation));
+    span.appendChild(document.createTextNode(`\u2060${punctuation}`));
     return span;
   }
 

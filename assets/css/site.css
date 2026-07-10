@@ -758,7 +758,7 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
 /* Glossary popup treatment: first meaningful occurrence of glossary terms outside the glossary page. */
 .glossary-term-phrase {
   white-space: normal;
-  overflow-wrap: break-word;
+  overflow-wrap: normal;
   word-break: normal;
 }
 .glossary-term {
@@ -768,24 +768,28 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   margin: 0;
   padding: 0 .03em;
   border: 0;
-  border-bottom: 1px dotted color-mix(in srgb, var(--accent) 72%, transparent);
   border-radius: 0;
   background: transparent;
   color: inherit;
   font: inherit;
   line-height: inherit;
   text-align: inherit;
-  text-decoration: none;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .18em;
+  text-decoration-skip-ink: auto;
   cursor: help;
   white-space: normal;
-  overflow-wrap: break-word;
+  overflow-wrap: normal;
   word-break: normal;
 }
 .glossary-term:hover,
 .glossary-term:focus-visible,
 .glossary-term[aria-expanded="true"] {
   color: var(--accent);
-  border-bottom-style: solid;
+  text-decoration-style: solid;
+  text-decoration-thickness: 1.5px;
 }
 .glossary-term:focus-visible {
   outline: 2px solid color-mix(in srgb, var(--accent) 72%, transparent);
