@@ -108,10 +108,10 @@
       if (!found) break;
 
       if (found.start > cursor) frag.appendChild(document.createTextNode(text.slice(cursor, found.start)));
-      const punctuation = getAttachedPunctuation(text, found.end);
-      frag.appendChild(makeTermPhrase(found.term, text.slice(found.start, found.end), punctuation));
+      const attachment = getAttachedAttachment(text, found.end);
+      frag.appendChild(makeTermPhrase(found.term, text.slice(found.start, found.end), attachment));
       used.add(found.term.id);
-      cursor = found.end + punctuation.length;
+      cursor = found.end + attachment.length;
       changed = true;
     }
 
@@ -145,17 +145,44 @@
     return { index: match.index + match[1].length, text: match[2] };
   }
 
-  function getAttachedPunctuation(text, index) {
-    const char = text.charAt(index);
-    return /^[,.;:!?]$/.test(char) ? char : '';
+  function getAttachedAttachment(text, index) {
+    const rest = text.slice(index);
+    const connector = /^([,;:]\s+(?:and|or)\b)/i.exec(rest);
+    if (connector) {
+      return { type: 'connector', text: connector[1], length: connector[1].length };
+    }
+
+    const punctuation = /^([,.;:!?])/.exec(rest);
+    if (punctuation) {
+      return { type: 'punctuation', text: punctuation[1], length: punctuation[1].length };
+    }
+
+    return { type: 'none', text: '', length: 0 };
   }
 
-  function makeTermPhrase(term, label, punctuation = '') {
-    // Keep following punctuation visually attached to the wrapped trigger.
-    // Safari can orphan punctuation when it sits in a separate text node after
-    // an inline button, even with a word joiner. Include the punctuation in the
-    // visible button label while keeping data-term on the canonical term name.
-    return makeButton(term, `${label}${punctuation}`);
+  function makeTermPhrase(term, label, attachment = { type: 'none', text: '', length: 0 }) {
+    const frag = document.createDocumentFragment();
+    const WORD_JOINER = '\u2060';
+
+    // Keep the interactive label on the canonical term. Short connector text
+    // such as ", and" or ", or" belongs beside the trigger, not inside it.
+    // Prefix the connector with a word joiner so Safari treats the connector as
+    // attached to the final trigger fragment while leaving the trigger label clean.
+    frag.appendChild(makeButton(term, label));
+
+    if (attachment.type === 'connector') {
+      const connector = document.createElement('span');
+      connector.className = 'glossary-term-connector';
+      connector.textContent = `${WORD_JOINER}${attachment.text}`;
+      frag.appendChild(connector);
+    } else if (attachment.type === 'punctuation') {
+      const punctuation = document.createElement('span');
+      punctuation.className = 'glossary-term-punctuation';
+      punctuation.textContent = `${WORD_JOINER}${attachment.text}`;
+      frag.appendChild(punctuation);
+    }
+
+    return frag;
   }
 
   function makeButton(term, label) {
