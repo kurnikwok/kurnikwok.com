@@ -937,6 +937,20 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   color: var(--accent);
   font-weight: 720;
 }
+.sequence-page-label {
+  display: grid;
+  grid-template-columns: 2em minmax(0, 1fr);
+  column-gap: .45rem;
+  align-items: start;
+}
+.sequence-page-label .sequence-number {
+  min-width: 0;
+  text-align: right;
+}
+.sequence-page-label a {
+  min-width: 0;
+}
+
 .reading-sequence-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
