@@ -915,8 +915,27 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
 .reading-sequence-block {
   margin-top: 2rem;
 }
-.reading-sequence-block > h2 {
+.reading-sequence-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .75rem;
   margin-bottom: .85rem;
+}
+.reading-sequence-heading h2 {
+  margin: 0;
+}
+.sequence-progress {
+  margin: 0;
+  color: var(--muted);
+  font-size: .92rem;
+  font-weight: 650;
+}
+.sequence-number {
+  display: inline-block;
+  min-width: 1.8em;
+  color: var(--accent);
+  font-weight: 720;
 }
 .reading-sequence-grid {
   display: grid;
@@ -971,5 +990,12 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
 @media (max-width: 820px) {
   .reading-sequence-grid,
   .reading-sequence-grid.reading-sequence-two { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .reading-sequence-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .2rem;
+  }
 }
 
