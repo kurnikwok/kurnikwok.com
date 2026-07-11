@@ -919,17 +919,21 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
 .reading-sequence-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: .9rem;
+  align-items: stretch;
+  gap: 1rem;
+}
+.reading-sequence-grid.reading-sequence-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .reading-sequence-card {
   display: flex;
   min-height: 100%;
   flex-direction: column;
   gap: .35rem;
-  padding: 1rem;
+  padding: 1.25rem;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: color-mix(in srgb, var(--surface) 88%, var(--surface-strong) 12%);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
   color: var(--text);
   text-decoration: none;
   box-shadow: 0 10px 26px rgba(49, 31, 16, .06);
@@ -940,6 +944,10 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   border-color: color-mix(in srgb, var(--line) 54%, var(--accent) 46%);
   box-shadow: 0 16px 34px rgba(49, 31, 16, .12);
   text-decoration: none;
+}
+.reading-sequence-card[href]:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 55%, white 45%);
+  outline-offset: 3px;
 }
 .reading-sequence-card strong {
   color: var(--accent);
@@ -959,6 +967,7 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   border-color: color-mix(in srgb, var(--line) 52%, var(--accent) 48%);
 }
 @media (max-width: 920px) {
-  .reading-sequence-grid { grid-template-columns: 1fr; }
+  .reading-sequence-grid,
+  .reading-sequence-grid.reading-sequence-two { grid-template-columns: 1fr; }
 }
 
