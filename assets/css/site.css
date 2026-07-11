@@ -720,11 +720,13 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
 @media (max-width: 1040px) {
   .route-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+@media (max-width: 820px) {
+  .comparison-strip,
+  .mini-steps { grid-template-columns: 1fr; }
+}
 @media (max-width: 920px) {
   .route-strip,
   .route-strip.compact,
-  .comparison-strip,
-  .mini-steps,
   .checklist-grid,
   .route-card-grid { grid-template-columns: 1fr; }
 }
@@ -891,7 +893,7 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
 .public-stage-note {
   border-style: dashed;
 }
-@media (max-width: 920px) {
+@media (max-width: 820px) {
   .layer-grid { grid-template-columns: 1fr; }
 }
 /* Reference-page polish: grouped glossary and FAQ sections. */
@@ -966,7 +968,7 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   background: color-mix(in srgb, var(--surface-strong) 82%, var(--accent-soft) 18%);
   border-color: color-mix(in srgb, var(--line) 52%, var(--accent) 48%);
 }
-@media (max-width: 920px) {
+@media (max-width: 820px) {
   .reading-sequence-grid,
   .reading-sequence-grid.reading-sequence-two { grid-template-columns: 1fr; }
 }
