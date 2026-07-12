@@ -148,16 +148,9 @@
   function getAttachedAttachment(text, index) {
     const rest = text.slice(index);
 
-    // Keep short punctuation-plus-connector phrases attached to the final
-    // word of the trigger so mobile Safari does not orphan punctuation or
-    // the connector on a new line. Keep this list deliberately short; long
-    // clauses should remain normal text and may wrap naturally.
-    const connector = /^([,;:]\s+(?:and|or|but|so|yet|for example|for instance)\b)/i.exec(rest);
-    if (connector) {
-      return { type: 'connector', text: connector[1], length: connector[1].length };
-    }
-
     // Attach standalone closing punctuation to the final word of the trigger.
+    // Grammatical connectors remain ordinary text so the browser can wrap
+    // phrases such as "and more" according to the surrounding sentence.
     const punctuation = /^([,.;:!?\)\]\}”’])/.exec(rest);
     if (punctuation) {
       return { type: 'punctuation', text: punctuation[1], length: punctuation[1].length };
@@ -204,10 +197,8 @@
       button.appendChild(before);
     }
 
-    // Keep the final token and following punctuation/connector in one
-    // no-break tail. This is more robust than putting punctuation in a
-    // sibling span after the button, because browsers may still break between
-    // separate inline elements at narrow mobile widths.
+    // Keep the final token and following punctuation in one no-break tail.
+    // Grammatical connectors remain outside the trigger and wrap naturally.
     const tail = document.createElement('span');
     tail.className = 'glossary-term-tail';
 
@@ -217,7 +208,7 @@
     tail.appendChild(finalToken);
 
     const attached = document.createElement('span');
-    attached.className = attachment.type === 'connector' ? 'glossary-term-attachment glossary-term-connector' : 'glossary-term-attachment glossary-term-punctuation';
+    attached.className = 'glossary-term-attachment glossary-term-punctuation';
     attached.textContent = attachment.text;
     tail.appendChild(attached);
 

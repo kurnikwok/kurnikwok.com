@@ -764,7 +764,6 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   word-break: normal;
 }
 .glossary-term-tail,
-.glossary-term-connector,
 .glossary-term-punctuation,
 .glossary-term-attachment {
   white-space: nowrap;
