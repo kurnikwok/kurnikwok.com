@@ -15,6 +15,7 @@ https://kurnikwok.com
 - Paper pages route readers to the formal DOI-backed public papers.
 - FAQ, glossary and sitemap pages support reader navigation.
 - Protected-stage discussion explains the boundary for implementation-level, collaboration-level or commercial review.
+- Reusable cue icons live under `assets/icons/`; retained brand/source artwork lives under `assets/brand/`.
 
 ## Deployment
 
