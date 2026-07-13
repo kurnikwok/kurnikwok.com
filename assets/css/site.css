@@ -1017,11 +1017,19 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   border-radius: .45rem;
   color: var(--text);
   text-decoration: none;
-  transition: background .16s ease;
+  transition: transform .16s ease, color .16s ease;
 }
 .reading-sequence-link:hover {
-  background: color-mix(in srgb, var(--surface-strong) 52%, transparent);
+  transform: translateY(-1px);
   text-decoration: none;
+}
+.reading-sequence-link:hover .reading-sequence-direction {
+  color: var(--accent);
+}
+.reading-sequence-link:hover strong {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 .reading-sequence-link:focus-visible {
   outline: 3px solid color-mix(in srgb, var(--accent) 55%, white 45%);
@@ -1096,7 +1104,8 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   }
   .button:hover,
   .route-card:hover,
-  .route-strip a:hover {
+  .route-strip a:hover,
+  .reading-sequence-link:hover {
     transform: none;
   }
 }
