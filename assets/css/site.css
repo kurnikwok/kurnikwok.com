@@ -63,6 +63,26 @@ a:focus-visible {
   outline-offset: .18rem;
   border-radius: .3rem;
 }
+.skip-link {
+  position: fixed;
+  top: .75rem;
+  left: max(.75rem, env(safe-area-inset-left));
+  z-index: 100;
+  padding: .58rem .82rem;
+  border: 2px solid var(--accent);
+  border-radius: .65rem;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--header-shadow);
+  font-weight: 750;
+  text-decoration: none;
+  transform: translateY(calc(-100% - 1rem));
+  transition: transform .16s ease;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
 header.site-header {
   position: sticky;
   top: 0;
@@ -1114,7 +1134,8 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   .button,
   .route-card,
   .route-strip a,
-  .reading-sequence-link {
+  .reading-sequence-link,
+  .skip-link {
     transition: none;
   }
   .button:hover,

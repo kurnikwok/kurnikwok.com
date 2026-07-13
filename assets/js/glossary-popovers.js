@@ -92,13 +92,14 @@
 
     for (const textNode of nodes) {
       if (!textNode.isConnected) continue;
-      const frag = buildFragment(textNode.nodeValue, terms, used);
+      const frag = buildFragment(textNode, terms, used);
       if (frag) textNode.replaceWith(frag);
       if (used.size >= terms.length) break;
     }
   }
 
-  function buildFragment(text, terms, used) {
+  function buildFragment(textNode, terms, used) {
+    const text = textNode.nodeValue;
     let cursor = 0;
     let changed = false;
     const frag = document.createDocumentFragment();
@@ -108,7 +109,10 @@
       if (!found) break;
 
       if (found.start > cursor) frag.appendChild(document.createTextNode(text.slice(cursor, found.start)));
-      const attachment = getAttachedAttachment(text, found.end);
+      let attachment = getAttachedAttachment(text, found.end);
+      if (attachment.type === 'none' && found.end === text.length) {
+        attachment = getAdjacentAttachedAttachment(textNode);
+      }
       frag.appendChild(makeTermPhrase(found.term, text.slice(found.start, found.end), attachment));
       used.add(found.term.id);
       cursor = found.end + attachment.length;
@@ -157,6 +161,71 @@
     }
 
     return { type: 'none', text: '', length: 0 };
+  }
+
+  function getAdjacentAttachedAttachment(textNode) {
+    let current = textNode;
+
+    // A glossary term may end inside nested inline wrappers while its closing
+    // punctuation begins the immediately adjacent text node outside them.
+    // Walk out only through transparent inline wrappers and stop at whitespace,
+    // substantive content, interactive elements or a block boundary.
+    while (current && current !== main) {
+      const next = nextMeaningfulSibling(current);
+      if (next) {
+        const punctuationNode = leadingPunctuationTextNode(next);
+        if (!punctuationNode) return { type: 'none', text: '', length: 0 };
+
+        const punctuation = /^([,.;:!?\)\]\}”’])/.exec(punctuationNode.nodeValue || '');
+        if (!punctuation) return { type: 'none', text: '', length: 0 };
+
+        punctuationNode.nodeValue = punctuationNode.nodeValue.slice(punctuation[1].length);
+        if (!punctuationNode.nodeValue) punctuationNode.remove();
+        return { type: 'punctuation', text: punctuation[1], length: 0 };
+      }
+
+      const parent = current.parentElement;
+      if (!parent || !isTransparentInlineWrapper(parent)) break;
+      current = parent;
+    }
+
+    return { type: 'none', text: '', length: 0 };
+  }
+
+  function nextMeaningfulSibling(node) {
+    let sibling = node.nextSibling;
+    while (sibling) {
+      if (sibling.nodeType === Node.COMMENT_NODE ||
+          (sibling.nodeType === Node.TEXT_NODE && sibling.nodeValue === '')) {
+        sibling = sibling.nextSibling;
+        continue;
+      }
+      return sibling;
+    }
+    return null;
+  }
+
+  function leadingPunctuationTextNode(node) {
+    if (node.nodeType === Node.TEXT_NODE) return node;
+    if (node.nodeType !== Node.ELEMENT_NODE || !isTransparentInlineWrapper(node)) return null;
+
+    let current = node;
+    while (current && current.nodeType === Node.ELEMENT_NODE && isTransparentInlineWrapper(current)) {
+      let child = current.firstChild;
+      while (child && (child.nodeType === Node.COMMENT_NODE ||
+             (child.nodeType === Node.TEXT_NODE && child.nodeValue === ''))) {
+        child = child.nextSibling;
+      }
+      if (!child) return null;
+      if (child.nodeType === Node.TEXT_NODE) return child;
+      if (child.nodeType !== Node.ELEMENT_NODE || !isTransparentInlineWrapper(child)) return null;
+      current = child;
+    }
+    return null;
+  }
+
+  function isTransparentInlineWrapper(element) {
+    return ['SPAN', 'EM', 'STRONG', 'B', 'I', 'SMALL', 'MARK', 'ABBR', 'SUB', 'SUP', 'S'].includes(element.tagName);
   }
 
   function makeTermPhrase(term, label, attachment = { type: 'none', text: '', length: 0 }) {
