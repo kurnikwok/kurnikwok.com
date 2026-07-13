@@ -348,7 +348,7 @@ p { margin: .55rem 0 1rem; }
   color: var(--text);
   text-decoration: none;
   box-shadow: 0 10px 26px rgba(49, 31, 16, .06);
-  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease, background .16s ease;
 }
 .route-card:hover {
   transform: translateY(-2px);
@@ -727,6 +727,27 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   background: color-mix(in srgb, var(--surface-strong) 72%, transparent);
   text-decoration: none;
 }
+.route-strip a {
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease, background .16s ease;
+}
+.route-strip a:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--line) 62%, var(--accent) 38%);
+  background: color-mix(in srgb, var(--surface-strong) 88%, var(--accent) 12%);
+  box-shadow: 0 8px 18px rgba(49, 31, 16, .08);
+  text-decoration: none;
+}
+.route-card:focus-visible,
+.route-strip a:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 55%, white 45%);
+  outline-offset: 3px;
+}
+.route-card:focus-visible {
+  border-radius: var(--radius);
+}
+.route-strip a:focus-visible {
+  border-radius: calc(var(--radius) - 4px);
+}
 .route-strip strong,
 .comparison-strip strong,
 .mini-steps strong {
@@ -991,11 +1012,15 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   min-width: 0;
   flex-direction: column;
   gap: .18rem;
-  padding: .55rem 0;
+  margin-inline: -.5rem;
+  padding: .55rem .5rem;
+  border-radius: .45rem;
   color: var(--text);
   text-decoration: none;
+  transition: background .16s ease;
 }
 .reading-sequence-link:hover {
+  background: color-mix(in srgb, var(--surface-strong) 52%, transparent);
   text-decoration: none;
 }
 .reading-sequence-link:focus-visible {
@@ -1062,3 +1087,16 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .route-card,
+  .route-strip a,
+  .reading-sequence-link {
+    transition: none;
+  }
+  .button:hover,
+  .route-card:hover,
+  .route-strip a:hover {
+    transform: none;
+  }
+}
