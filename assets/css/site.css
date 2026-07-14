@@ -980,25 +980,24 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   font-size: .92rem;
   font-weight: 650;
 }
-.sequence-number {
-  display: inline-block;
-  min-width: 1.8em;
-  color: var(--muted);
-  font-size: .9em;
-  font-weight: 600;
-}
-.sequence-page-label {
+/* Reusable number-plus-label geometry for sequential table structure. */
+.numbered-label {
   display: grid;
-  grid-template-columns: 2em minmax(0, 1fr);
-  column-gap: .45rem;
+  grid-template-columns: 1.65em minmax(min-content, 1fr);
+  column-gap: .4rem;
   align-items: start;
 }
-.sequence-page-label .sequence-number {
+.numbered-label-number {
   min-width: 0;
   text-align: right;
 }
-.sequence-page-label a {
+.numbered-label-label {
   min-width: 0;
+}
+.numbered-label--ordinal .numbered-label-number {
+  color: var(--muted);
+  font-size: .9em;
+  font-weight: 600;
 }
 .reading-sequence-links {
   display: grid;
@@ -1055,12 +1054,12 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   grid-column: 2;
 }
 @media (max-width: 820px) {
-  .sequence-page-label {
+  .numbered-label {
     grid-template-columns: auto minmax(0, 1fr);
     justify-content: start;
     text-align: left;
   }
-  .sequence-page-label .sequence-number {
+  .numbered-label-number {
     text-align: left;
   }
 }
