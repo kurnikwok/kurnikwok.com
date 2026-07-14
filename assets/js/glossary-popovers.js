@@ -20,8 +20,7 @@
     'figure', 'figcaption',
     'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
     '.breadcrumbs', '.eyebrow', '.badge',
-    '.sitemap-card', '.sitemap-grid', '.link-note',
-    '.figure-section', '.concept-diagram', '.figure-card', '.diagram-note',
+    '.figure-section', '.figure-card', '.diagram-note',
     '.mini-steps',
     '.actions',
     '.no-glossary-popovers', '[data-no-glossary-popovers]'
