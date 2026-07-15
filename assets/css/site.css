@@ -293,6 +293,8 @@ h2 { font-size: 1.55rem; margin-top: 2.2rem; }
 h3 { font-size: 1.15rem; margin-top: 1.35rem; }
 p { margin: .55rem 0 1rem; }
 .lead { font-size: 1.1rem; color: var(--muted); max-width: 65rem; }
+/* Semantic secondary copy: apply deliberately to supporting orientation, summaries and metadata. */
+.supporting-copy { color: var(--muted); }
 @media (min-width: 960px) {
   h1 { font-size: clamp(2.6rem, 4.4vw, 5.2rem); }
   .page h1 { font-size: clamp(2.35rem, 3.6vw, 4.35rem); }
@@ -344,12 +346,10 @@ p { margin: .55rem 0 1rem; }
 .card h2, .card h3 { margin-top: 0; }
 .card.compact p { margin-bottom: .4rem; }
 .table-block > h2 { margin-bottom: .55rem; }
-.table-block > p { max-width: 72rem; color: var(--muted); }
+.table-block > p,
+.figure-section > p,
+.route-cards-block > p { max-width: 72rem; }
 .table-block table { margin-top: .85rem; }
-.route-cards-block > p {
-  max-width: 72rem;
-  color: var(--muted);
-}
 .route-card-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -472,7 +472,6 @@ li + li { margin-top: .35rem; }
   border: 1px dashed var(--accent);
   background: color-mix(in srgb, var(--surface-strong) 68%, transparent);
 }
-.figure-section > p { max-width: 72rem; color: var(--muted); }
 .concept-stack-panel {
   padding: 1.35rem;
   border: 1px solid color-mix(in srgb, var(--line) 70%, var(--accent-2) 30%);
