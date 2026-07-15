@@ -1,12 +1,15 @@
 # Kurni Kwok — AI Shaping
 
-This repository contains the static files for **kurnikwok.com**.
+This repository publishes [kurnikwok.com](https://kurnikwok.com), the public website and formal paper route for AI shaping.
 
-The site presents public materials on AI shaping, shaped intelligence, productive AI work, work-burden shift, public capability-evidence framing and related papers.
+AI shaping addresses a practical gap in ordinary AI use: useful answers and drafts can still leave people repeatedly rebuilding domain context, work state, review status and resumption logic. The site explains how more of that recurring work burden can shift to shaped intelligence while source basis and the human-authority boundary remain explicit.
 
-## Site
+## Start here
 
-https://kurnikwok.com
+- [AI shaping in 5 minutes](https://kurnikwok.com/ai-shaping-in-5-minutes/) — a plain-language introduction
+- [Work-burden shift](https://kurnikwok.com/work-burden-shift/) — the central operating mechanism
+- [Evidence overview](https://kurnikwok.com/evidence/) — the current public evidence route
+- [Papers](https://kurnikwok.com/papers/) — the formal DOI-backed publications
 
 ## Structure
 
