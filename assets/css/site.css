@@ -345,6 +345,97 @@ p { margin: .55rem 0 1rem; }
 }
 .card h2, .card h3 { margin-top: 0; }
 .card.compact p { margin-bottom: .4rem; }
+
+/* Ordered narrative sequences: preserve chronology and process without forcing peer-card geometry. */
+.architecture-route,
+.ordered-mini-steps,
+.development-steps {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: ordered-step;
+}
+.architecture-route { margin: 0; }
+.ordered-mini-steps { margin-bottom: 0; }
+.architecture-route > li + li,
+.ordered-mini-steps > li + li,
+.development-steps > li + li { margin-top: 0; }
+.architecture-route > li,
+.ordered-mini-steps > li,
+.development-steps > li {
+  counter-increment: ordered-step;
+}
+.architecture-step-label::before,
+.ordered-mini-steps > li > strong::before {
+  content: counter(ordered-step) ".\00a0";
+}
+.development-steps {
+  margin: 1rem 0 0;
+}
+.development-steps > li {
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr);
+  gap: .9rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--line);
+}
+.development-steps > li:first-child {
+  padding-top: .4rem;
+  border-top: 0;
+}
+.development-steps > li::before {
+  content: counter(ordered-step);
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  margin-top: .05rem;
+  border: 1px solid color-mix(in srgb, var(--line) 66%, var(--accent) 34%);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface-strong) 78%, transparent);
+  color: var(--accent);
+  font-size: .88rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.development-step-content > h3 {
+  margin: 0;
+}
+.development-step-content > p:last-child {
+  margin-bottom: 0;
+}
+
+/* Functional capability surface: one joined list avoids a false peer-card hierarchy. */
+.capability-surface-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0 0;
+  border-top: 1px solid var(--line);
+}
+.capability-surface-list > li {
+  display: grid;
+  grid-template-columns: minmax(13rem, .75fr) minmax(0, 2fr);
+  gap: 1rem;
+  padding: .95rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.capability-surface-list strong {
+  color: var(--accent);
+  line-height: 1.4;
+}
+.capability-surface-list span {
+  color: var(--text);
+  line-height: 1.55;
+}
+@media (max-width: 680px) {
+  .development-steps > li {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: .75rem;
+  }
+  .capability-surface-list > li {
+    grid-template-columns: 1fr;
+    gap: .25rem;
+  }
+}
 .table-block > h2 { margin-bottom: .55rem; }
 .table-block > p,
 .figure-section > p,
@@ -720,6 +811,7 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
 .route-strip a,
 .comparison-strip div,
 .mini-steps div,
+.mini-steps > li,
 .checklist-grid div {
   display: block;
   padding: .95rem 1rem;
@@ -758,7 +850,8 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
 }
 .route-strip a > span,
 .comparison-strip > div > span,
-.mini-steps > div > span {
+.mini-steps > div > span,
+.mini-steps > li > span {
   display: block;
   color: var(--muted);
   line-height: 1.45;
