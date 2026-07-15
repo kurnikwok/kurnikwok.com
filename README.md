@@ -12,6 +12,8 @@ https://kurnikwok.com
 
 - Orientation pages introduce the public framing in plain language.
 - Concept pages explain one public concept at a time.
+- Comparison pages distinguish construct classifications, AI-work patterns and adjacent AI categories.
+- The Plan page presents public planned capability directions separately from current evidence.
 - Paper pages route readers to the formal DOI-backed public papers.
 - FAQ, glossary and sitemap pages support reader navigation.
 - Protected-stage discussion explains the boundary for implementation-level, collaboration-level or commercial review.
