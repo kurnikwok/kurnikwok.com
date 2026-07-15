@@ -666,7 +666,33 @@ li + li { margin-top: .35rem; }
   width: 41%;
 }
 .breadcrumbs { color: var(--muted); font-size: .92rem; margin-bottom: 1.1rem; }
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+}
+.breadcrumbs li + li::before {
+  content: "";
+  width: .36rem;
+  height: .36rem;
+  margin: 0 .62rem 0 .52rem;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  opacity: .72;
+  transform: rotate(45deg);
+  flex: 0 0 auto;
+}
 .breadcrumbs a { color: var(--muted); text-decoration: none; }
+.breadcrumbs [aria-current="page"] { color: var(--muted); }
 footer {
   border-top: 1px solid var(--line);
   padding: 2rem 0 3rem;
