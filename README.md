@@ -8,6 +8,7 @@ AI shaping addresses a practical gap in ordinary AI use: useful answers and draf
 
 - [AI shaping in 5 minutes](https://kurnikwok.com/ai-shaping-in-5-minutes/) — a plain-language introduction
 - [Work-burden shift](https://kurnikwok.com/work-burden-shift/) — the central operating mechanism
+- [Compare AI shaping](https://kurnikwok.com/compare/) — routes to the relevant construct, work-pattern, tool or adjacent-framework comparison
 - [Evidence overview](https://kurnikwok.com/evidence/) — the current public evidence route
 - [Papers](https://kurnikwok.com/papers/) — the formal DOI-backed publications
 
@@ -15,7 +16,7 @@ AI shaping addresses a practical gap in ordinary AI use: useful answers and draf
 
 - Orientation pages introduce the public framing in plain language.
 - Concept pages explain one public concept at a time.
-- Comparison pages distinguish construct classifications, AI-work patterns and adjacent AI categories.
+- The Compare AI shaping hub routes readers among construct classification, AI-work-pattern, tool/execution-form and adjacent-framework comparisons.
 - The Plan page presents public planned capability directions separately from current evidence.
 - Paper pages route readers to the formal DOI-backed public papers.
 - FAQ, glossary and sitemap pages support reader navigation.
