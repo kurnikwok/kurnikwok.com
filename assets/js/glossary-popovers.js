@@ -31,7 +31,7 @@
   popover.id = 'glossary-popover';
   popover.setAttribute('role', 'tooltip');
   popover.hidden = true;
-  popover.innerHTML = '<strong></strong><p></p><a href="/glossary/">Open definition</a>';
+  popover.innerHTML = '<strong></strong><p></p><a href="/glossary/">Explore concept</a>';
   document.body.appendChild(popover);
 
   const titleEl = popover.querySelector('strong');
