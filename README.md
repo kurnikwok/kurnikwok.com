@@ -19,6 +19,7 @@ AI shaping addresses a practical gap in ordinary AI use: useful answers and draf
 - Compare AI shaping routes readers among construct type, how AI work develops, tools and execution forms, and adjacent frameworks.
 - The Plan page presents public planned capability directions separately from current evidence.
 - Paper pages route readers to the formal DOI-backed public papers.
+- The About page explains development context, practice-derived principles and the author background relevant to credibility.
 - FAQ, glossary and sitemap pages support reader navigation.
 - Protected-stage discussion explains the boundary for implementation-level, collaboration-level or commercial review.
 - Reusable cue icons live under `assets/icons/`; retained brand/source artwork lives under `assets/brand/`.

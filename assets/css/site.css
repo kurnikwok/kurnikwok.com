@@ -436,6 +436,39 @@ p { margin: .55rem 0 1rem; }
     gap: .25rem;
   }
 }
+
+/* Practice-derived principles: joined text rows avoid false card hierarchy or mandatory-sequence cues. */
+.principle-group + .principle-group { margin-top: 1.5rem; }
+.principle-group > h3 { margin: 0 0 .55rem; }
+.principle-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+.principle-list > li {
+  display: grid;
+  grid-template-columns: minmax(13rem, .72fr) minmax(0, 2fr);
+  gap: 1rem;
+  padding: .9rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.principle-list strong {
+  color: var(--accent);
+  line-height: 1.4;
+}
+.principle-list span {
+  color: var(--text);
+  line-height: 1.55;
+}
+.foundation-list { margin: .85rem 0 0; }
+.foundation-list > li + li { margin-top: .65rem; }
+@media (max-width: 680px) {
+  .principle-list > li {
+    grid-template-columns: 1fr;
+    gap: .25rem;
+  }
+}
 .table-block > h2 { margin-bottom: .55rem; }
 .table-block > p,
 .figure-section > p,
