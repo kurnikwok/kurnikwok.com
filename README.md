@@ -2,6 +2,8 @@
 
 This repository publishes [kurnikwok.com](https://kurnikwok.com), the public website and formal paper route for AI shaping.
 
+AI shaping may establish shaped intelligence through the direct-shaping approach or through the mediated-shaping approach using AI-shaping intelligence.
+
 AI shaping addresses a practical gap in ordinary AI use: useful answers and drafts can still leave people repeatedly rebuilding domain context, work state, review status and resumption logic. The site explains how more of that recurring work burden can shift to shaped intelligence while source basis and the human-authority boundary remain explicit.
 
 ## Start here
@@ -9,7 +11,7 @@ AI shaping addresses a practical gap in ordinary AI use: useful answers and draf
 - [AI shaping in 5 minutes](https://kurnikwok.com/ai-shaping-in-5-minutes/) — a plain-language introduction
 - [Work-burden shift](https://kurnikwok.com/work-burden-shift/) — the central operating mechanism
 - [Compare AI shaping](https://kurnikwok.com/compare/) — routes by construct type, how AI work develops, tools and execution forms, or adjacent frameworks
-- [Evidence overview](https://kurnikwok.com/evidence/) — the current public evidence route
+- [Evidence overview](https://kurnikwok.com/evidence/) — the current public evidence overview and evaluation route
 - [Papers](https://kurnikwok.com/papers/) — the formal DOI-backed publications
 
 ## Structure
