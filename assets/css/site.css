@@ -468,6 +468,8 @@ p { margin: .55rem 0 1rem; }
     grid-template-columns: 1fr;
     gap: .25rem;
   }
+
+  .on-this-page ul { display: grid; grid-template-columns: 1fr; gap: .35rem; }
 }
 .table-block > h2 { margin-bottom: .55rem; }
 .table-block > p,
@@ -541,7 +543,42 @@ th, td {
   border-bottom: 1px solid var(--line);
 }
 th { color: var(--accent); background: color-mix(in srgb, var(--surface-strong) 76%, transparent); }
-tr:last-child td { border-bottom: 0; }
+tr:last-child td,
+tr:last-child th[scope="row"] { border-bottom: 0; }
+
+
+/* Screen-reader-only text remains available to assistive technologies without changing visual composition. */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Selective long-page navigation: used only where the page has a real reference-navigation need. */
+.on-this-page {
+  margin-top: 1.35rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) - 4px);
+  background: color-mix(in srgb, var(--surface) 92%, var(--surface-strong) 8%);
+}
+.on-this-page h2 { margin: 0 0 .55rem; font-size: 1.08rem; }
+.on-this-page ul { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: 0; padding: 0; list-style: none; }
+.on-this-page li { margin: 0; }
+.on-this-page a { font-weight: 650; }
+
+/* Simple data tables expose column and row-header relationships programmatically. */
+tbody th[scope="row"] {
+  color: var(--text);
+  background: color-mix(in srgb, var(--surface) 95%, transparent);
+  font-weight: 700;
+}
 
 /* Cue icons: decorative visual correlation between diagrams, prose and dense comparison/mechanism tables. */
 .icon-label {
@@ -831,6 +868,9 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   tr { border-bottom: 1px solid var(--line); }
   td { border: 0; padding: .65rem .85rem; }
   td::before { content: attr(data-label); display: block; font-weight: 800; color: var(--accent); margin-bottom: .15rem; }
+
+  tbody th[scope="row"] { border: 0; padding: .65rem .85rem; }
+  tbody th[scope="row"]::before { content: attr(data-label); display: block; font-weight: 800; color: var(--accent); margin-bottom: .15rem; }
 
   .burden-shift-components-table {
     table-layout: auto;
