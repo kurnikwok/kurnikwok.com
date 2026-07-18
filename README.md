@@ -12,6 +12,7 @@ AI shaping addresses a practical gap in ordinary AI use: useful answers and draf
 - [Work-burden shift](https://kurnikwok.com/work-burden-shift/) — the central operating mechanism
 - [Compare AI shaping](https://kurnikwok.com/compare/) — routes by construct type, how AI work develops, tools and execution forms, or adjacent frameworks
 - [Evidence overview](https://kurnikwok.com/evidence/) — the current public evidence overview and evaluation route
+- [Publication co-evolution](https://kurnikwok.com/publication-co-evolution/) — how two paper-authoring instances and web-developing shaped intelligence refine one publication system
 - [Papers](https://kurnikwok.com/papers/) — the formal DOI-backed publications
 
 ## Structure
@@ -23,7 +24,8 @@ AI shaping addresses a practical gap in ordinary AI use: useful answers and draf
 - Paper pages route readers to the formal DOI-backed public papers.
 - The About page explains development context, practice-derived principles and the author background relevant to credibility.
 - FAQ, glossary and sitemap pages support reader navigation.
-- Protected-stage discussion explains the boundary for implementation-level, collaboration-level or commercial review.
+- Publication co-evolution explains the separately governed private-paper, published-paper and website instances and their controlled reciprocal refinement.
+- Protected-stage discussion explains when a defined practice, capability, evidence or implementation question may justify minimum scoped private review.
 - Reusable cue icons live under `assets/icons/`; retained brand/source artwork lives under `assets/brand/`.
 
 ## Deployment
