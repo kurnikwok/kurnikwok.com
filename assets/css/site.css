@@ -917,6 +917,25 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
 .mini-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .mini-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .checklist-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+/* Five equal peers: keep equal widths while centring the two-item final row. */
+@media (min-width: 921px) {
+  .route-strip.compact.balanced-five,
+  .checklist-grid.balanced-five {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  .route-strip.compact.balanced-five > *,
+  .checklist-grid.balanced-five > * {
+    grid-column: span 2;
+  }
+  .route-strip.compact.balanced-five > :nth-child(4),
+  .checklist-grid.balanced-five > :nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+  .route-strip.compact.balanced-five > :nth-child(5),
+  .checklist-grid.balanced-five > :nth-child(5) {
+    grid-column: 4 / span 2;
+  }
+}
 .route-strip a,
 .comparison-strip div,
 .mini-steps div,
@@ -1140,6 +1159,20 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
 }
 .layer-grid span a {
   font-weight: inherit;
+}
+@media (min-width: 821px) {
+  .layer-grid.balanced-five {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  .layer-grid.balanced-five > * {
+    grid-column: span 2;
+  }
+  .layer-grid.balanced-five > :nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+  .layer-grid.balanced-five > :nth-child(5) {
+    grid-column: 4 / span 2;
+  }
 }
 @media (max-width: 820px) {
   .layer-grid { grid-template-columns: 1fr; }
