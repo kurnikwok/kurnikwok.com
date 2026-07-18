@@ -364,9 +364,39 @@ p { margin: .55rem 0 1rem; }
 .development-steps > li {
   counter-increment: ordered-step;
 }
-.architecture-step-label::before,
-.ordered-mini-steps > li > strong::before {
+.architecture-step-label::before {
   content: counter(ordered-step) ".\00a0";
+}
+.mini-steps.ordered-mini-steps > li {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  column-gap: .75rem;
+  row-gap: .15rem;
+  align-content: start;
+}
+.mini-steps.ordered-mini-steps > li::before {
+  content: counter(ordered-step);
+  display: grid;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  width: 1.8rem;
+  height: 1.8rem;
+  place-items: center;
+  margin-top: .05rem;
+  border: 1px solid color-mix(in srgb, var(--line) 66%, var(--accent) 34%);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface-strong) 78%, transparent);
+  color: var(--accent);
+  font-size: .82rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.mini-steps.ordered-mini-steps > li > strong,
+.mini-steps.ordered-mini-steps > li > span {
+  grid-column: 2;
+}
+.mini-steps.ordered-mini-steps > li > strong {
+  margin-bottom: 0;
 }
 .development-steps {
   margin: 1rem 0 0;
