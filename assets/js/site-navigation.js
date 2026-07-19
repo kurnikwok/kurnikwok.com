@@ -1,4 +1,8 @@
 (() => {
+  const SITE_VERSION = 'v1.7';
+
+  addSiteVersion();
+
   const header = document.querySelector('.site-header');
   const topbar = document.querySelector('.topbar');
   const shell = document.querySelector('[data-primary-nav-shell]');
@@ -42,6 +46,19 @@
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && !panel.hidden) closeMenu();
   });
+
+
+  function addSiteVersion() {
+    const copyright = document.querySelector('footer .footgrid > :first-child');
+    if (!copyright || copyright.querySelector('.site-version')) return;
+
+    const version = document.createElement('span');
+    version.className = 'site-version';
+    version.textContent = ` · ${SITE_VERSION}`;
+    version.setAttribute('aria-label', `Website release ${SITE_VERSION}`);
+    version.title = `Website release ${SITE_VERSION}`;
+    copyright.appendChild(version);
+  }
 
   function openMenu() {
     updateMenuGeometry();
