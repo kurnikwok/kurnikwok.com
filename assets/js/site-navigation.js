@@ -1,5 +1,5 @@
 (() => {
-  const SITE_VERSION = 'v1.7';
+  const SITE_VERSION = 'v1.8';
 
   addSiteVersion();
 
