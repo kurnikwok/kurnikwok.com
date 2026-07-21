@@ -1,7 +1,5 @@
 (() => {
-  const SITE_VERSION = 'v1.9';
-
-  addSiteVersion();
+  addReleaseIndicator(window.siteConfig && window.siteConfig.release);
 
   const header = document.querySelector('.site-header');
   const topbar = document.querySelector('.topbar');
@@ -48,15 +46,24 @@
   });
 
 
-  function addSiteVersion() {
+  function addReleaseIndicator(release = {}) {
+    const versionValue = typeof release.version === 'string' ? release.version.trim() : '';
+    if (!versionValue) return;
+
+    const visibleLabel = typeof release.visibleLabel === 'string' && release.visibleLabel.trim()
+      ? release.visibleLabel.trim()
+      : 'Release';
+    const ariaLabel = typeof release.ariaLabel === 'string' && release.ariaLabel.trim()
+      ? release.ariaLabel.trim()
+      : visibleLabel;
     const copyright = document.querySelector('footer .footgrid > :first-child');
     if (!copyright || copyright.querySelector('.site-version')) return;
 
     const version = document.createElement('span');
     version.className = 'site-version';
-    version.textContent = `Site ${SITE_VERSION}`;
-    version.setAttribute('aria-label', `Website release ${SITE_VERSION}`);
-    version.title = `Website release ${SITE_VERSION}`;
+    version.textContent = `${visibleLabel} ${versionValue}`;
+    version.setAttribute('aria-label', `${ariaLabel} ${versionValue}`);
+    version.title = `${ariaLabel} ${versionValue}`;
     copyright.appendChild(version);
   }
 
