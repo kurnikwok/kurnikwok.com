@@ -11,6 +11,8 @@
 
   if (!header || !topbar || !shell || !nav || !toggle || !panel) return;
 
+  if (panel.parentElement !== document.body) document.body.appendChild(panel);
+
   let viewportListenerAttached = false;
   let windowScrollListenerAttached = false;
 
@@ -37,7 +39,7 @@
 
   document.addEventListener('click', (event) => {
     if (panel.hidden) return;
-    if (shell.contains(event.target)) return;
+    if (shell.contains(event.target) || panel.contains(event.target)) return;
     closeMenu();
   });
 
