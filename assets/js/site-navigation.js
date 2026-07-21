@@ -1,5 +1,5 @@
 (() => {
-  const SITE_VERSION = 'v1.8';
+  const SITE_VERSION = 'v1.9';
 
   addSiteVersion();
 
@@ -54,7 +54,7 @@
 
     const version = document.createElement('span');
     version.className = 'site-version';
-    version.textContent = ` · ${SITE_VERSION}`;
+    version.textContent = `Site ${SITE_VERSION}`;
     version.setAttribute('aria-label', `Website release ${SITE_VERSION}`);
     version.title = `Website release ${SITE_VERSION}`;
     copyright.appendChild(version);

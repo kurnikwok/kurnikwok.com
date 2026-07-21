@@ -815,7 +815,9 @@ footer .footgrid {
   justify-content: space-between;
 }
 .site-version {
+  margin-left: .4rem;
   white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 dl { display: grid; gap: .8rem; }
 dt { font-weight: 800; color: var(--accent); }
