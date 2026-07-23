@@ -1404,3 +1404,38 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
     transform: none;
   }
 }
+
+/* Public practice disclosure funnel: width represents disclosure depth, not strategic importance. */
+.disclosure-funnel {
+  display: grid;
+  gap: .7rem;
+  max-width: 66rem;
+  margin: 1rem auto 0;
+  padding: 0;
+  list-style: none;
+}
+.disclosure-funnel > li {
+  box-sizing: border-box;
+  margin-inline: auto;
+  padding: .95rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--line) 72%, var(--accent) 28%);
+  border-radius: calc(var(--radius) - 4px);
+  background: color-mix(in srgb, var(--surface-strong) 76%, transparent);
+}
+.disclosure-funnel > li:nth-child(1) { width: 100%; }
+.disclosure-funnel > li:nth-child(2) { width: 82%; }
+.disclosure-funnel > li:nth-child(3) { width: 64%; }
+.disclosure-funnel strong {
+  display: block;
+  margin-bottom: .2rem;
+  color: var(--accent);
+}
+.disclosure-funnel span {
+  display: block;
+  color: var(--muted);
+  line-height: 1.5;
+}
+@media (max-width: 680px) {
+  .disclosure-funnel > li:nth-child(n) { width: 100%; }
+}
+
