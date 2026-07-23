@@ -16,6 +16,7 @@
   let viewportListenerAttached = false;
   let windowScrollListenerAttached = false;
 
+  markCurrentPrimaryLink();
   markCurrentPanelLink();
   updateNavFadeState();
   updateMenuGeometry();
@@ -130,9 +131,27 @@
     windowScrollListenerAttached = false;
   }
 
+  function markCurrentPrimaryLink() {
+    const currentPath = normalisePath(window.location.pathname);
+    const routes = Array.isArray(window.siteConfig && window.siteConfig.routes)
+      ? window.siteConfig.routes
+      : [];
+    const currentRoute = routes.find((route) => normalisePath(route.path) === currentPath);
+    const primaryPath = currentRoute && currentRoute.primary
+      ? normalisePath(currentRoute.primary)
+      : currentPath;
+
+    nav.querySelectorAll('a[href^="/"]').forEach((link) => link.removeAttribute('aria-current'));
+    const primaryLink = Array.from(nav.querySelectorAll('a[href^="/"]'))
+      .find((link) => normalisePath(link.getAttribute('href')) === primaryPath);
+    if (!primaryLink) return;
+    primaryLink.setAttribute('aria-current', primaryPath === currentPath ? 'page' : 'location');
+  }
+
   function markCurrentPanelLink() {
     const currentPath = normalisePath(window.location.pathname);
     panel.querySelectorAll('a[href^="/"]').forEach((link) => {
+      link.removeAttribute('aria-current');
       if (normalisePath(link.getAttribute('href')) === currentPath) link.setAttribute('aria-current', 'page');
     });
   }

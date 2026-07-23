@@ -162,6 +162,7 @@ nav.primary-nav a,
   border-top: .36rem solid currentColor;
 }
 nav.primary-nav a[aria-current="page"],
+nav.primary-nav a[aria-current="location"],
 nav.primary-nav a:hover,
 .all-pages-toggle:hover,
 .all-pages-toggle[aria-expanded="true"] {
