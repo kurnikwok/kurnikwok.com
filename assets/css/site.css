@@ -266,11 +266,38 @@ nav.primary-nav a:hover,
 }
 main { padding: 2rem 0 4rem; }
 .hero {
+  position: relative;
+  overflow: hidden;
   padding: 2.4rem;
-  border: 1px solid var(--line);
-  background: linear-gradient(135deg, var(--surface), var(--surface-strong));
+  border: 1px solid color-mix(in srgb, var(--line) 68%, var(--accent) 32%);
+  background:
+    linear-gradient(135deg,
+      color-mix(in srgb, var(--surface) 92%, var(--accent) 8%),
+      color-mix(in srgb, var(--surface-strong) 93%, var(--accent-2) 7%));
   border-radius: calc(var(--radius) + 10px);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow), inset 0 1px 0 color-mix(in srgb, white 38%, transparent);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  opacity: .72;
+}
+.hero > * { position: relative; }
+.hero--home {
+  border-color: color-mix(in srgb, var(--line) 54%, var(--accent) 46%);
+  background:
+    radial-gradient(circle at 88% 10%, color-mix(in srgb, var(--accent-2) 14%, transparent), transparent 23rem),
+    linear-gradient(135deg,
+      color-mix(in srgb, var(--surface) 86%, var(--accent) 14%),
+      color-mix(in srgb, var(--surface-strong) 89%, var(--accent-2) 11%));
+  box-shadow: 0 24px 58px rgba(49, 31, 16, .16), inset 0 1px 0 color-mix(in srgb, white 44%, transparent);
+}
+@media (prefers-color-scheme: dark) {
+  .hero { box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, .08); }
+  .hero--home { box-shadow: 0 24px 58px rgba(0, 0, 0, .42), inset 0 1px 0 rgba(255, 255, 255, .1); }
 }
 .eyebrow {
   color: var(--accent-2);
