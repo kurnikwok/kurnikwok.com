@@ -146,7 +146,7 @@
   },
   {
     "path": "/publication-co-evolution/",
-    "label": "Publication co-evolution",
+    "label": "Product-managing shaped intelligence",
     "group": "Evidence",
     "parent": "/evidence/",
     "primary": "/evidence/",
@@ -183,9 +183,9 @@
   {
     "path": "/planned-capability-directions/",
     "label": "Planned capability directions",
-    "group": "Plan",
-    "parent": "/",
-    "primary": null,
+    "group": "Evidence",
+    "parent": "/evidence/",
+    "primary": "/evidence/",
     "sequence": 21,
     "sitemap": true
   },
@@ -268,7 +268,7 @@
     release: Object.freeze({
       visibleLabel: 'Site',
       ariaLabel: 'Website release',
-      version: 'v1.17'
+      version: 'v1.18'
     }),
     routes
   });
