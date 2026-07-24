@@ -13,7 +13,7 @@ AI shaping addresses a practical gap in ordinary AI use: useful answers and draf
 - [Work-burden shift](https://kurnikwok.com/work-burden-shift/) — the central operating mechanism
 - [Compare AI shaping](https://kurnikwok.com/compare/) — routes by construct type, how AI work develops, tools and execution forms, or adjacent frameworks
 - [Evidence overview](https://kurnikwok.com/evidence/) — the current public evidence overview and evaluation route
-- [Publication co-evolution](https://kurnikwok.com/publication-co-evolution/) — how four separately governed publication capabilities refine one publication system
+- [Publication co-evolution](https://kurnikwok.com/publication-co-evolution/) — how Product-managing shaped intelligence coordinates four publication capabilities that refine one publication system
 - [Papers](https://kurnikwok.com/papers/) — the formal DOI-backed publications
 
 ## Structure
@@ -26,7 +26,7 @@ AI shaping addresses a practical gap in ordinary AI use: useful answers and draf
 - The AI Shaping practice page presents substantive principles, broad lifecycle bands and the role and benefits of reusable techniques through a bounded public disclosure funnel.
 - The About page summarises provenance, maturity, evidence context and the author background relevant to credibility.
 - FAQ, glossary and sitemap pages support reader navigation.
-- Publication co-evolution explains four separately governed publication capabilities—private paper-authoring, published paper-authoring, public web-developing and private knowledge-publishing—and their controlled reciprocal refinement.
+- Publication co-evolution explains Product-managing shaped intelligence as the bounded product-level coordinator, four separately governed publication capabilities—private knowledge-publishing, private paper-authoring, published paper-authoring and public web-developing—and their controlled reciprocal refinement under human product stewardship and decision authority.
 - Protected-stage discussion explains when a defined practice, capability, evidence or implementation question may justify minimum scoped private review.
 - Reusable cue icons live under `assets/icons/`; retained brand/source artwork lives under `assets/brand/`.
 
