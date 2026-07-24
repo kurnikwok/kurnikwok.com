@@ -709,18 +709,6 @@ li + li { margin-top: .35rem; }
 }
 
 
-.hero-diagram {
-  margin-top: 1.35rem;
-  margin-bottom: 1.15rem;
-  background: color-mix(in srgb, var(--surface-strong) 52%, var(--surface) 48%);
-}
-.hero-diagram img {
-  background: transparent;
-}
-.hero-diagram figcaption {
-  font-size: .92rem;
-}
-
 .figure-card {
   margin: 1.25rem 0 0;
   padding: 1rem;
@@ -742,6 +730,31 @@ li + li { margin-top: .35rem; }
   color: var(--muted);
   font-size: .94rem;
   line-height: 1.55;
+}
+
+/* Figure roles: integrated hero diagrams belong inside heroes; lead figures open dense pages; section figures support later content. */
+.hero > .hero-diagram {
+  margin: 1.35rem 0 0;
+  background: color-mix(in srgb, var(--surface-strong) 52%, var(--surface) 48%);
+}
+.hero > .hero-diagram img {
+  background: transparent;
+}
+.hero > .hero-diagram figcaption {
+  font-size: .92rem;
+}
+.lead-figure {
+  width: 100%;
+  margin: 1.15rem auto 0;
+  border-color: color-mix(in srgb, var(--line) 88%, var(--accent) 12%);
+  background: color-mix(in srgb, var(--surface) 96%, var(--surface-strong) 4%);
+  box-shadow: 0 10px 24px rgba(49, 31, 16, .06);
+}
+.lead-figure--medium { max-width: 60rem; }
+.lead-figure--tall { max-width: 48rem; }
+.section-figure { margin-top: 1.25rem; }
+@media (prefers-color-scheme: dark) {
+  .lead-figure { box-shadow: 0 10px 24px rgba(0, 0, 0, .24); }
 }
 .diagram-note {
   margin: .65rem 0 0;
