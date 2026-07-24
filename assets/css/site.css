@@ -16,8 +16,6 @@
   --anchor-offset: 8.75rem;
   --stacked-label-heading-gap: .75rem;
   --card-heading-size: clamp(1.35rem, 1.7vw, 1.65rem);
-  --prose-measure: 72ch;
-  --lead-measure: 66ch;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
@@ -324,7 +322,7 @@ h1 { font-size: 2.25rem; max-width: min(100%, 22ch); }
 h2 { font-size: 1.55rem; margin-top: 2.2rem; }
 h3 { font-size: 1.15rem; margin-top: 1.35rem; }
 p { margin: .55rem 0 1rem; }
-.lead { font-size: 1.1rem; color: var(--muted); max-width: var(--lead-measure); }
+.lead { font-size: 1.1rem; color: var(--muted); max-width: 65rem; }
 /* Semantic secondary copy: apply deliberately to supporting orientation, summaries and metadata. */
 .supporting-copy { color: var(--muted); }
 @media (min-width: 960px) {
@@ -590,10 +588,6 @@ p { margin: .55rem 0 1rem; }
 /* Shared stacked-label rhythm: badge/status semantics may differ, but the label-to-heading relationship is consistent. */
 :is(.badge, .status-chip) + :is(h1, h2, h3) {
   margin-top: var(--stacked-label-heading-gap);
-}
-/* Sustained prose uses a readable measure while tables, figures, grids and route components retain their full geometry. */
-:where(.section, .card, .reader-guide-intro, .plain-example, .boundary) > :is(p, blockquote) {
-  max-inline-size: var(--prose-measure);
 }
 .section { margin-top: 2rem; }
 table {
@@ -1450,3 +1444,7 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   .disclosure-funnel > li:nth-child(n) { width: 100%; }
 }
 
+/* Relationship invariant: keep after every component and responsive heading reset. */
+body :is(.badge, .status-chip) + :is(h1, h2, h3) {
+  margin-block-start: var(--stacked-label-heading-gap);
+}
