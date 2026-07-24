@@ -13,7 +13,8 @@ AI shaping addresses a practical gap in ordinary AI use: useful answers and draf
 - [Work-burden shift](https://kurnikwok.com/work-burden-shift/) — the central operating mechanism
 - [Compare AI shaping](https://kurnikwok.com/compare/) — routes by construct type, how AI work develops, tools and execution forms, or adjacent frameworks
 - [Evidence overview](https://kurnikwok.com/evidence/) — the current public evidence overview and evaluation route
-- [Product-managing shaped intelligence](https://kurnikwok.com/publication-co-evolution/) — strong bounded first-party operational evidence of governed product-management burden shift, with publication co-evolution as a principal mechanism
+- [Product-managing shaped intelligence](https://kurnikwok.com/publication-co-evolution/) — bounded operational establishment across three accepted cycles, with publication co-evolution as a principal mechanism
+- [AI Shaping product ownership](https://kurnikwok.com/ai-shaping-product-ownership/) — how human product ownership remained explicit while governed AI capabilities carried recurring delivery work
 - [Papers](https://kurnikwok.com/papers/) — the formal DOI-backed publications
 
 ## Structure
@@ -26,7 +27,7 @@ AI shaping addresses a practical gap in ordinary AI use: useful answers and draf
 - The AI Shaping practice page presents substantive principles, broad lifecycle bands and the role and benefits of reusable techniques through a bounded public disclosure funnel.
 - The About page summarises provenance, maturity, evidence context and the author background relevant to credibility.
 - FAQ, glossary and sitemap pages support reader navigation.
-- The Product-managing shaped-intelligence page retains the `/publication-co-evolution/` URL and explains the bounded product-level capability, governed automation, strong first-party operational evidence, four separately governed publication capabilities and publication co-evolution through reciprocal refinement under human product stewardship and decision authority. The public architecture remains 29 routes, and protected controls and implementation-transfer detail remain private.
+- The Product-managing shaped-intelligence page retains the `/publication-co-evolution/` URL and explains bounded operational establishment across three accepted cycles under human product ownership, stewardship and decision authority. The separate product-ownership page provides professional interpretation without changing the formal evidence roles. The public architecture is 30 routes, and protected controls and implementation-transfer detail remain private.
 - Protected-stage discussion explains when a defined practice, capability, evidence or implementation question may justify minimum scoped private review.
 - Reusable cue icons live under `assets/icons/`; retained brand/source artwork lives under `assets/brand/`.
 

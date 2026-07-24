@@ -154,12 +154,21 @@
     "sitemap": true
   },
   {
+    "path": "/ai-shaping-product-ownership/",
+    "label": "AI Shaping product ownership",
+    "group": "Evidence",
+    "parent": "/evidence/",
+    "primary": "/evidence/",
+    "sequence": 18,
+    "sitemap": true
+  },
+  {
     "path": "/ai-shaping-intelligence-evidence/",
     "label": "AI-shaping intelligence evidence",
     "group": "Evidence",
     "parent": "/evidence/",
     "primary": "/evidence/",
-    "sequence": 18,
+    "sequence": 19,
     "sitemap": true
   },
   {
@@ -168,7 +177,7 @@
     "group": "Evidence",
     "parent": "/evidence/",
     "primary": "/evidence/",
-    "sequence": 19,
+    "sequence": 20,
     "sitemap": true
   },
   {
@@ -177,7 +186,7 @@
     "group": "Evidence",
     "parent": "/evidence/",
     "primary": "/evidence/",
-    "sequence": 20,
+    "sequence": 21,
     "sitemap": true
   },
   {
@@ -186,7 +195,7 @@
     "group": "Evidence",
     "parent": "/evidence/",
     "primary": "/evidence/",
-    "sequence": 21,
+    "sequence": 22,
     "sitemap": true
   },
   {
@@ -195,7 +204,7 @@
     "group": "Papers",
     "parent": "/",
     "primary": "/papers/",
-    "sequence": 22,
+    "sequence": 23,
     "sitemap": true
   },
   {
@@ -204,7 +213,7 @@
     "group": "Papers",
     "parent": "/papers/",
     "primary": "/papers/",
-    "sequence": 23,
+    "sequence": 24,
     "sitemap": true
   },
   {
@@ -213,7 +222,7 @@
     "group": "Papers",
     "parent": "/papers/",
     "primary": "/papers/",
-    "sequence": 24,
+    "sequence": 25,
     "sitemap": true
   },
   {
@@ -222,7 +231,7 @@
     "group": "Boundary",
     "parent": "/",
     "primary": null,
-    "sequence": 25,
+    "sequence": 26,
     "sitemap": true
   },
   {
@@ -231,7 +240,7 @@
     "group": "Reference",
     "parent": "/",
     "primary": null,
-    "sequence": 26,
+    "sequence": 27,
     "sitemap": true
   },
   {
@@ -240,7 +249,7 @@
     "group": "Reference",
     "parent": "/",
     "primary": "/glossary/",
-    "sequence": 27,
+    "sequence": 28,
     "sitemap": true
   },
   {
@@ -249,7 +258,7 @@
     "group": "Reference",
     "parent": "/",
     "primary": null,
-    "sequence": 28,
+    "sequence": 29,
     "sitemap": true
   },
   {
@@ -258,7 +267,7 @@
     "group": "Reference",
     "parent": "/",
     "primary": null,
-    "sequence": 29,
+    "sequence": 30,
     "sitemap": true
   }
 ]);
@@ -268,7 +277,7 @@
     release: Object.freeze({
       visibleLabel: 'Site',
       ariaLabel: 'Website release',
-      version: 'v1.19'
+      version: 'v1.20'
     }),
     routes
   });
