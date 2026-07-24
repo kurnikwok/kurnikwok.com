@@ -268,7 +268,7 @@
     release: Object.freeze({
       visibleLabel: 'Site',
       ariaLabel: 'Website release',
-      version: 'v1.18'
+      version: 'v1.19'
     }),
     routes
   });
