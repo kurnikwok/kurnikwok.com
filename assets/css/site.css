@@ -315,10 +315,11 @@ h1, h2, h3 {
   margin: 0 0 .8rem;
   text-wrap: balance;
 }
-h1 { font-size: 2.25rem; max-width: min(100%, 22ch); }
-.page h1 { font-size: 2.15rem; max-width: min(100%, 28ch); }
-.hero h1 { max-width: min(100%, 24ch); }
-.page h1.wide-title { max-width: min(100%, 34ch); }
+/* Primary headings use the available content or hero width. Natural wrapping and
+   text balancing govern line breaks; avoid character-count constraints that can
+   create accidental-looking wraps when horizontal space remains available. */
+h1 { font-size: 2.25rem; }
+.page h1 { font-size: 2.15rem; }
 h2 { font-size: 1.55rem; margin-top: 2.2rem; }
 h3 { font-size: 1.15rem; margin-top: 1.35rem; }
 p { margin: .55rem 0 1rem; }
@@ -332,6 +333,20 @@ p { margin: .55rem 0 1rem; }
   .lead { font-size: clamp(1.15rem, 1.35vw, 1.42rem); }
 }
 .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.3rem; }
+/* Homepage gateway actions: deliberate balance at intermediate widths; no lone wrapped specialist action. */
+@media (min-width: 681px) and (max-width: 1680px) {
+  .home-hero-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, max-content));
+  }
+}
+@media (max-width: 680px) {
+  .home-hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .home-hero-actions .button { width: 100%; }
+}
 .button {
   display: inline-flex;
   align-items: center;
