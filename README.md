@@ -27,7 +27,7 @@ AI shaping addresses a practical gap in ordinary AI use: useful answers and draf
 - The AI Shaping practice page presents substantive principles, broad lifecycle bands and the role and benefits of reusable techniques through a bounded public disclosure funnel.
 - The About page summarises provenance, maturity, evidence context and the author background relevant to credibility.
 - FAQ, glossary and sitemap pages support reader navigation.
-- The Product-managing shaped-intelligence page retains the `/publication-co-evolution/` URL and explains bounded operational establishment across three accepted cycles under human product ownership, stewardship and decision authority. The separate product-ownership page provides professional interpretation without changing the formal evidence roles. The public architecture is 30 routes, and protected controls and implementation-transfer detail remain private.
+- The Product-managing shaped-intelligence page retains the `/publication-co-evolution/` URL and explains bounded operational establishment across three accepted cycles under human product ownership, stewardship and decision authority. The separate product-ownership page provides a human-authority account without changing the formal evidence roles. The public architecture is 30 routes, and protected controls and implementation-transfer detail remain private.
 - Protected-stage discussion explains when a defined practice, capability, evidence or implementation question may justify minimum scoped private review.
 - Reusable cue icons live under `assets/icons/`; retained brand/source artwork lives under `assets/brand/`.
 
