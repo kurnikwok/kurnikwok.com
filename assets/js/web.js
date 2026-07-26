@@ -277,7 +277,7 @@
     release: Object.freeze({
       visibleLabel: 'Site',
       ariaLabel: 'Website release',
-      version: 'v1.25'
+      version: 'v1.26'
     }),
     routes
   });

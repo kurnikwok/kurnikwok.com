@@ -327,10 +327,12 @@ p { margin: .55rem 0 1rem; }
 /* Semantic secondary copy: apply deliberately to supporting orientation, summaries and metadata. */
 .supporting-copy { color: var(--muted); }
 @media (min-width: 960px) {
-  h1 { font-size: clamp(2.6rem, 4.4vw, 5.2rem); }
-  .page h1 { font-size: clamp(2.35rem, 3.6vw, 4.35rem); }
-  h2 { font-size: clamp(1.7rem, 2.2vw, 2.25rem); }
-  .lead { font-size: clamp(1.15rem, 1.35vw, 1.42rem); }
+  /* The content container stops growing at 1120px. Cap viewport-responsive type
+     near that point so ultrawide screens retain the balanced medium-width scale. */
+  h1 { font-size: clamp(2.6rem, 4.4vw, 4.2rem); }
+  .page h1 { font-size: clamp(2.35rem, 3.6vw, 3.6rem); }
+  h2 { font-size: clamp(1.7rem, 2.2vw, 2rem); }
+  .lead { font-size: clamp(1.15rem, 1.35vw, 1.25rem); }
 }
 .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.3rem; }
 /* Homepage gateway actions: deliberate balance at intermediate widths; no lone wrapped specialist action. */
@@ -1285,6 +1287,38 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
     flex-direction: column;
     gap: .05rem;
   }
+  .brand .brand-subtitle,
+  .brand .nowrap {
+    white-space: normal;
+  }
+  h1,
+  h2,
+  h3,
+  main p,
+  main li,
+  main th,
+  main td,
+  main a,
+  .reading-sequence-link strong,
+  .icon-label > :last-child {
+    overflow-wrap: anywhere;
+  }
+  main :where(p, li) .icon-label {
+    display: inline-flex;
+    max-width: 100%;
+    white-space: normal;
+  }
+  .reading-sequence-link {
+    margin-inline: 0;
+  }
+}
+
+/* Grid and card children must be allowed to shrink when text is enlarged. */
+.grid > *,
+.hero,
+.card,
+.reading-sequence-link {
+  min-width: 0;
 }
 
 /* Reading sequence: quiet linear Previous / progress / Next continuation across the public site. */
