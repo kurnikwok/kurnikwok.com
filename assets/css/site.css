@@ -16,6 +16,7 @@
   --anchor-offset: 8.75rem;
   --stacked-label-heading-gap: .75rem;
   --card-heading-size: clamp(1.35rem, 1.7vw, 1.65rem);
+  --standard-diagram-max-width: 46rem;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
@@ -776,6 +777,7 @@ li + li { margin-top: .35rem; }
 
 
 .figure-card {
+  width: 100%;
   margin: 1.25rem 0 0;
   padding: 1rem;
   border: 1px solid var(--line);
@@ -786,8 +788,15 @@ li + li { margin-top: .35rem; }
   display: block;
   width: 100%;
   height: auto;
+  margin-inline: auto;
   border-radius: calc(var(--radius) - 6px);
   background: color-mix(in srgb, var(--surface) 90%, transparent);
+}
+.figure-card img.diagram-standard {
+  max-width: var(--standard-diagram-max-width);
+}
+.figure-card img.diagram-dense {
+  max-width: none;
 }
 .figure-card figcaption {
   margin-top: .8rem;
@@ -816,8 +825,6 @@ li + li { margin-top: .35rem; }
   background: color-mix(in srgb, var(--surface) 96%, var(--surface-strong) 4%);
   box-shadow: 0 10px 24px rgba(49, 31, 16, .06);
 }
-.lead-figure--medium { max-width: 60rem; }
-.lead-figure--tall { max-width: 48rem; }
 .section-figure { margin-top: 1.25rem; }
 @media (prefers-color-scheme: dark) {
   .lead-figure { box-shadow: 0 10px 24px rgba(0, 0, 0, .24); }
