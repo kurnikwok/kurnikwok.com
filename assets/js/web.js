@@ -287,7 +287,7 @@
       visibleLabel: 'Site',
       ariaLabel: 'Website release',
       version: 'v1.31',
-      updated: '27 July 2026, 11:43 pm AEST'
+      updated: '28 July 2026, 12:45 am AEST'
     }),
     routes
   });
