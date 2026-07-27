@@ -384,6 +384,7 @@ p { margin: .55rem 0 1rem; }
 }
 .grid { display: grid; gap: 1rem; }
 .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid.paper-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .card {
   border: 1px solid var(--line);
   background: color-mix(in srgb, var(--surface) 92%, transparent);
@@ -1007,7 +1008,7 @@ summary { cursor: pointer; font-weight: 800; color: var(--accent); }
   }
   main { padding: 1.6rem 0 3.25rem; }
   .hero { padding: 1.4rem; }
-  .grid.two { grid-template-columns: 1fr; }
+  .grid.two, .grid.paper-grid { grid-template-columns: 1fr; }
   table, thead, tbody, tr, th, td { display: block; }
   thead { display: none; }
   tr { border-bottom: 1px solid var(--line); }

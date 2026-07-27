@@ -23,11 +23,11 @@ AI shaping addresses a practical gap in ordinary AI use: useful answers and draf
 - Concept pages explain one public concept at a time.
 - Compare AI shaping routes readers among construct type, how AI work develops, tools and execution forms, and adjacent frameworks.
 - The Plan page presents public planned capability directions separately from current evidence.
-- Paper pages route readers to the formal DOI-backed public papers.
+- Paper pages route readers to the formal DOI-backed Category Definition, Project-managing Capability Evidence and Product-managing Capability Evidence working papers.
 - The AI Shaping practice page presents substantive principles, broad lifecycle bands and the role and benefits of reusable techniques through a bounded public disclosure funnel.
 - The About page summarises provenance, maturity, evidence context and the author background relevant to credibility.
 - FAQ, glossary and sitemap pages support reader navigation.
-- The Product-managing shaped-intelligence page retains the `/publication-co-evolution/` URL and explains bounded operational establishment across three accepted cycles under human product ownership, stewardship and decision authority. The separate product-ownership page provides a human-authority account without changing the formal evidence roles. The public architecture is 30 routes, and protected controls and implementation-transfer detail remain private.
+- The Product-managing shaped-intelligence page retains the `/publication-co-evolution/` URL and explains bounded operational establishment across three accepted cycles under human product ownership, stewardship and decision authority. The separate product-ownership page provides a human-authority account without changing the formal evidence roles. The public architecture is 31 routes, and protected controls and implementation-transfer detail remain private.
 - Protected-stage discussion explains when a defined practice, capability, evidence or implementation question may justify minimum scoped private review.
 - Reusable cue icons live under `assets/icons/`; retained brand/source artwork lives under `assets/brand/`.
 

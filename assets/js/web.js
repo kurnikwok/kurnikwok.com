@@ -218,11 +218,20 @@
   },
   {
     "path": "/papers/ai-shaping-intelligence-in-practice/",
-    "label": "Capability evidence paper",
+    "label": "Project-managing evidence paper",
     "group": "Papers",
     "parent": "/papers/",
     "primary": "/papers/",
     "sequence": 25,
+    "sitemap": true
+  },
+  {
+    "path": "/papers/product-managing-shaped-intelligence/",
+    "label": "Product-managing evidence paper",
+    "group": "Papers",
+    "parent": "/papers/",
+    "primary": "/papers/",
+    "sequence": 26,
     "sitemap": true
   },
   {
@@ -231,7 +240,7 @@
     "group": "Boundary",
     "parent": "/",
     "primary": null,
-    "sequence": 26,
+    "sequence": 27,
     "sitemap": true
   },
   {
@@ -240,7 +249,7 @@
     "group": "Reference",
     "parent": "/",
     "primary": null,
-    "sequence": 27,
+    "sequence": 28,
     "sitemap": true
   },
   {
@@ -249,7 +258,7 @@
     "group": "Reference",
     "parent": "/",
     "primary": "/glossary/",
-    "sequence": 28,
+    "sequence": 29,
     "sitemap": true
   },
   {
@@ -258,7 +267,7 @@
     "group": "Reference",
     "parent": "/",
     "primary": null,
-    "sequence": 29,
+    "sequence": 30,
     "sitemap": true
   },
   {
@@ -267,7 +276,7 @@
     "group": "Reference",
     "parent": "/",
     "primary": null,
-    "sequence": 30,
+    "sequence": 31,
     "sitemap": true
   }
 ]);
@@ -277,8 +286,8 @@
     release: Object.freeze({
       visibleLabel: 'Site',
       ariaLabel: 'Website release',
-      version: 'v1.30',
-      updated: '27 July 2026, 6:01 pm AEST'
+      version: 'v1.31',
+      updated: '27 July 2026, 11:43 pm AEST'
     }),
     routes
   });
