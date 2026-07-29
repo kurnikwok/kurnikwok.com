@@ -286,8 +286,8 @@
     release: Object.freeze({
       visibleLabel: 'Site',
       ariaLabel: 'Website release',
-      version: 'v1.35',
-      updated: '28 July 2026, 10:43 pm AEST'
+      version: 'v1.36',
+      updated: '29 July 2026, 11:39 am AEST'
     }),
     routes
   });
