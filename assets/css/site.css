@@ -490,36 +490,60 @@ p { margin: .55rem 0 1rem; }
 .architecture-sequence-note {
   margin-top: 1rem;
 }
-.programme-example {
+.section.programme-example {
+  --programme-divider-space-before: 2.5rem;
+  --programme-divider-space-after: 1.25rem;
+  margin-block-start: var(--programme-divider-space-before);
+  padding-block-start: var(--programme-divider-space-after);
   border-top: 1px solid var(--line);
 }
-.programme-hierarchy {
+.programme-model {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
-  align-items: stretch;
-  gap: .55rem;
-  margin: 1.2rem 0 1.5rem;
+  gap: 1.25rem;
+  margin: 1.35rem 0 1.1rem;
 }
-.programme-hierarchy > span {
+.programme-structure {
+  margin: 0;
+}
+.programme-structure > h3 {
+  margin: 0 0 .7rem;
+}
+.programme-flow {
   display: grid;
-  align-content: center;
+  gap: .65rem;
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
 }
-.programme-hierarchy > span:nth-child(odd) {
-  gap: .2rem;
-  min-height: 5.25rem;
+.programme-flow-seven,
+.programme-flow-four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.programme-flow > li {
+  min-width: 0;
   padding: .85rem;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: color-mix(in srgb, var(--surface) 90%, transparent);
 }
-.programme-hierarchy > span:nth-child(even) {
+.programme-flow > li::marker {
   color: var(--accent);
   font-weight: 800;
-  text-align: center;
 }
-.programme-hierarchy small {
+.programme-flow strong,
+.programme-flow small {
+  display: block;
+}
+.programme-flow strong {
+  margin-top: .2rem;
+}
+.programme-flow small {
+  margin-top: .25rem;
   color: var(--muted);
   line-height: 1.35;
+}
+.programme-boundary-note {
+  margin: 0 0 1.5rem;
 }
 .programme-phases {
   list-style: none;
@@ -566,19 +590,26 @@ p { margin: .55rem 0 1rem; }
 .programme-conditions .card h3 {
   margin-top: 0;
 }
-.programme-role-allocation {
+.programme-role-allocation,
+.programme-evidence-boundary,
+.programme-instance-boundary {
   margin-top: 1.25rem;
 }
 @media (max-width: 820px) {
-  .programme-hierarchy {
-    grid-template-columns: 1fr;
-  }
-  .programme-hierarchy > span:nth-child(even) {
-    min-height: auto;
-    transform: rotate(90deg);
+  .programme-flow-seven,
+  .programme-flow-four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (max-width: 520px) {
+  .section.programme-example {
+    --programme-divider-space-before: 2rem;
+    --programme-divider-space-after: 1rem;
+  }
+  .programme-flow-seven,
+  .programme-flow-four {
+    grid-template-columns: 1fr;
+  }
   .programme-phases > li {
     grid-template-columns: 2rem minmax(0, 1fr);
     gap: .7rem;
