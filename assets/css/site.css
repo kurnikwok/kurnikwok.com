@@ -704,6 +704,7 @@ p { margin: .55rem 0 1rem; }
 
 /* Functional capability surface: one joined list avoids a false peer-card hierarchy. */
 .capability-surface-list {
+  container-type: inline-size;
   list-style: none;
   padding-left: 0;
   margin: 1rem 0 0;
@@ -717,10 +718,14 @@ p { margin: .55rem 0 1rem; }
   border-bottom: 1px solid var(--line);
 }
 .capability-surface-list strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
   color: var(--accent);
   line-height: 1.4;
 }
 .capability-surface-list span {
+  min-width: 0;
+  overflow-wrap: anywhere;
   color: var(--text);
   line-height: 1.55;
 }
@@ -729,9 +734,19 @@ p { margin: .55rem 0 1rem; }
     grid-template-columns: 2rem minmax(0, 1fr);
     gap: .75rem;
   }
+}
+@container (max-width: 41rem) {
   .capability-surface-list > li {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: .25rem;
+  }
+}
+@supports not (container-type: inline-size) {
+  @media (max-width: 48rem) {
+    .capability-surface-list > li {
+      grid-template-columns: minmax(0, 1fr);
+      gap: .25rem;
+    }
   }
 }
 
@@ -739,6 +754,7 @@ p { margin: .55rem 0 1rem; }
 .principle-group + .principle-group { margin-top: 1.5rem; }
 .principle-group > h3 { margin: 0 0 .55rem; }
 .principle-list {
+  container-type: inline-size;
   list-style: none;
   padding-left: 0;
   margin: 0;
@@ -752,21 +768,34 @@ p { margin: .55rem 0 1rem; }
   border-bottom: 1px solid var(--line);
 }
 .principle-list strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
   color: var(--accent);
   line-height: 1.4;
 }
 .principle-list span {
+  min-width: 0;
+  overflow-wrap: anywhere;
   color: var(--text);
   line-height: 1.55;
+}
+@container (max-width: 39rem) {
+  .principle-list > li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .25rem;
+  }
+}
+@supports not (container-type: inline-size) {
+  @media (max-width: 48rem) {
+    .principle-list > li {
+      grid-template-columns: minmax(0, 1fr);
+      gap: .25rem;
+    }
+  }
 }
 .foundation-list { margin: .85rem 0 0; }
 .foundation-list > li + li { margin-top: .65rem; }
 @media (max-width: 680px) {
-  .principle-list > li {
-    grid-template-columns: 1fr;
-    gap: .25rem;
-  }
-
   .on-this-page ul { display: grid; grid-template-columns: 1fr; gap: .35rem; }
 }
 .table-block > h2 { margin-bottom: .55rem; }
