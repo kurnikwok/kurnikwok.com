@@ -805,6 +805,61 @@ p { margin: .55rem 0 1rem; }
 }
 .foundation-list { margin: .85rem 0 0; }
 .foundation-list > li + li { margin-top: .65rem; }
+
+/* Cross-principle relationships: equal-status peers, balanced without forced equal heights. */
+.principle-relationships {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+.principle-relationships > h3 { margin: 0 0 .55rem; }
+.principle-relationships > p { max-width: 72rem; }
+.relationship-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: .8rem;
+  margin-top: 1rem;
+}
+.relationship-grid > article {
+  grid-column: span 2;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  padding: .95rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) - 4px);
+  background: color-mix(in srgb, var(--surface-strong) 72%, transparent);
+}
+.relationship-grid > article:nth-child(4) { grid-column: 2 / span 2; }
+.relationship-grid > article:nth-child(5) { grid-column: 4 / span 2; }
+.relationship-grid h4 {
+  margin: 0 0 .35rem;
+  color: var(--accent);
+  line-height: 1.35;
+}
+.relationship-grid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+@media (max-width: 920px) {
+  .relationship-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .relationship-grid > article,
+  .relationship-grid > article:nth-child(4),
+  .relationship-grid > article:nth-child(5) { grid-column: auto; }
+  .relationship-grid > article:nth-child(5) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - .4rem);
+  }
+}
+@media (max-width: 620px) {
+  .relationship-grid { grid-template-columns: minmax(0, 1fr); }
+  .relationship-grid > article:nth-child(5) {
+    grid-column: auto;
+    justify-self: stretch;
+    width: auto;
+  }
+}
 @media (max-width: 680px) {
   .on-this-page ul { display: grid; grid-template-columns: 1fr; gap: .35rem; }
 }
@@ -1898,6 +1953,8 @@ details:focus-within {
   margin: 1rem auto 0;
   padding: 0;
   list-style: none;
+  container-type: inline-size;
+  container-name: disclosure-funnel;
 }
 .disclosure-funnel > li {
   box-sizing: border-box;
@@ -1920,8 +1977,23 @@ details:focus-within {
   color: var(--muted);
   line-height: 1.5;
 }
-@media (max-width: 680px) {
-  .disclosure-funnel > li:nth-child(n) { width: 100%; }
+@container disclosure-funnel (max-width: 45rem) {
+  .disclosure-funnel > li:nth-child(2) { width: 90%; }
+  .disclosure-funnel > li:nth-child(3) { width: 80%; }
+}
+@container disclosure-funnel (max-width: 28rem) {
+  .disclosure-funnel > li:nth-child(2) { width: calc(100% - .75rem); }
+  .disclosure-funnel > li:nth-child(3) { width: calc(100% - 1.5rem); }
+}
+@supports not (container-type: inline-size) {
+  @media (max-width: 48rem) {
+    .disclosure-funnel > li:nth-child(2) { width: 90%; }
+    .disclosure-funnel > li:nth-child(3) { width: 80%; }
+  }
+  @media (max-width: 30rem) {
+    .disclosure-funnel > li:nth-child(2) { width: calc(100% - .75rem); }
+    .disclosure-funnel > li:nth-child(3) { width: calc(100% - 1.5rem); }
+  }
 }
 
 /* Relationship invariant: keep after every component and responsive heading reset. */

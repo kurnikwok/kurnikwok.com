@@ -9,7 +9,7 @@ AI shaping addresses a practical gap in ordinary AI use: useful answers and draf
 ## Start here
 
 - [AI shaping in 5 minutes](https://kurnikwok.com/ai-shaping-in-5-minutes/) — a plain-language introduction
-- [AI Shaping principles, lifecycle and techniques](https://kurnikwok.com/ai-shaping-practice/) — the bounded public practice architecture
+- [AI Shaping principles, lifecycle and operational patterns](https://kurnikwok.com/ai-shaping-practice/) — the bounded public practice architecture
 - [Work-burden shift](https://kurnikwok.com/work-burden-shift/) — the central operating mechanism
 - [Compare AI shaping](https://kurnikwok.com/compare/) — routes by construct type, how AI work develops, tools and execution forms, or adjacent frameworks
 - [Evidence overview](https://kurnikwok.com/evidence/) — the current public evidence overview and evaluation route
