@@ -63,6 +63,10 @@ body {
 }
 a { color: var(--link); text-decoration-thickness: .08em; text-underline-offset: .18em; }
 a:hover { text-decoration-thickness: .14em; }
+main a[href^="https://doi.org/"] {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
 a:focus-visible {
   outline: 3px solid color-mix(in srgb, var(--accent) 64%, transparent);
   outline-offset: .18rem;
@@ -273,7 +277,9 @@ nav.primary-nav a:hover,
 main { padding: 2rem 0 4rem; }
 .hero {
   position: relative;
-  overflow: hidden;
+  container-name: action-scope;
+  container-type: inline-size;
+  overflow: visible;
   padding: 2.4rem;
   border: 1px solid color-mix(in srgb, var(--line) 68%, var(--accent) 32%);
   background:
@@ -287,9 +293,11 @@ main { padding: 2rem 0 4rem; }
   content: "";
   position: absolute;
   inset: 0 0 auto;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  height: calc(var(--radius) + 10px);
+  border-radius: calc(var(--radius) + 10px) calc(var(--radius) + 10px) 0 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2)) top / 100% 3px no-repeat;
   opacity: .72;
+  pointer-events: none;
 }
 .hero > * { position: relative; }
 .hero--home {
@@ -390,10 +398,12 @@ p { margin: .55rem 0 1rem; }
   .actions-three--sources { grid-template-columns: repeat(2, minmax(0, max-content)); }
   .actions-three--sources > .button:first-child { grid-column: 1 / -1; }
 }
+@container action-scope (max-width: 45rem) {
+  .actions-three--home { grid-template-columns: repeat(2, minmax(0, max-content)); }
+  .actions-three--home > .button:first-child { grid-column: 1 / -1; }
+}
 @container action-scope (max-width: 40rem) {
-  .actions-three--home,
   .actions-three--evaluation { grid-template-columns: repeat(2, minmax(0, max-content)); }
-  .actions-three--home > .button:first-child,
   .actions-three--evaluation > .button:first-child { grid-column: 1 / -1; }
 }
 @container action-scope (max-width: 29rem) {
@@ -823,6 +833,8 @@ p { margin: .55rem 0 1rem; }
 }
 .route-card {
   display: flex;
+  min-width: 0;
+  overflow-wrap: anywhere;
   min-height: 100%;
   flex-direction: column;
   padding: 1rem;
@@ -847,6 +859,7 @@ p { margin: .55rem 0 1rem; }
 
 .badge {
   display: inline-flex;
+  max-width: 100%;
   align-items: center;
   width: fit-content;
   padding: .2rem .55rem;
@@ -867,6 +880,8 @@ p { margin: .55rem 0 1rem; }
 .role-map > a,
 .role-map > div {
   display: block;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: .95rem 1rem;
   border: 1px solid var(--line);
   border-radius: calc(var(--radius) - 4px);
@@ -1231,6 +1246,8 @@ details {
 details + details { margin-top: .8rem; }
 details > summary {
   display: grid;
+  min-width: 0;
+  overflow-wrap: anywhere;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: .8rem;
@@ -1413,6 +1430,8 @@ details:focus-within {
 .mini-steps > li,
 .checklist-grid div {
   display: block;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: .95rem 1rem;
   border: 1px solid var(--line);
   border-radius: calc(var(--radius) - 4px);
@@ -1650,6 +1669,45 @@ details:focus-within {
 .faq-group details + details { margin-top: .8rem; }
 
 @media (max-width: 520px) {
+  .wrap {
+    padding-inline: 16px;
+  }
+  .hero {
+    padding: 22px;
+  }
+  .card,
+  .reader-guide,
+  .reader-note,
+  .plain-example {
+    padding: 20px;
+  }
+  .route-card,
+  .route-strip a,
+  .comparison-strip div,
+  .mini-steps div,
+  .mini-steps > li,
+  .checklist-grid div,
+  .role-map > a,
+  .role-map > div {
+    padding: 16px;
+  }
+  details {
+    padding: 16px;
+  }
+  details > summary {
+    gap: 12px;
+  }
+  details > summary::after {
+    width: 10px;
+    height: 10px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+  }
+  .badge {
+    border-radius: var(--control-wrap-radius);
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
   .brand {
     align-items: flex-start;
     flex-direction: column;
