@@ -93,6 +93,23 @@
     }
   ]
 }</script>
+<style>
+.table-fit-adaptive { container-type: inline-size; }
+@container (max-width: 50rem) {
+  .table-fit-adaptive table,
+  .table-fit-adaptive thead,
+  .table-fit-adaptive tbody,
+  .table-fit-adaptive tr,
+  .table-fit-adaptive th,
+  .table-fit-adaptive td { display: block; }
+  .table-fit-adaptive thead { display: none; }
+  .table-fit-adaptive tr { border-bottom: 1px solid var(--line); }
+  .table-fit-adaptive td { border: 0; padding: .65rem .85rem; }
+  .table-fit-adaptive td::before { content: attr(data-label); display: block; font-weight: 800; color: var(--accent); margin-bottom: .15rem; }
+  .table-fit-adaptive tbody th[scope="row"] { border: 0; padding: .65rem .85rem; }
+  .table-fit-adaptive tbody th[scope="row"]::before { content: attr(data-label); display: block; font-weight: 800; color: var(--accent); margin-bottom: .15rem; }
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -143,10 +160,9 @@
 <h2>Context page, not a new formal source</h2>
 <p>This page gives a public reader map across adjacent AI source families. It does not replace the <a href="/papers/ai-shaping/">category definition paper</a>, the <a href="/papers/ai-shaping-intelligence-in-practice/">capability evidence paper</a> or the <a href="/public-evaluation-map/">public evaluation map</a>. It also does not make AI shaping a substitute for governance, an AI management system, workflow redesign, adoption work or empirical productivity evaluation.</p>
 </section>
-<section class="section table-block">
+<section class="section table-block table-fit-adaptive">
 <h2>Adjacent source families and the AI shaping position</h2>
 <p class="supporting-copy">Read this as a positioning diagram. Each adjacent source family answers a valid question. AI shaping asks a narrower operating-model question: can more domain-practice and subject-context burden, and more work-state and resumption burden, shift from the responsible person to shaped intelligence while source basis and the human-authority boundary remain explicit?</p>
-<div class="table-scroll" role="region" aria-label="Adjacent source families and AI shaping position" tabindex="0">
 <table><caption class="visually-hidden">Adjacent source families and the AI shaping position</caption>
 <thead><tr><th scope="col">Adjacent source family</th><th scope="col">Representative public source</th><th scope="col">What it mainly addresses</th><th scope="col">AI shaping position</th></tr></thead>
 <tbody>
@@ -156,7 +172,6 @@
 <tr><th data-label="Adjacent source family" scope="row"><span class="icon-label icon-blue"><span aria-hidden="true" class="icon-cue" style="--icon-url: url('/assets/icons/ai-shaping-icon-chart-magnifier.svg');"></span><span>AI productivity evidence</span></span></th><td data-label="Representative public source"><a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/">METR study on experienced open-source developers</a></td><td data-label="What it mainly addresses">Measured task outcomes, productivity effects, perception gaps and setting-specific evidence.</td><td data-label="AI shaping position">AI shaping should not be read as a generic productivity-uplift claim. The public claim is narrower: visible work-burden shift under human authority, with evidence assessed in context.</td></tr>
 </tbody>
 </table>
-</div>
 </section>
 <section class="section grid two">
 <article class="card">
