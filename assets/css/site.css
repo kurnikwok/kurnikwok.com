@@ -300,6 +300,9 @@ main { padding: 2rem 0 4rem; }
   pointer-events: none;
 }
 .hero > * { position: relative; }
+/* Hero edges: the container padding owns the outer inset; nested descendants retain their rhythm. */
+.hero > :first-child { margin-block-start: 0; }
+.hero > :last-child { margin-block-end: 0; }
 .hero--home {
   border-color: color-mix(in srgb, var(--line) 54%, var(--accent) 46%);
   background:
