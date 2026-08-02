@@ -23,7 +23,7 @@ AI shaping addresses a practical gap in ordinary AI use: useful answers and draf
 - Concept pages explain one public concept at a time.
 - Compare AI shaping routes readers among construct type, how AI work develops, tools and execution forms, and adjacent frameworks.
 - The Plan page presents public planned capability directions separately from current evidence.
-- Paper pages route readers to the formal DOI-backed Category Definition, Project-managing Capability Evidence and Product-managing Capability Evidence working papers.
+- Paper pages route readers to the formal DOI-backed Category Definition, Project-managing Capability Evidence and Product-managing Capability Evidence published papers.
 - The AI Shaping practice page presents substantive principles, broad lifecycle bands and the role and benefits of operational patterns through a bounded public disclosure funnel.
 - The About page summarises provenance, maturity, evidence context and the author background relevant to credibility.
 - FAQ, glossary and sitemap pages support reader navigation.
