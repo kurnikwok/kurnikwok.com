@@ -1816,11 +1816,16 @@ details:focus-within {
   min-width: 0;
 }
 
-/* Reading sequence: quiet linear Previous / progress / Next continuation across the public site. */
-.reading-sequence-block {
-  margin-top: 2rem;
-  padding-top: 1.15rem;
+/* Reading sequence: a full-width page-end band, separate from both main content and footer semantics. */
+main.main-with-page-end-sequence {
+  padding-bottom: 2rem;
+}
+.page-end-sequence-band {
   border-top: 1px solid var(--line);
+  padding-block: 1.15rem;
+}
+.reading-sequence-block {
+  margin: 0;
 }
 .reading-sequence-heading {
   display: flex;
